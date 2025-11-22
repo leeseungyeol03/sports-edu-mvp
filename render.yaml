@@ -3,7 +3,7 @@ services:
   - type: web
     name: sports-edu-backend
     root: backend
-    env: docker # Dockerfile 사용
+    env: docker
     plan: free
     region: oregon
     numReplicas: 1
@@ -21,6 +21,11 @@ services:
     env: static
     buildCommand: npm install && npm run build
     staticPublishPath: dist
+    # React SPA 새로고침 404 방지 설정
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
     envVars:
       - key: VITE_API_URL
         fromService:
