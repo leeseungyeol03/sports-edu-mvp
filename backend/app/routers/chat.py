@@ -1,3 +1,8 @@
+import sys
+import os
+# 상위 폴더 경로 추가 (Import Error 방지)
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 import logging
 from fastapi import APIRouter, Depends, HTTPException, status, WebSocket, WebSocketDisconnect
 from fastapi.encoders import jsonable_encoder
@@ -5,14 +10,15 @@ from sqlalchemy.orm import Session, joinedload
 from typing import List
 import json
 from datetime import datetime
-from zoneinfo import ZoneInfo
+from zoneinfo import ZoneInfo # Import ZoneInfo
 
-from app import models, schemas, database, auth
-from app.connection_manager import manager
+from .. import models, schemas, database, auth
+from ..connection_manager import manager # Import the new manager
 
 # Add logging configuration
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
+
 
 router = APIRouter()
 
