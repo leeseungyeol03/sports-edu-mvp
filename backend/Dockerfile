@@ -18,4 +18,4 @@ COPY . /app/
 
 # CMD를 사용하여 애플리케이션 시작 (render.yaml의 startCommand를 우회)
 # set -x 를 사용하여 실행되는 모든 명령어 로깅
-CMD bash -c "set -ex && python -c \"print('Starting Python application from Docker CMD with verbose debug output:'); print('PYTHONPATH: ' + os.environ.get('PYTHONPATH', 'Not Set')); print('sys.path: ' + str(sys.path)); from app import main\" && uvicorn app.main:app --host 0.0.0.0 --port $PORT"
+CMD bash -c "set -ex && python -c \"import os; import sys; print('Starting Python application from Docker CMD with verbose debug output:'); print('PYTHONPATH: ' + os.environ.get('PYTHONPATH', 'Not Set')); print('sys.path: ' + str(sys.path)); from app import main\" && uvicorn app.main:app --host 0.0.0.0 --port $PORT"
