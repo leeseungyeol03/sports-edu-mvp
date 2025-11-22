@@ -1,50 +1,80 @@
-2025-11-22T15:55:56.973128419Z #9 6.807   Downloading cryptography-46.0.3-cp38-abi3-manylinux_2_34_x86_64.whl (4.5 MB)
-2025-11-22T15:55:56.97314527Z #9 6.834      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/4.5 MB 186.4 MB/s eta 0:00:00
-2025-11-22T15:55:56.97314973Z #9 6.984 Collecting bcrypt>=3.1.0
-2025-11-22T15:55:57.138828113Z #9 6.995   Downloading bcrypt-5.0.0-cp39-abi3-manylinux_2_34_x86_64.whl (278 kB)
-2025-11-22T15:55:57.138854404Z #9 6.999      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 278.2/278.2 kB 189.6 MB/s eta 0:00:00
-2025-11-22T15:55:57.454058569Z #9 7.465 Collecting cffi>=2.0.0
-2025-11-22T15:55:57.570924179Z #9 7.476   Downloading cffi-2.0.0-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (216 kB)
-2025-11-22T15:55:57.570941099Z #9 7.479      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 216.5/216.5 kB 233.2 MB/s eta 0:00:00
-2025-11-22T15:55:57.570945879Z #9 7.510 Collecting six>=1.9.0
-2025-11-22T15:55:57.57095324Z #9 7.520   Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
-2025-11-22T15:55:57.57095769Z #9 7.582 Collecting anyio<5,>=3.4.0
-2025-11-22T15:55:57.685287193Z #9 7.593   Downloading anyio-4.11.0-py3-none-any.whl (109 kB)
-2025-11-22T15:55:57.685304213Z #9 7.595      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 109.1/109.1 kB 240.1 MB/s eta 0:00:00
-2025-11-22T15:55:57.685308514Z #9 7.656 Collecting exceptiongroup>=1.0.2
-2025-11-22T15:55:57.685312284Z #9 7.667   Downloading exceptiongroup-1.3.1-py3-none-any.whl (16 kB)
-2025-11-22T15:55:57.685315564Z #9 7.696 Collecting idna>=2.8
-2025-11-22T15:55:57.924114045Z #9 7.707   Downloading idna-3.11-py3-none-any.whl (71 kB)
-2025-11-22T15:55:57.924135766Z #9 7.709      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 228.3 MB/s eta 0:00:00
-2025-11-22T15:55:57.924139216Z #9 7.729 Collecting sniffio>=1.1
-2025-11-22T15:55:57.924141646Z #9 7.739   Downloading sniffio-1.3.1-py3-none-any.whl (10 kB)
-2025-11-22T15:55:57.924143936Z #9 7.772 Collecting pycparser
-2025-11-22T15:55:57.924146146Z #9 7.782   Downloading pycparser-2.23-py3-none-any.whl (118 kB)
-2025-11-22T15:55:57.924148386Z #9 7.784      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 118.1/118.1 kB 229.6 MB/s eta 0:00:00
-2025-11-22T15:55:57.978251538Z #9 7.989 Installing collected packages: passlib, websockets, tzdata, typing-extensions, sniffio, six, python-multipart, pycparser, pyasn1, psycopg2-binary, idna, h11, greenlet, click, bcrypt, annotated-types, uvicorn, sqlalchemy, rsa, pydantic-core, exceptiongroup, ecdsa, cffi, python-jose, pydantic, cryptography, anyio, starlette, fastapi
-2025-11-22T15:56:01.480198832Z #9 11.49 Successfully installed annotated-types-0.7.0 anyio-4.11.0 bcrypt-5.0.0 cffi-2.0.0 click-8.1.8 cryptography-46.0.3 ecdsa-0.19.1 exceptiongroup-1.3.1 fastapi-0.109.0 greenlet-3.2.4 h11-0.16.0 idna-3.11 passlib-1.7.4 psycopg2-binary-2.9.9 pyasn1-0.6.1 pycparser-2.23 pydantic-2.6.0 pydantic-core-2.16.1 python-jose-3.3.0 python-multipart-0.0.20 rsa-4.9.1 six-1.17.0 sniffio-1.3.1 sqlalchemy-2.0.25 starlette-0.35.1 typing-extensions-4.15.0 tzdata-2025.2 uvicorn-0.27.0 websockets-15.0.1
-2025-11-22T15:56:01.59011063Z #9 11.49 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
-2025-11-22T15:56:01.5901253Z #9 11.60 
-2025-11-22T15:56:01.59012907Z #9 11.60 [notice] A new release of pip is available: 23.0.1 -> 25.3
-2025-11-22T15:56:01.59013253Z #9 11.60 [notice] To update, run: pip install --upgrade pip
-2025-11-22T15:56:02.673341647Z #9 DONE 12.7s
-2025-11-22T15:56:02.922903949Z 
-2025-11-22T15:56:02.92293021Z #10 [5/5] COPY . .
-2025-11-22T15:56:02.92293393Z #10 DONE 0.1s
-2025-11-22T15:56:02.9229367Z 
-2025-11-22T15:56:02.9229421Z #11 exporting to docker image format
-2025-11-22T15:56:02.922957201Z #11 exporting layers
-2025-11-22T15:56:05.525496275Z #11 exporting layers 2.8s done
-2025-11-22T15:56:05.698001957Z #11 exporting manifest sha256:0a51faffa65deadb83581a283a97cbaa2f6da8f14b3d5ac341c3c37231be4db1 done
-2025-11-22T15:56:05.698027257Z #11 exporting config sha256:76d424046a3a8c69656ec1d54c1aa0505072710eac5bb4da62a834a57344ef7b done
-2025-11-22T15:56:05.919283141Z #11 DONE 3.1s
-2025-11-22T15:56:06.078784403Z 
-2025-11-22T15:56:06.078806374Z #12 exporting cache to client directory
-2025-11-22T15:56:06.078809724Z #12 preparing build cache for export
-2025-11-22T15:56:07.602614708Z #12 writing cache image manifest sha256:d580b15f4fa301e407719380a3adc66f4fc050d7b314bca7665c0714a2d1abd6 0.1s done
-2025-11-22T15:56:07.602642209Z #12 DONE 1.7s
-2025-11-22T15:56:09.931242976Z Pushing image to registry...
-2025-11-22T15:56:12.347586443Z Upload succeeded
-2025-11-22T15:56:16.609037441Z ==> Deploying...
-2025-11-22T15:56:22.80707392Z ==> Application exited early
-2025-11-22T15:56:22.824153788Z ==> Common ways to troubleshoot your deploy: https://render.com/docs/troubleshooting-deploys
+2025-11-22T15:59:54.63952458Z ==> Downloading cache...
+2025-11-22T15:59:54.683212025Z ==> Cloning from https://github.com/leeseungyeol03/sports-edu-mvp
+2025-11-22T15:59:55.229150463Z ==> Checking out commit c35c9fdf4579435d27325224194abf3bb081e8fa in branch main
+2025-11-22T15:59:55.96637958Z ==> Downloaded 66MB in 1s. Extraction took 0s.
+2025-11-22T15:59:57.008006166Z #1 [internal] load build definition from Dockerfile
+2025-11-22T15:59:57.008045187Z #1 transferring dockerfile: 370B done
+2025-11-22T15:59:57.008049596Z #1 DONE 0.0s
+2025-11-22T15:59:57.008053187Z 
+2025-11-22T15:59:57.008057587Z #2 [internal] load metadata for docker.io/library/python:3.9-slim
+2025-11-22T15:59:57.191416309Z #2 ...
+2025-11-22T15:59:57.191440189Z 
+2025-11-22T15:59:57.191443379Z #3 [auth] library/python:pull render-prod/docker-mirror-repository/library/python:pull token for us-west1-docker.pkg.dev
+2025-11-22T15:59:57.191449099Z #3 DONE 0.0s
+2025-11-22T15:59:57.340627352Z 
+2025-11-22T15:59:57.340649562Z #2 [internal] load metadata for docker.io/library/python:3.9-slim
+2025-11-22T15:59:57.469078304Z #2 DONE 0.6s
+2025-11-22T15:59:57.580286867Z 
+2025-11-22T15:59:57.580305898Z #4 [internal] load .dockerignore
+2025-11-22T15:59:57.580309218Z #4 transferring context: 2B done
+2025-11-22T15:59:57.580312058Z #4 DONE 0.0s
+2025-11-22T15:59:57.580314508Z 
+2025-11-22T15:59:57.580324448Z #5 importing cache manifest from local:8792851022353271508
+2025-11-22T15:59:57.580363449Z #5 inferred cache manifest type: application/vnd.oci.image.manifest.v1+json done
+2025-11-22T15:59:57.580391649Z #5 DONE 0.0s
+2025-11-22T15:59:57.580431141Z 
+2025-11-22T15:59:57.580543833Z #6 [1/5] FROM docker.io/library/python:3.9-slim@sha256:2d97f6910b16bd338d3060f261f53f144965f755599aab1acda1e13cf1731b1b
+2025-11-22T15:59:57.580552693Z #6 resolve docker.io/library/python:3.9-slim@sha256:2d97f6910b16bd338d3060f261f53f144965f755599aab1acda1e13cf1731b1b 0.0s done
+2025-11-22T15:59:57.580555793Z #6 DONE 0.0s
+2025-11-22T15:59:57.580733018Z 
+2025-11-22T15:59:57.581056115Z #7 [internal] load build context
+2025-11-22T15:59:57.581063416Z #7 transferring context: 152.82kB done
+2025-11-22T15:59:57.581066225Z #7 DONE 0.1s
+2025-11-22T15:59:57.581068736Z 
+2025-11-22T15:59:57.581071846Z #8 [2/5] WORKDIR /app
+2025-11-22T15:59:57.581081426Z #8 CACHED
+2025-11-22T15:59:57.583558775Z 
+2025-11-22T15:59:57.583574405Z #9 [3/5] COPY requirements.txt .
+2025-11-22T15:59:57.583577565Z #9 CACHED
+2025-11-22T15:59:57.583579905Z 
+2025-11-22T15:59:57.583595785Z #10 [4/5] RUN pip install --no-cache-dir -r requirements.txt
+2025-11-22T15:59:57.833598375Z #10 sha256:38513bd7256313495cdd83b3b0915a633cfa475dc2a07072ab2c8d191020ca5d 11.53MB / 29.78MB 0.2s
+2025-11-22T15:59:57.989704562Z #10 sha256:38513bd7256313495cdd83b3b0915a633cfa475dc2a07072ab2c8d191020ca5d 29.78MB / 29.78MB 0.3s
+2025-11-22T15:59:58.162873433Z #10 sha256:38513bd7256313495cdd83b3b0915a633cfa475dc2a07072ab2c8d191020ca5d 29.78MB / 29.78MB 0.3s done
+2025-11-22T15:59:58.162891123Z #10 extracting sha256:38513bd7256313495cdd83b3b0915a633cfa475dc2a07072ab2c8d191020ca5d
+2025-11-22T15:59:58.808224634Z #10 extracting sha256:38513bd7256313495cdd83b3b0915a633cfa475dc2a07072ab2c8d191020ca5d 0.8s done
+2025-11-22T15:59:58.987177232Z #10 sha256:b3ec39b36ae8c03a3e09854de4ec4aa08381dfed84a9daa075048c2e3df3881d 1.29MB / 1.29MB 0.0s done
+2025-11-22T15:59:58.987203173Z #10 extracting sha256:b3ec39b36ae8c03a3e09854de4ec4aa08381dfed84a9daa075048c2e3df3881d
+2025-11-22T15:59:59.796089007Z #10 extracting sha256:b3ec39b36ae8c03a3e09854de4ec4aa08381dfed84a9daa075048c2e3df3881d 1.0s done
+2025-11-22T15:59:59.898382399Z #10 sha256:fc74430849022d13b0d44b8969a953f842f59c6e9d1a0c2c83d710affa286c08 13.88MB / 13.88MB 0.1s done
+2025-11-22T16:00:00.053363439Z #10 extracting sha256:fc74430849022d13b0d44b8969a953f842f59c6e9d1a0c2c83d710affa286c08
+2025-11-22T16:00:00.741992626Z #10 extracting sha256:fc74430849022d13b0d44b8969a953f842f59c6e9d1a0c2c83d710affa286c08 0.8s done
+2025-11-22T16:00:00.885596356Z #10 sha256:ea56f685404adf81680322f152d2cfec62115b30dda481c2c450078315beb508 251B / 251B done
+2025-11-22T16:00:00.885632927Z #10 extracting sha256:ea56f685404adf81680322f152d2cfec62115b30dda481c2c450078315beb508 0.1s done
+2025-11-22T16:00:01.193935357Z #10 sha256:50cd5fe83edb951373587b403079c725b522a51327765b781719427d14c23117 92B / 92B done
+2025-11-22T16:00:01.193954808Z #10 extracting sha256:50cd5fe83edb951373587b403079c725b522a51327765b781719427d14c23117 0.0s done
+2025-11-22T16:00:01.193959058Z #10 sha256:df51269dbc1b074a85fba900fb50882acd417690915aaabd6e4eb2f2a3066430 278B / 278B done
+2025-11-22T16:00:01.193962968Z #10 extracting sha256:df51269dbc1b074a85fba900fb50882acd417690915aaabd6e4eb2f2a3066430 0.0s done
+2025-11-22T16:00:01.193967348Z #10 sha256:e87528c6a329d9ad1253d092394dcc4706a03c69826b7aa0488302992d6ba91c 23.39MB / 23.39MB 0.1s done
+2025-11-22T16:00:01.347825062Z #10 extracting sha256:e87528c6a329d9ad1253d092394dcc4706a03c69826b7aa0488302992d6ba91c
+2025-11-22T16:00:02.434674998Z #10 extracting sha256:e87528c6a329d9ad1253d092394dcc4706a03c69826b7aa0488302992d6ba91c 1.2s done
+2025-11-22T16:00:02.551249259Z #10 CACHED
+2025-11-22T16:00:02.551272749Z 
+2025-11-22T16:00:02.551277809Z #11 [5/5] COPY . .
+2025-11-22T16:00:02.55128163Z #11 DONE 0.1s
+2025-11-22T16:00:02.551285119Z 
+2025-11-22T16:00:02.55128964Z #12 exporting to docker image format
+2025-11-22T16:00:02.55129476Z #12 exporting layers 0.0s done
+2025-11-22T16:00:02.715691993Z #12 exporting manifest sha256:d8972557c49a9dacadbe673888179330d4c299ad986a319b73832f39d17daa2d done
+2025-11-22T16:00:02.715715573Z #12 exporting config sha256:9155840c698cce20cd0a0a7f117a184f19a840190a20bcabb02fe3563c5b97fc done
+2025-11-22T16:00:02.92882053Z #12 DONE 0.4s
+2025-11-22T16:00:02.92883806Z 
+2025-11-22T16:00:02.92884222Z #13 exporting cache to client directory
+2025-11-22T16:00:02.92884525Z #13 preparing build cache for export
+2025-11-22T16:00:03.003437686Z #13 writing cache image manifest sha256:b791876ffb3ffb7c04c9587dc2877d269c7abb129e87b755e45752ac67f1af10 done
+2025-11-22T16:00:03.003453697Z #13 DONE 0.0s
+2025-11-22T16:00:03.751174593Z Pushing image to registry...
+2025-11-22T16:00:05.594209226Z Upload succeeded
+2025-11-22T16:00:08.657574223Z ==> Deploying...
+2025-11-22T16:00:47.187999927Z ==> Application exited early
+2025-11-22T16:00:47.203711316Z ==> Common ways to troubleshoot your deploy: https://render.com/docs/troubleshooting-deploys

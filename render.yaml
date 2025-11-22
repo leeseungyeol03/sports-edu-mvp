@@ -8,7 +8,7 @@ services:
     region: oregon
     numReplicas: 1
     healthCheckPath: /health
-    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT --app-dir app
+    startCommand: python -c "import os; import sys; print(f'PYTHONPATH: {os.environ.get(\'PYTHONPATH\')}'); print(f'sys.path: {sys.path}'); from app import main" && uvicorn main:app --host 0.0.0.0 --port $PORT --app-dir app
     envVars:
       - key: DATABASE_URL
         fromDatabase:
