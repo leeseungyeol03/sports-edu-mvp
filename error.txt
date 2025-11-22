@@ -1,22 +1,19 @@
-Failed to load resource: the server responded with a status of 404 ()Understand this error
-index-C1fpdXeu.js:120 API Error: Object
-
 Request URL
-https://sports-edu-frontend.onrender.com/api/users/me
+https://sports-edu-backend.onrender.com/users/signup
 Request Method
-GET
+POST
 Status Code
 404 Not Found
 Remote Address
-216.24.57.251:443
+216.24.57.7:443
 Referrer Policy
 strict-origin-when-cross-origin
 :authority
-sports-edu-frontend.onrender.com
+sports-edu-backend.onrender.com
 :method
-GET
+POST
 :path
-/api/users/me
+/users/signup
 :scheme
 https
 accept
@@ -25,10 +22,12 @@ accept-encoding
 gzip, deflate, br, zstd
 accept-language
 ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7,ja;q=0.6
-authorization
-Bearer undefined
+content-length
+100
 content-type
 application/json
+origin
+https://sports-edu-frontend.onrender.com
 priority
 u=1, i
 referer
@@ -44,8 +43,6 @@ empty
 sec-fetch-mode
 cors
 sec-fetch-site
-same-origin
+cross-site
 user-agent
 Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
-
-head
