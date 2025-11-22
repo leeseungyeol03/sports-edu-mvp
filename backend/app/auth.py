@@ -1,3 +1,4 @@
+import os
 from datetime import datetime, timedelta
 from typing import Optional
 from jose import JWTError, jwt
@@ -8,7 +9,8 @@ from sqlalchemy.orm import Session
 from . import models, database
 
 # --- 설정 (배포 시 환경변수로 관리 권장) ---
-SECRET_KEY = "your-secret-key-keep-it-secret"  # 실제 운영에선 os.getenv("SECRET_KEY") 사용
+# 실제 운영에선 os.getenv("SECRET_KEY") 사용, 개발 시 기본값 제공
+SECRET_KEY = os.getenv("SECRET_KEY", "your-super-secret-key-please-change-me")
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 30
 
@@ -37,7 +39,7 @@ def create_access_token(data: dict, expires_delta: Optional[timedelta] = None):
         expire = datetime.utcnow() + timedelta(minutes=15)
     
     to_encode.update({"exp": expire})
-    encoded_jwt = jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
+    encoded_jwt = jwt.encode(to_encode, SECRET_KEY, algorithms=[ALGORITHM])
     return encoded_jwt
 
 # --- 의존성 (Dependency) ---
