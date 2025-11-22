@@ -4,7 +4,7 @@ const BASE_URL = import.meta.env.VITE_API_URL || '';
 const getToken = () => localStorage.getItem('access_token');
 
 // 기본 요청 함수
-const request = async (method, endpoint, body = null, isFormData = false) => {
+const request = async (method, endpoint, body = null, contentType = 'application/json') => {
   const token = getToken();
   const headers = {};
 
@@ -13,9 +13,11 @@ const request = async (method, endpoint, body = null, isFormData = false) => {
     headers['Authorization'] = `Bearer ${token}`;
   }
 
-  // FormData가 아닐 때만 Content-Type: application/json 설정
-  if (!isFormData) {
-    headers['Content-Type'] = 'application/json';
+  // FormData는 브라우저가 Content-Type을 자동으로 설정하므로 헤더에서 제거
+  if (body instanceof FormData) {
+    // Content-Type 헤더를 설정하지 않음
+  } else if (contentType) {
+    headers['Content-Type'] = contentType;
   }
 
   const config = {
@@ -24,7 +26,13 @@ const request = async (method, endpoint, body = null, isFormData = false) => {
   };
 
   if (body) {
-    config.body = isFormData ? body : JSON.stringify(body);
+    if (contentType === 'application/json' && !(body instanceof FormData)) {
+      config.body = JSON.stringify(body);
+    } else if (contentType === 'application/x-www-form-urlencoded' && body instanceof URLSearchParams) {
+      config.body = body.toString();
+    } else {
+      config.body = body; // FormData 또는 기타 타입
+    }
   }
 
   try {
@@ -59,22 +67,22 @@ const request = async (method, endpoint, body = null, isFormData = false) => {
 // 메서드별 단축 함수 내보내기
 export const apiClient = {
   get: (endpoint) => request('GET', endpoint),
-  post: (endpoint, body, isFormData = false) => request('POST', endpoint, body, isFormData),
-  put: (endpoint, body) => request('PUT', endpoint, body),
+  post: (endpoint, body, contentType = 'application/json') => request('POST', endpoint, body, contentType),
+  put: (endpoint, body, contentType = 'application/json') => request('PUT', endpoint, body, contentType),
   delete: (endpoint) => request('DELETE', endpoint),
 };
 
 // New API calls for user management
-export const updateUser = (userData) => request('PUT', '/api/users/me', userData);
-export const updatePassword = (passwordData) => request('PUT', '/api/users/me/password', passwordData);
+export const updateUser = (userData) => apiClient.put('/api/users/me', userData);
+export const updatePassword = (passwordData) => apiClient.put('/api/users/me/password', passwordData);
 
 // New API calls for courses
-export const createCourseAdmin = (courseData) => request('POST', '/api/courses/', courseData);
-export const fetchMyCourses = () => request('GET', '/api/courses/my');
+export const createCourseAdmin = (courseData) => apiClient.post('/api/courses/', courseData);
+export const fetchMyCourses = () => apiClient.get('/api/courses/my');
 
 // New API calls for chat
-export const fetchChatHistory = (otherUserId) => request('GET', `/api/chat/history/${otherUserId}`);
-export const fetchChatRoomsAdmin = () => request('GET', '/api/chat/rooms');
+export const fetchChatHistory = (otherUserId) => apiClient.get(`/api/chat/history/${otherUserId}`);
+export const fetchChatRoomsAdmin = () => apiClient.get('/api/chat/rooms');
 
 // New API calls for signup
-export const signupUser = (userData) => request('POST', '/api/users/signup', userData);
+export const signupUser = (userData) => apiClient.post('/api/users/signup', userData);

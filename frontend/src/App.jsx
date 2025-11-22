@@ -49,19 +49,19 @@ export default function App() {
   };
 
   const fetchMyRentals = async () => {
-    try {
+    try {   
       const data = await apiClient.get('/api/rentals/my');
       setRentals(data);
     } catch (err) { console.error(err); }
   };
 
   const handleLogin = async (username, password) => {
-    const formData = new FormData();
-    formData.append('username', username);
-    formData.append('password', password);
+    const params = new URLSearchParams();
+    params.append('username', username);
+    params.append('password', password);
 
     try {
-      const data = await apiClient.post('/api/users/login', formData, true);
+      const data = await apiClient.post('/api/users/login', params, 'application/x-www-form-urlencoded');
       localStorage.setItem('access_token', data.access_token);
       fetchUserInfo();
     } catch (err) { alert("로그인 실패: " + err.message); }

@@ -1,50 +1,50 @@
-2025-11-22T17:21:00.376081856Z #10 extracting sha256:caaa2cfbab17e0ae333d07d07b4af1acf7afa074f5e2e2dda2d926d81a60bf98
-2025-11-22T17:21:00.602269551Z #10 extracting sha256:caaa2cfbab17e0ae333d07d07b4af1acf7afa074f5e2e2dda2d926d81a60bf98 0.0s done
-2025-11-22T17:21:00.602289771Z #10 sha256:6cd6bb33fe3223743e60187d5c85c4f715f021f0f7425002ddcf7d02ca394b62 278B / 278B done
-2025-11-22T17:21:00.602294182Z #10 extracting sha256:6cd6bb33fe3223743e60187d5c85c4f715f021f0f7425002ddcf7d02ca394b62 0.0s done
-2025-11-22T17:21:00.602297842Z #10 sha256:2988e1e8999d49a930e519ad0dd4970f54854fe1acfba7b7917e06f117631d57 23.39MB / 23.39MB 0.1s done
-2025-11-22T17:21:00.758118668Z #10 extracting sha256:2988e1e8999d49a930e519ad0dd4970f54854fe1acfba7b7917e06f117631d57
-2025-11-22T17:21:03.225820663Z #10 extracting sha256:2988e1e8999d49a930e519ad0dd4970f54854fe1acfba7b7917e06f117631d57 2.6s done
-2025-11-22T17:21:03.400754983Z #10 CACHED
-2025-11-22T17:21:03.400775893Z 
-2025-11-22T17:21:03.400779733Z #11 [5/5] COPY . /app/
-2025-11-22T17:21:03.696498385Z #11 DONE 0.4s
-2025-11-22T17:21:03.811571922Z 
-2025-11-22T17:21:03.811597732Z #12 exporting to docker image format
-2025-11-22T17:21:03.811603583Z #12 exporting layers 0.1s done
-2025-11-22T17:21:03.811608163Z #12 exporting manifest sha256:1831c7ddf8d8baf49fd5d36ef1d69e21a7b4ef60087dc29ed5550609f81d1bdb 0.0s done
-2025-11-22T17:21:03.811612543Z #12 exporting config sha256:1797064d2fa5239e8b4f561a7896d7f2d4e002eebe35399ff44f33a7fa42b5ae
-2025-11-22T17:21:03.978214302Z #12 exporting config sha256:1797064d2fa5239e8b4f561a7896d7f2d4e002eebe35399ff44f33a7fa42b5ae 0.0s done
-2025-11-22T17:21:04.358938371Z #12 DONE 0.7s
-2025-11-22T17:21:04.47449833Z 
-2025-11-22T17:21:04.474533881Z #13 exporting cache to client directory
-2025-11-22T17:21:04.474545551Z #13 writing cache image manifest sha256:9beedc9fcc7541afea67c1297da3d63cca0fa583f1277ad3921003bdffbd3e4e done
-2025-11-22T17:21:04.474550741Z #13 DONE 0.1s
-2025-11-22T17:21:17.444560833Z Pushing image to registry...
-2025-11-22T17:21:19.145235338Z Upload succeeded
-2025-11-22T17:21:21.009236024Z ==> Deploying...
-2025-11-22T17:21:24.872743971Z + python -c 'import os; import sys; print('\''Starting Python application from Docker CMD with verbose debug output:'\''); print('\''PYTHONPATH: '\'' + os.environ.get('\''PYTHONPATH'\'', '\''Not Set'\'')); print('\''sys.path: '\'' + str(sys.path))'
-2025-11-22T17:21:24.969842347Z Starting Python application from Docker CMD with verbose debug output:
-2025-11-22T17:21:24.969858897Z PYTHONPATH: /app
-2025-11-22T17:21:24.969861837Z sys.path: ['', '/app', '/usr/local/lib/python39.zip', '/usr/local/lib/python3.9', '/usr/local/lib/python3.9/lib-dynload', '/usr/local/lib/python3.9/site-packages']
-2025-11-22T17:21:24.971918329Z + cd /app/app
-2025-11-22T17:21:24.971965199Z + uvicorn main:app --host 0.0.0.0 --port 10000
-2025-11-22T17:21:33.574244308Z INFO:main:Attempt 1/5: Creating database tables...
-2025-11-22T17:21:34.057284861Z INFO:main:Database tables created successfully.
-2025-11-22T17:21:34.175372051Z INFO:     Started server process [7]
-2025-11-22T17:21:34.260461451Z INFO:     Waiting for application startup.
-2025-11-22T17:21:34.260768956Z INFO:     Application startup complete.
-2025-11-22T17:21:34.261111542Z INFO:     Uvicorn running on http://0.0.0.0:10000 (Press CTRL+C to quit)
-2025-11-22T17:21:35.250302173Z INFO:     127.0.0.1:58166 - "HEAD / HTTP/1.1" 404 Not Found
-2025-11-22T17:21:41.780550947Z ==> Your service is live 🎉
-2025-11-22T17:21:41.809955235Z ==> 
-2025-11-22T17:21:41.838056853Z ==> ///////////////////////////////////////////////////////////
-2025-11-22T17:21:41.866587401Z ==> 
-2025-11-22T17:21:41.894002009Z ==> Available at your primary URL https://sports-edu-backend.onrender.com
-2025-11-22T17:21:41.921883367Z ==> 
-2025-11-22T17:21:41.950505255Z ==> ///////////////////////////////////////////////////////////
-2025-11-22T17:21:42.971109677Z INFO:     10.23.40.19:0 - "GET / HTTP/1.1" 404 Not Found
-2025-11-22T17:22:15.507705146Z INFO:     10.23.58.18:0 - "GET / HTTP/1.1" 404 Not Found
-2025-11-22T17:22:15.782438318Z INFO:     10.23.58.18:0 - "GET /favicon.ico HTTP/1.1" 404 Not Found
-2025-11-22T17:22:36.207651632Z INFO:     10.23.40.19:0 - "OPTIONS /equipment/ HTTP/1.1" 200 OK
-2025-11-22T17:22:36.371967743Z INFO:     10.22.62.66:0 - "GET /equipment/ HTTP/1.1" 404 Not Found
+2025-11-22T17:31:13.780495802Z #11 extracting sha256:6cd6bb33fe3223743e60187d5c85c4f715f021f0f7425002ddcf7d02ca394b62 0.0s done
+2025-11-22T17:31:13.780500503Z #11 sha256:2988e1e8999d49a930e519ad0dd4970f54854fe1acfba7b7917e06f117631d57 23.39MB / 23.39MB 0.1s done
+2025-11-22T17:31:13.934662883Z #11 extracting sha256:2988e1e8999d49a930e519ad0dd4970f54854fe1acfba7b7917e06f117631d57
+2025-11-22T17:31:15.91572072Z #11 extracting sha256:2988e1e8999d49a930e519ad0dd4970f54854fe1acfba7b7917e06f117631d57 2.1s done
+2025-11-22T17:31:16.097406628Z #11 sha256:967f49808c05b8695e60842b513739770e2e9be48b83c0f49514bfe9fe24bee3 35.26kB / 35.26kB done
+2025-11-22T17:31:16.097430479Z #11 extracting sha256:967f49808c05b8695e60842b513739770e2e9be48b83c0f49514bfe9fe24bee3
+2025-11-22T17:31:19.878264054Z #11 extracting sha256:967f49808c05b8695e60842b513739770e2e9be48b83c0f49514bfe9fe24bee3 3.9s done
+2025-11-22T17:31:21.158206131Z #11 CACHED
+2025-11-22T17:31:21.322781912Z 
+2025-11-22T17:31:21.322804364Z #12 exporting to docker image format
+2025-11-22T17:31:21.322809504Z #12 exporting layers done
+2025-11-22T17:31:21.322815074Z #12 exporting manifest sha256:1831c7ddf8d8baf49fd5d36ef1d69e21a7b4ef60087dc29ed5550609f81d1bdb 0.1s done
+2025-11-22T17:31:21.322819704Z #12 exporting config sha256:1797064d2fa5239e8b4f561a7896d7f2d4e002eebe35399ff44f33a7fa42b5ae
+2025-11-22T17:31:21.504146082Z #12 exporting config sha256:1797064d2fa5239e8b4f561a7896d7f2d4e002eebe35399ff44f33a7fa42b5ae 0.0s done
+2025-11-22T17:31:21.730588771Z #12 DONE 0.5s
+2025-11-22T17:31:21.872486015Z 
+2025-11-22T17:31:21.872506306Z #13 exporting cache to client directory
+2025-11-22T17:31:21.872510076Z #13 writing cache image manifest sha256:9beedc9fcc7541afea67c1297da3d63cca0fa583f1277ad3921003bdffbd3e4e done
+2025-11-22T17:31:21.872513096Z #13 DONE 0.1s
+2025-11-22T17:31:25.321449719Z Pushing image to registry...
+2025-11-22T17:31:25.908173768Z Upload succeeded
+2025-11-22T17:31:31.908164097Z ==> Deploying...
+2025-11-22T17:31:36.45982504Z + python -c 'import os; import sys; print('\''Starting Python application from Docker CMD with verbose debug output:'\''); print('\''PYTHONPATH: '\'' + os.environ.get('\''PYTHONPATH'\'', '\''Not Set'\'')); print('\''sys.path: '\'' + str(sys.path))'
+2025-11-22T17:31:36.538630302Z Starting Python application from Docker CMD with verbose debug output:
+2025-11-22T17:31:36.538662673Z PYTHONPATH: /app
+2025-11-22T17:31:36.538666823Z sys.path: ['', '/app', '/usr/local/lib/python39.zip', '/usr/local/lib/python3.9', '/usr/local/lib/python3.9/lib-dynload', '/usr/local/lib/python3.9/site-packages']
+2025-11-22T17:31:36.542060847Z + cd /app/app
+2025-11-22T17:31:36.542133049Z + uvicorn main:app --host 0.0.0.0 --port 10000
+2025-11-22T17:31:45.048045975Z INFO:main:Attempt 1/5: Creating database tables...
+2025-11-22T17:31:45.165921041Z INFO:main:Database tables created successfully.
+2025-11-22T17:31:45.344746149Z INFO:     Started server process [7]
+2025-11-22T17:31:45.34477568Z INFO:     Waiting for application startup.
+2025-11-22T17:31:45.345038175Z INFO:     Application startup complete.
+2025-11-22T17:31:45.345314152Z INFO:     Uvicorn running on http://0.0.0.0:10000 (Press CTRL+C to quit)
+2025-11-22T17:31:46.333421725Z INFO:     127.0.0.1:38560 - "HEAD / HTTP/1.1" 404 Not Found
+2025-11-22T17:31:52.855019367Z ==> Your service is live 🎉
+2025-11-22T17:31:52.884311474Z ==> 
+2025-11-22T17:31:52.911576172Z ==> ///////////////////////////////////////////////////////////
+2025-11-22T17:31:52.939781761Z ==> 
+2025-11-22T17:31:52.968438938Z ==> Available at your primary URL https://sports-edu-backend.onrender.com
+2025-11-22T17:31:52.995659656Z ==> 
+2025-11-22T17:31:53.023522574Z ==> ///////////////////////////////////////////////////////////
+2025-11-22T17:31:54.071140854Z INFO:     10.23.40.19:0 - "GET / HTTP/1.1" 404 Not Found
+2025-11-22T17:36:47.267703237Z INFO:     10.23.40.19:0 - "OPTIONS /api/equipment/ HTTP/1.1" 200 OK
+2025-11-22T17:36:47.857279021Z INFO:     10.23.58.18:0 - "GET /api/equipment/ HTTP/1.1" 200 OK
+2025-11-22T17:36:54.400493595Z ==> Detected service running on port 10000
+2025-11-22T17:36:54.576407402Z ==> Docs on specifying a port: https://render.com/docs/web-services#port-binding
+2025-11-22T17:37:06.555546511Z INFO:     10.23.40.19:0 - "OPTIONS /users/signup HTTP/1.1" 200 OK
+2025-11-22T17:37:06.725779604Z INFO:     10.23.40.19:0 - "POST /users/signup HTTP/1.1" 404 Not Found
+2025-11-22T17:37:21.2708479Z INFO:     10.23.58.18:0 - "POST /users/signup HTTP/1.1" 404 Not Found
