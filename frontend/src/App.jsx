@@ -29,14 +29,14 @@ export default function App() {
 
   const fetchEquipment = async () => {
     try {
-      const data = await apiClient.get('/equipment/');
+      const data = await apiClient.get('/api/equipment/');
       setEquipmentData(data);
     } catch (err) { console.error(err); }
   };
 
   const fetchUserInfo = async () => {
     try {
-      const userData = await apiClient.get('/users/me');
+      const userData = await apiClient.get('/api/users/me');
       setUser(userData);
       
       if (userData.role === 'ADMIN') setView('admin'); 
@@ -50,7 +50,7 @@ export default function App() {
 
   const fetchMyRentals = async () => {
     try {
-      const data = await apiClient.get('/rentals/my');
+      const data = await apiClient.get('/api/rentals/my');
       setRentals(data);
     } catch (err) { console.error(err); }
   };
@@ -61,7 +61,7 @@ export default function App() {
     formData.append('password', password);
 
     try {
-      const data = await apiClient.post('/users/login', formData, true);
+      const data = await apiClient.post('/api/users/login', formData, true);
       localStorage.setItem('access_token', data.access_token);
       fetchUserInfo();
     } catch (err) { alert("로그인 실패: " + err.message); }
@@ -75,7 +75,7 @@ export default function App() {
 
   const handleRent = async (rentalInfo) => {
       try {
-        await apiClient.post('/rentals/', {
+        await apiClient.post('/api/rentals/', {
           equip_id: rentalInfo.equip_id, 
           start_date: new Date(rentalInfo.startDate).toISOString(),
           end_date: new Date(rentalInfo.endDate).toISOString(),
