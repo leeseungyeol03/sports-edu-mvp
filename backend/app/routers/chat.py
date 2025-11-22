@@ -1,3 +1,8 @@
+import sys
+import os
+# 상위 폴더 경로 추가 (Import Error 방지)
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 import logging
 from fastapi import APIRouter, Depends, HTTPException, status, WebSocket, WebSocketDisconnect
 from fastapi.encoders import jsonable_encoder
@@ -16,7 +21,7 @@ logger = logging.getLogger(__name__)
 
 router = APIRouter()
 
-@router.websocket("/ws/{rental_id}")
+@router.websocket("/ws/{rental_id}/{user_id}")
 async def websocket_endpoint(
     websocket: WebSocket,
     rental_id: int,

@@ -1,9 +1,9 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from . import models
-from .database import engine
+import models
+from database import engine
 # routers 패키지에서 courses 모듈 추가 임포트
-from .routers import users, equipment, rentals, courses, chat # chat 모듈 추가
+from routers import users, equipment, rentals, courses, chat # chat 모듈 추가
 
 # DB 테이블 생성
 models.Base.metadata.create_all(bind=engine)
@@ -25,7 +25,7 @@ app.include_router(equipment.router, prefix="/api/equipment", tags=["equipment"]
 app.include_router(rentals.router, prefix="/api/rentals", tags=["rentals"])
 # courses 라우터 등록 (이제 /courses URL로 접근 가능)
 app.include_router(courses.router, prefix="/api/courses", tags=["courses"])
-app.include_router(chat.router, prefix="/api/chat", tags=["chat"]) # chat 라우터 등록
+app.include_router(chat.router) 
 
 @app.get("/health")
 def health_check():
