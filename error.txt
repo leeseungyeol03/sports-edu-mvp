@@ -1,24 +1,51 @@
-INFO:     connection closed
-INFO:     127.0.0.1:50799 - "GET /api/chat/history/1 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:65111 - "WebSocket /api/chat/ws/1?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkZGQiLCJleHAiOjE3NjM4MTcxMjZ9.TXk5saPeZzWvs-Pakgw9TGZnsyh47ACG8x14on-UOOY" [accepted]
-WebSocket connected to rental_id: 1. Total connections for this room: 1
-INFO:     connection open
-INFO:     127.0.0.1:61174 - "GET /api/chat/history/1 HTTP/1.1" 200 OK
-INFO:app.routers.chat:Broadcasting message: {'sender_id': 2, 'receiver_id': 1, 'rental_id': 1, 'message': 'ㅇㅇ', 'id': 19, 'timestamp': '2025-11-22T21:50:00.345453', 'sender': {'username': 'ddd', 'affiliation': 'ddd', 'name': 'ddd', 'user_id': 2, 'role': 'USER'}, 'receiver': {'username': 'aaa', 'affiliation': '서울대', 'name': '이승열', 'user_id': 1, 'role': 'ADMIN'}, 'rental': {'rental_id': 1, 'user_id': 2, 'equip_id': 1, 'status': 'APPROVED', 'start_date': datetime.datetime(2025, 11, 22, 0, 0), 'end_date': datetime.datetime(2025, 11, 23, 0, 0), 'equipment': {'name': 'd', 'category': '펜싱', 'rating': 0.0, 'review_count': 0, 'badge': None, 'total_qty': 1, 'available_qty': 0, 'rental_fee': 2323, 'description': 'a', 'image_url': '📦', 'equip_id': 1, 'instructor_id': 1, 'instructor': {'username': 'aaa', 'affiliation': '서울대', 'name': '이승열', 'user_id': 1, 'role': 'ADMIN'}}, 'user': {'username': 'ddd', 'affiliation': 'ddd', 'name': 'ddd', 'user_id': 2, 'role': 'USER'}}} to rental_id: 1      
-ERROR:app.routers.chat:WebSocket error for rental_id 1: Object of type datetime is not JSON serializable
-Traceback (most recent call last):
-  File "C:\Users\211833\Desktop\vscodepj\sports_edu_mvp\backend\app\routers\chat.py", line 77, in websocket_endpoint
-    await manager.broadcast(json.dumps(full_message), str(rental_id))
-                            ~~~~~~~~~~^^^^^^^^^^^^^^
-  File "C:\Users\211833\AppData\Local\anaconda3\Lib\json\__init__.py", line 231, in dumps
-    return _default_encoder.encode(obj)
-           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^
-  File "C:\Users\211833\AppData\Local\anaconda3\Lib\json\encoder.py", line 200, in encode
-    chunks = self.iterencode(o, _one_shot=True)
-  File "C:\Users\211833\AppData\Local\anaconda3\Lib\json\encoder.py", line 261, in iterencode
-    return _iterencode(o, 0)
-  File "C:\Users\211833\AppData\Local\anaconda3\Lib\json\encoder.py", line 180, in default
-    raise TypeError(f'Object of type {o.__class__.__name__} '
-                    f'is not JSON serializable')
-TypeError: Object of type datetime is not JSON serializable
-WebSocket disconnected from rental_id: 1.
+Failed to load resource: the server responded with a status of 404 ()Understand this error
+index-C1fpdXeu.js:120 API Error: Object
+
+Request URL
+https://sports-edu-frontend.onrender.com/api/users/me
+Request Method
+GET
+Status Code
+404 Not Found
+Remote Address
+216.24.57.251:443
+Referrer Policy
+strict-origin-when-cross-origin
+:authority
+sports-edu-frontend.onrender.com
+:method
+GET
+:path
+/api/users/me
+:scheme
+https
+accept
+*/*
+accept-encoding
+gzip, deflate, br, zstd
+accept-language
+ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7,ja;q=0.6
+authorization
+Bearer undefined
+content-type
+application/json
+priority
+u=1, i
+referer
+https://sports-edu-frontend.onrender.com/
+sec-ch-ua
+"Chromium";v="142", "Google Chrome";v="142", "Not_A Brand";v="99"
+sec-ch-ua-mobile
+?0
+sec-ch-ua-platform
+"Windows"
+sec-fetch-dest
+empty
+sec-fetch-mode
+cors
+sec-fetch-site
+same-origin
+user-agent
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
+
+head

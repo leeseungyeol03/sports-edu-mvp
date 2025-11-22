@@ -1,4 +1,4 @@
-const BASE_URL = '/api';
+const BASE_URL = import.meta.env.VITE_API_URL || '/api';
 
 // 로컬 스토리지에서 토큰 가져오기
 const getToken = () => localStorage.getItem('access_token');
