@@ -1,6 +1,9 @@
 # Python 3.9 이미지 사용
 FROM python:3.9-slim
 
+# [추가] 로그가 버퍼링 없이 즉시 출력되도록 설정
+ENV PYTHONUNBUFFERED=1
+
 # 작업 디렉토리 설정
 WORKDIR /app
 
@@ -11,7 +14,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 # 소스 코드 복사
 COPY . .
 
-# 포트 노출 (Render는 기본적으로 10000 포트 사용)
+# 포트 노출
 EXPOSE 10000
 
 # 앱 실행 명령어

@@ -21,7 +21,7 @@ logger = logging.getLogger(__name__)
 
 router = APIRouter()
 
-@router.websocket("/ws/{rental_id}/{user_id}")
+@router.websocket("/ws/{rental_id}")
 async def websocket_endpoint(
     websocket: WebSocket,
     rental_id: int,
