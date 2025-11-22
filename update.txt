@@ -1,0 +1,18 @@
+현재 백엔드 API 호출 시 `read_all_rentals` 함수에서 **`expected ORM mapped attribute for loader strategy argument`** 에러가 발생하고 있습니다.
+이는 `Equipment.instructor`가 더 이상 DB 컬럼이나 관계(Relationship)가 아니라 Python 프로퍼티(`@property`)로 변경되었는데, SQLAlchemy 쿼리에서 이를 `joinedload`하려고 시도했기 때문입니다.
+
+따라서 `backend/routers/rentals.py` 파일을 다음과 같이 수정해주세요.
+
+### 수정 지시사항 (`backend/routers/rentals.py`)
+
+1. **`read_all_rentals` 함수 수정**
+   - `db.query(models.Rental).options(...)` 부분에서 `joinedload` 체인을 수정해야 합니다.
+   - **변경 전 (추정):** `joinedload(models.Equipment.instructor)` (프로퍼티라 에러 발생)
+   - **변경 후:** `joinedload(models.Equipment.instructor_user)` (실제 User 테이블과의 관계)
+   - `models.Rental.user`도 함께 로딩(`joinedload`)되어야 합니다.
+
+2. **`read_my_rentals` 함수 수정**
+   - 여기서도 장비 정보를 가져올 때 강사 정보가 필요하므로, `options`를 추가하여 `instructor_user`를 로딩하도록 수정하세요.
+   - 코드: `.options(joinedload(models.Rental.equipment).joinedload(models.Equipment.instructor_user))`
+
+위 내용을 반영하여 수정된 `backend/routers/rentals.py`의 **전체 코드**를 작성해주세요.
