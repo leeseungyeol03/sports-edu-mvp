@@ -4,10 +4,10 @@ from sqlalchemy.exc import OperationalError
 import time # Import time for sleep
 import logging # Import logging
 
-from . import models
-from .database import engine
+from app import models # Changed from . import models
+from app.database import engine # Changed from .database import engine
 # routers 패키지에서 courses 모듈 추가 임포트
-from .routers import users, equipment, rentals, courses, chat # chat 모듈 추가
+from app.routers import users, equipment, rentals, courses, chat # Changed from .routers import ...
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)

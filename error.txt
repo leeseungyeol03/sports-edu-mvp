@@ -1,50 +1,172 @@
-2025-11-22T16:34:49.065084597Z #7 transferring context: 153.48kB 0.0s done
-2025-11-22T16:34:49.065087357Z #7 DONE 0.1s
-2025-11-22T16:34:49.23511432Z 
-2025-11-22T16:34:49.327618622Z #8 [2/5] RUN mkdir /app
-2025-11-22T16:34:49.327631552Z #8 CACHED
-2025-11-22T16:34:49.327635532Z 
-2025-11-22T16:34:49.327640832Z #9 [3/5] COPY requirements.txt /app/
-2025-11-22T16:34:49.327645413Z #9 CACHED
-2025-11-22T16:34:49.327649453Z 
-2025-11-22T16:34:49.327654133Z #10 [4/5] RUN pip install --no-cache-dir -r /app/requirements.txt
-2025-11-22T16:34:49.655092024Z #10 sha256:38513bd7256313495cdd83b3b0915a633cfa475dc2a07072ab2c8d191020ca5d 29.78MB / 29.78MB 0.2s
-2025-11-22T16:34:50.066680146Z #10 sha256:38513bd7256313495cdd83b3b0915a633cfa475dc2a07072ab2c8d191020ca5d 29.78MB / 29.78MB 0.5s done
-2025-11-22T16:34:50.066697956Z #10 extracting sha256:38513bd7256313495cdd83b3b0915a633cfa475dc2a07072ab2c8d191020ca5d
-2025-11-22T16:34:51.080526601Z #10 extracting sha256:38513bd7256313495cdd83b3b0915a633cfa475dc2a07072ab2c8d191020ca5d 1.0s done
-2025-11-22T16:34:51.54175345Z #10 sha256:b3ec39b36ae8c03a3e09854de4ec4aa08381dfed84a9daa075048c2e3df3881d 1.29MB / 1.29MB 0.0s done
-2025-11-22T16:34:51.667208938Z #10 extracting sha256:b3ec39b36ae8c03a3e09854de4ec4aa08381dfed84a9daa075048c2e3df3881d
-2025-11-22T16:34:54.27893628Z #10 extracting sha256:b3ec39b36ae8c03a3e09854de4ec4aa08381dfed84a9daa075048c2e3df3881d 2.6s done
-2025-11-22T16:34:54.424552154Z #10 sha256:fc74430849022d13b0d44b8969a953f842f59c6e9d1a0c2c83d710affa286c08 13.88MB / 13.88MB 0.1s done
-2025-11-22T16:34:54.586773098Z #10 extracting sha256:fc74430849022d13b0d44b8969a953f842f59c6e9d1a0c2c83d710affa286c08
-2025-11-22T16:34:55.158025003Z #10 extracting sha256:fc74430849022d13b0d44b8969a953f842f59c6e9d1a0c2c83d710affa286c08 0.7s done
-2025-11-22T16:34:55.258266252Z #10 sha256:ea56f685404adf81680322f152d2cfec62115b30dda481c2c450078315beb508 251B / 251B done
-2025-11-22T16:34:55.258283362Z #10 extracting sha256:ea56f685404adf81680322f152d2cfec62115b30dda481c2c450078315beb508 0.0s done
-2025-11-22T16:34:55.258296272Z #10 sha256:a56e771a8d2f06ce99b8d2bacf83687cc0922dd4def3f2f4547c775927085775 92B / 92B done
-2025-11-22T16:34:55.258298663Z #10 extracting sha256:a56e771a8d2f06ce99b8d2bacf83687cc0922dd4def3f2f4547c775927085775 0.0s done
-2025-11-22T16:34:55.258300952Z #10 sha256:5853386260e5e58fb91bceb1509edcee5c5f64929f778b475b2b80b5ab776d32 278B / 278B done
-2025-11-22T16:34:55.258302663Z #10 extracting sha256:5853386260e5e58fb91bceb1509edcee5c5f64929f778b475b2b80b5ab776d32
-2025-11-22T16:34:55.422660529Z #10 extracting sha256:5853386260e5e58fb91bceb1509edcee5c5f64929f778b475b2b80b5ab776d32 0.0s done
-2025-11-22T16:34:55.422681209Z #10 sha256:10971ab6c032e8120d607fb6c28fd5775e8413ce02832b9c27f2e1f180a7bf71 23.39MB / 23.39MB 0.1s done
-2025-11-22T16:34:55.576693926Z #10 extracting sha256:10971ab6c032e8120d607fb6c28fd5775e8413ce02832b9c27f2e1f180a7bf71
-2025-11-22T16:34:57.938902867Z #10 extracting sha256:10971ab6c032e8120d607fb6c28fd5775e8413ce02832b9c27f2e1f180a7bf71 2.5s done
-2025-11-22T16:34:58.104146394Z #10 CACHED
-2025-11-22T16:34:58.104164794Z 
-2025-11-22T16:34:58.104169764Z #11 [5/5] COPY . /app/
-2025-11-22T16:34:58.104173484Z #11 DONE 0.0s
-2025-11-22T16:34:58.104176844Z 
-2025-11-22T16:34:58.104181405Z #12 exporting to docker image format
-2025-11-22T16:34:58.104185735Z #12 exporting layers 0.1s done
-2025-11-22T16:34:58.285298205Z #12 exporting manifest sha256:36ce8f66773e63ab13f4b8d2f115e526e66c1ac919a565571c977ad0b4b20605 0.0s done
-2025-11-22T16:34:58.285328556Z #12 exporting config sha256:a461604e0ccb49fc82a9a6e251c497bb79c966942976e9d1871a7ae2863c2765 0.0s done
-2025-11-22T16:34:58.502596578Z #12 DONE 0.5s
-2025-11-22T16:34:58.502618219Z 
-2025-11-22T16:34:58.502623739Z #13 exporting cache to client directory
-2025-11-22T16:34:58.502628029Z #13 preparing build cache for export
-2025-11-22T16:34:58.657018535Z #13 writing cache image manifest sha256:838263975b54f01b6043d31c4821b012c57d44efe64956b4d97b6be82ab77b9a 0.0s done
-2025-11-22T16:34:58.657035705Z #13 DONE 0.1s
-2025-11-22T16:34:59.618889555Z Pushing image to registry...
-2025-11-22T16:35:01.277627271Z Upload succeeded
-2025-11-22T16:35:03.47363591Z ==> Deploying...
-2025-11-22T16:35:23.84271846Z ==> Application exited early
-2025-11-22T16:35:23.862475118Z ==> Common ways to troubleshoot your deploy: https://render.com/docs/troubleshooting-deploys
+2025-11-22T17:15:25.924222668Z ==> Downloading cache...
+2025-11-22T17:15:25.961668836Z ==> Cloning from https://github.com/leeseungyeol03/sports-edu-mvp
+2025-11-22T17:15:26.539831454Z ==> Checking out commit eb7ab32ebda779ecb0a4b530cc5b9d98cb099089 in branch main
+2025-11-22T17:15:30.512134658Z ==> Downloaded 110MB in 3s. Extraction took 0s.
+2025-11-22T17:15:54.039988118Z #1 [internal] load build definition from Dockerfile
+2025-11-22T17:15:55.416648915Z #1 transferring dockerfile:
+2025-11-22T17:15:55.569200233Z #1 transferring dockerfile: 939B done
+2025-11-22T17:15:55.801057675Z #1 DONE 1.8s
+2025-11-22T17:15:56.003518214Z 
+2025-11-22T17:15:56.003539464Z #2 [internal] load metadata for docker.io/library/python:3.9-slim
+2025-11-22T17:15:56.382196995Z #2 ...
+2025-11-22T17:15:56.382213785Z 
+2025-11-22T17:15:56.382217525Z #3 [auth] library/python:pull render-prod/docker-mirror-repository/library/python:pull token for us-west1-docker.pkg.dev
+2025-11-22T17:15:56.382222116Z #3 DONE 0.0s
+2025-11-22T17:15:56.5325286Z 
+2025-11-22T17:15:56.53255296Z #2 [internal] load metadata for docker.io/library/python:3.9-slim
+2025-11-22T17:15:58.310014935Z #2 DONE 2.3s
+2025-11-22T17:15:58.460914203Z 
+2025-11-22T17:15:58.460932314Z #4 [internal] load .dockerignore
+2025-11-22T17:15:58.677868634Z #4 transferring context:
+2025-11-22T17:15:58.829734145Z #4 transferring context: 2B done
+2025-11-22T17:15:58.920024254Z #4 DONE 0.6s
+2025-11-22T17:15:59.043079058Z 
+2025-11-22T17:15:59.043102049Z #5 importing cache manifest from local:11583632557964241848
+2025-11-22T17:15:59.043106199Z #5 inferred cache manifest type: application/vnd.oci.image.manifest.v1+json done
+2025-11-22T17:15:59.043109469Z #5 DONE 0.0s
+2025-11-22T17:15:59.043111789Z 
+2025-11-22T17:15:59.043115099Z #6 [internal] load build context
+2025-11-22T17:16:00.375954084Z #6 ...
+2025-11-22T17:16:00.375979574Z 
+2025-11-22T17:16:00.375983734Z #7 [1/5] FROM docker.io/library/python:3.9-slim@sha256:2d97f6910b16bd338d3060f261f53f144965f755599aab1acda1e13cf1731b1b
+2025-11-22T17:16:00.375986924Z #7 resolve docker.io/library/python:3.9-slim@sha256:2d97f6910b16bd338d3060f261f53f144965f755599aab1acda1e13cf1731b1b 1.3s done
+2025-11-22T17:16:00.375989894Z #7 DONE 1.4s
+2025-11-22T17:16:00.518852598Z 
+2025-11-22T17:16:00.518876539Z #6 [internal] load build context
+2025-11-22T17:16:00.677921845Z #6 transferring context: 153.91kB done
+2025-11-22T17:16:00.910069233Z #6 DONE 1.9s
+2025-11-22T17:16:01.122220377Z 
+2025-11-22T17:16:01.122247477Z #8 [2/5] RUN mkdir /app
+2025-11-22T17:16:01.122251857Z #8 CACHED
+2025-11-22T17:16:01.122255517Z 
+2025-11-22T17:16:01.122260438Z #9 [3/5] COPY requirements.txt /app/
+2025-11-22T17:16:01.122264318Z #9 CACHED
+2025-11-22T17:16:01.122267868Z 
+2025-11-22T17:16:01.122274248Z #10 [4/5] RUN pip install --no-cache-dir -r /app/requirements.txt
+2025-11-22T17:16:02.343939387Z #10 sha256:38513bd7256313495cdd83b3b0915a633cfa475dc2a07072ab2c8d191020ca5d 29.78MB / 29.78MB 0.2s
+2025-11-22T17:16:03.094096304Z #10 sha256:38513bd7256313495cdd83b3b0915a633cfa475dc2a07072ab2c8d191020ca5d 29.78MB / 29.78MB 0.7s done
+2025-11-22T17:16:03.543105251Z #10 extracting sha256:38513bd7256313495cdd83b3b0915a633cfa475dc2a07072ab2c8d191020ca5d
+2025-11-22T17:16:05.26510566Z #10 extracting sha256:38513bd7256313495cdd83b3b0915a633cfa475dc2a07072ab2c8d191020ca5d 1.7s done
+2025-11-22T17:16:06.033964521Z #10 sha256:b3ec39b36ae8c03a3e09854de4ec4aa08381dfed84a9daa075048c2e3df3881d 1.29MB / 1.29MB 0.1s done
+2025-11-22T17:16:06.493601914Z #10 extracting sha256:b3ec39b36ae8c03a3e09854de4ec4aa08381dfed84a9daa075048c2e3df3881d
+2025-11-22T17:16:12.415719164Z #10 extracting sha256:b3ec39b36ae8c03a3e09854de4ec4aa08381dfed84a9daa075048c2e3df3881d 5.9s done
+2025-11-22T17:16:12.549036346Z #10 sha256:fc74430849022d13b0d44b8969a953f842f59c6e9d1a0c2c83d710affa286c08 13.88MB / 13.88MB 0.1s done
+2025-11-22T17:16:12.710011589Z #10 extracting sha256:fc74430849022d13b0d44b8969a953f842f59c6e9d1a0c2c83d710affa286c08
+2025-11-22T17:16:13.322013446Z #10 extracting sha256:fc74430849022d13b0d44b8969a953f842f59c6e9d1a0c2c83d710affa286c08 0.8s done
+2025-11-22T17:16:13.434550255Z #10 sha256:ea56f685404adf81680322f152d2cfec62115b30dda481c2c450078315beb508 251B / 251B done
+2025-11-22T17:16:13.434570205Z #10 extracting sha256:ea56f685404adf81680322f152d2cfec62115b30dda481c2c450078315beb508 0.0s done
+2025-11-22T17:16:13.434574895Z #10 sha256:caaa2cfbab17e0ae333d07d07b4af1acf7afa074f5e2e2dda2d926d81a60bf98 92B / 92B done
+2025-11-22T17:16:13.434578706Z #10 extracting sha256:caaa2cfbab17e0ae333d07d07b4af1acf7afa074f5e2e2dda2d926d81a60bf98 0.0s done
+2025-11-22T17:16:13.581067027Z #10 sha256:6cd6bb33fe3223743e60187d5c85c4f715f021f0f7425002ddcf7d02ca394b62 278B / 278B done
+2025-11-22T17:16:13.581088478Z #10 extracting sha256:6cd6bb33fe3223743e60187d5c85c4f715f021f0f7425002ddcf7d02ca394b62 0.1s done
+2025-11-22T17:16:13.745120824Z #10 sha256:2988e1e8999d49a930e519ad0dd4970f54854fe1acfba7b7917e06f117631d57 23.39MB / 23.39MB 0.2s
+2025-11-22T17:16:13.916675603Z #10 sha256:2988e1e8999d49a930e519ad0dd4970f54854fe1acfba7b7917e06f117631d57 23.39MB / 23.39MB 0.2s done
+2025-11-22T17:16:13.916698514Z #10 extracting sha256:2988e1e8999d49a930e519ad0dd4970f54854fe1acfba7b7917e06f117631d57
+2025-11-22T17:16:23.922994428Z #10 extracting sha256:2988e1e8999d49a930e519ad0dd4970f54854fe1acfba7b7917e06f117631d57 10.2s done
+2025-11-22T17:16:24.121694675Z #10 CACHED
+2025-11-22T17:16:24.121715536Z 
+2025-11-22T17:16:24.121720386Z #11 [5/5] COPY . /app/
+2025-11-22T17:16:42.265698721Z #11 DONE 18.3s
+2025-11-22T17:16:42.390573918Z 
+2025-11-22T17:16:42.390598719Z #12 exporting to docker image format
+2025-11-22T17:16:42.390605839Z #12 exporting layers 0.1s done
+2025-11-22T17:16:42.588382164Z #12 exporting manifest sha256:6ec3d572adeba55f11e876d9cbc17f6bcaecbd62d069a88cd69fc725bf5c4b0b 0.0s done
+2025-11-22T17:16:42.588421935Z #12 exporting config sha256:1ff46e115987002ccefcde079a7196f2f746d1694359dca7a46d2070768d7448 0.0s done
+2025-11-22T17:16:42.816104154Z #12 DONE 0.5s
+2025-11-22T17:16:42.987186792Z 
+2025-11-22T17:16:42.987210983Z #13 exporting cache to client directory
+2025-11-22T17:16:42.987216093Z #13 writing cache image manifest sha256:de59ed32b8964510b94e576645475d23bf882b82b1228dc6f806688cceac37a9 0.0s done
+2025-11-22T17:16:42.987219233Z #13 DONE 0.1s
+2025-11-22T17:16:43.299241777Z Pushing image to registry...
+2025-11-22T17:16:44.934708566Z Upload succeeded
+2025-11-22T17:16:57.452590857Z ==> Deploying...
+2025-11-22T17:17:02.424491842Z + python -c 'import os; import sys; print('\''Starting Python application from Docker CMD with verbose debug output:'\''); print('\''PYTHONPATH: '\'' + os.environ.get('\''PYTHONPATH'\'', '\''Not Set'\'')); print('\''sys.path: '\'' + str(sys.path))'
+2025-11-22T17:17:02.49434046Z Starting Python application from Docker CMD with verbose debug output:
+2025-11-22T17:17:02.494363601Z PYTHONPATH: /app
+2025-11-22T17:17:02.494367441Z sys.path: ['', '/app', '/usr/local/lib/python39.zip', '/usr/local/lib/python3.9', '/usr/local/lib/python3.9/lib-dynload', '/usr/local/lib/python3.9/site-packages']
+2025-11-22T17:17:02.498410527Z + cd /app/app
+2025-11-22T17:17:02.498428007Z + uvicorn main:app --host 0.0.0.0 --port 10000
+2025-11-22T17:17:08.693881571Z Traceback (most recent call last):
+2025-11-22T17:17:08.693913312Z   File "/usr/local/bin/uvicorn", line 8, in <module>
+2025-11-22T17:17:08.693919372Z     sys.exit(main())
+2025-11-22T17:17:08.693924022Z   File "/usr/local/lib/python3.9/site-packages/click/core.py", line 1161, in __call__
+2025-11-22T17:17:08.693928232Z     return self.main(*args, **kwargs)
+2025-11-22T17:17:08.693932702Z   File "/usr/local/lib/python3.9/site-packages/click/core.py", line 1082, in main
+2025-11-22T17:17:08.693937332Z     rv = self.invoke(ctx)
+2025-11-22T17:17:08.693941422Z   File "/usr/local/lib/python3.9/site-packages/click/core.py", line 1443, in invoke
+2025-11-22T17:17:08.693945492Z     return ctx.invoke(self.callback, **ctx.params)
+2025-11-22T17:17:08.693949842Z   File "/usr/local/lib/python3.9/site-packages/click/core.py", line 788, in invoke
+2025-11-22T17:17:08.693953993Z     return __callback(*args, **kwargs)
+2025-11-22T17:17:08.693958093Z   File "/usr/local/lib/python3.9/site-packages/uvicorn/main.py", line 418, in main
+2025-11-22T17:17:08.693962213Z     run(
+2025-11-22T17:17:08.693966603Z   File "/usr/local/lib/python3.9/site-packages/uvicorn/main.py", line 587, in run
+2025-11-22T17:17:08.693971033Z     server.run()
+2025-11-22T17:17:08.693975043Z   File "/usr/local/lib/python3.9/site-packages/uvicorn/server.py", line 62, in run
+2025-11-22T17:17:08.693979103Z     return asyncio.run(self.serve(sockets=sockets))
+2025-11-22T17:17:08.693983273Z   File "/usr/local/lib/python3.9/asyncio/runners.py", line 44, in run
+2025-11-22T17:17:08.693990063Z     return loop.run_until_complete(main)
+2025-11-22T17:17:08.693994494Z   File "/usr/local/lib/python3.9/asyncio/base_events.py", line 647, in run_until_complete
+2025-11-22T17:17:08.693998644Z     return future.result()
+2025-11-22T17:17:08.694003004Z   File "/usr/local/lib/python3.9/site-packages/uvicorn/server.py", line 69, in serve
+2025-11-22T17:17:08.694007074Z     config.load()
+2025-11-22T17:17:08.694011204Z   File "/usr/local/lib/python3.9/site-packages/uvicorn/config.py", line 458, in load
+2025-11-22T17:17:08.694015354Z     self.loaded_app = import_from_string(self.app)
+2025-11-22T17:17:08.694019974Z   File "/usr/local/lib/python3.9/site-packages/uvicorn/importer.py", line 21, in import_from_string
+2025-11-22T17:17:08.694024174Z     module = importlib.import_module(module_str)
+2025-11-22T17:17:08.694028584Z   File "/usr/local/lib/python3.9/importlib/__init__.py", line 127, in import_module
+2025-11-22T17:17:08.694032865Z     return _bootstrap._gcd_import(name[level:], package, level)
+2025-11-22T17:17:08.694037015Z   File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+2025-11-22T17:17:08.694042175Z   File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+2025-11-22T17:17:08.694046455Z   File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+2025-11-22T17:17:08.694050445Z   File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+2025-11-22T17:17:08.694054715Z   File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+2025-11-22T17:17:08.694085786Z   File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+2025-11-22T17:17:08.694089456Z   File "/app/app/main.py", line 7, in <module>
+2025-11-22T17:17:08.694092176Z     from . import models
+2025-11-22T17:17:08.694094876Z ImportError: attempted relative import with no known parent package
+2025-11-22T17:17:10.194827959Z ==> Exited with status 1
+2025-11-22T17:17:10.213152277Z ==> Common ways to troubleshoot your deploy: https://render.com/docs/troubleshooting-deploys
+2025-11-22T17:17:10.166617959Z + python -c 'import os; import sys; print('\''Starting Python application from Docker CMD with verbose debug output:'\''); print('\''PYTHONPATH: '\'' + os.environ.get('\''PYTHONPATH'\'', '\''Not Set'\'')); print('\''sys.path: '\'' + str(sys.path))'
+2025-11-22T17:17:10.231253479Z Starting Python application from Docker CMD with verbose debug output:
+2025-11-22T17:17:10.23128448Z PYTHONPATH: /app
+2025-11-22T17:17:10.2312918Z sys.path: ['', '/app', '/usr/local/lib/python39.zip', '/usr/local/lib/python3.9', '/usr/local/lib/python3.9/lib-dynload', '/usr/local/lib/python3.9/site-packages']
+2025-11-22T17:17:10.317333394Z + cd /app/app
+2025-11-22T17:17:10.317354754Z + uvicorn main:app --host 0.0.0.0 --port 10000
+2025-11-22T17:17:16.329447733Z Traceback (most recent call last):
+2025-11-22T17:17:16.329496635Z   File "/usr/local/bin/uvicorn", line 8, in <module>
+2025-11-22T17:17:16.329502885Z     sys.exit(main())
+2025-11-22T17:17:16.329507845Z   File "/usr/local/lib/python3.9/site-packages/click/core.py", line 1161, in __call__
+2025-11-22T17:17:16.329511985Z     return self.main(*args, **kwargs)
+2025-11-22T17:17:16.329515785Z   File "/usr/local/lib/python3.9/site-packages/click/core.py", line 1082, in main
+2025-11-22T17:17:16.329520915Z     rv = self.invoke(ctx)
+2025-11-22T17:17:16.329525346Z   File "/usr/local/lib/python3.9/site-packages/click/core.py", line 1443, in invoke
+2025-11-22T17:17:16.329529436Z     return ctx.invoke(self.callback, **ctx.params)
+2025-11-22T17:17:16.329533136Z   File "/usr/local/lib/python3.9/site-packages/click/core.py", line 788, in invoke
+2025-11-22T17:17:16.329537366Z     return __callback(*args, **kwargs)
+2025-11-22T17:17:16.329541376Z   File "/usr/local/lib/python3.9/site-packages/uvicorn/main.py", line 418, in main
+2025-11-22T17:17:16.329545166Z     run(
+2025-11-22T17:17:16.329549046Z   File "/usr/local/lib/python3.9/site-packages/uvicorn/main.py", line 587, in run
+2025-11-22T17:17:16.329553006Z     server.run()
+2025-11-22T17:17:16.329557027Z   File "/usr/local/lib/python3.9/site-packages/uvicorn/server.py", line 62, in run
+2025-11-22T17:17:16.329561167Z     return asyncio.run(self.serve(sockets=sockets))
+2025-11-22T17:17:16.329565637Z   File "/usr/local/lib/python3.9/asyncio/runners.py", line 44, in run
+2025-11-22T17:17:16.329569437Z     return loop.run_until_complete(main)
+2025-11-22T17:17:16.329573367Z   File "/usr/local/lib/python3.9/asyncio/base_events.py", line 647, in run_until_complete
+2025-11-22T17:17:16.329577767Z     return future.result()
+2025-11-22T17:17:16.329581717Z   File "/usr/local/lib/python3.9/site-packages/uvicorn/server.py", line 69, in serve
+2025-11-22T17:17:16.329585567Z     config.load()
+2025-11-22T17:17:16.329589277Z   File "/usr/local/lib/python3.9/site-packages/uvicorn/config.py", line 458, in load
+2025-11-22T17:17:16.329592877Z     self.loaded_app = import_from_string(self.app)
+2025-11-22T17:17:16.329597168Z   File "/usr/local/lib/python3.9/site-packages/uvicorn/importer.py", line 21, in import_from_string
+2025-11-22T17:17:16.329600958Z     module = importlib.import_module(module_str)
+2025-11-22T17:17:16.329604788Z   File "/usr/local/lib/python3.9/importlib/__init__.py", line 127, in import_module
+2025-11-22T17:17:16.329608678Z     return _bootstrap._gcd_import(name[level:], package, level)
+2025-11-22T17:17:16.329612658Z   File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+2025-11-22T17:17:16.329616648Z   File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+2025-11-22T17:17:16.329620468Z   File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+2025-11-22T17:17:16.329623988Z   File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+2025-11-22T17:17:16.329627618Z   File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+2025-11-22T17:17:16.329647129Z   File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+2025-11-22T17:17:16.329650079Z   File "/app/app/main.py", line 7, in <module>
+2025-11-22T17:17:16.329652309Z     from . import models
+2025-11-22T17:17:16.329654489Z ImportError: attempted relative import with no known parent package

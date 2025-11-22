@@ -8,7 +8,7 @@ services:
     region: oregon
     numReplicas: 1
     healthCheckPath: /health
-    startCommand: echo "Hello from Render Start Command!"
+    startCommand: bash -c "export PYTHONPATH=/app && uvicorn app.main:app --host 0.0.0.0 --port $PORT"
     envVars:
       - key: DATABASE_URL
         fromDatabase:
