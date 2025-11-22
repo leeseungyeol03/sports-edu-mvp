@@ -1,80 +1,160 @@
-2025-11-22T15:59:54.63952458Z ==> Downloading cache...
-2025-11-22T15:59:54.683212025Z ==> Cloning from https://github.com/leeseungyeol03/sports-edu-mvp
-2025-11-22T15:59:55.229150463Z ==> Checking out commit c35c9fdf4579435d27325224194abf3bb081e8fa in branch main
-2025-11-22T15:59:55.96637958Z ==> Downloaded 66MB in 1s. Extraction took 0s.
-2025-11-22T15:59:57.008006166Z #1 [internal] load build definition from Dockerfile
-2025-11-22T15:59:57.008045187Z #1 transferring dockerfile: 370B done
-2025-11-22T15:59:57.008049596Z #1 DONE 0.0s
-2025-11-22T15:59:57.008053187Z 
-2025-11-22T15:59:57.008057587Z #2 [internal] load metadata for docker.io/library/python:3.9-slim
-2025-11-22T15:59:57.191416309Z #2 ...
-2025-11-22T15:59:57.191440189Z 
-2025-11-22T15:59:57.191443379Z #3 [auth] library/python:pull render-prod/docker-mirror-repository/library/python:pull token for us-west1-docker.pkg.dev
-2025-11-22T15:59:57.191449099Z #3 DONE 0.0s
-2025-11-22T15:59:57.340627352Z 
-2025-11-22T15:59:57.340649562Z #2 [internal] load metadata for docker.io/library/python:3.9-slim
-2025-11-22T15:59:57.469078304Z #2 DONE 0.6s
-2025-11-22T15:59:57.580286867Z 
-2025-11-22T15:59:57.580305898Z #4 [internal] load .dockerignore
-2025-11-22T15:59:57.580309218Z #4 transferring context: 2B done
-2025-11-22T15:59:57.580312058Z #4 DONE 0.0s
-2025-11-22T15:59:57.580314508Z 
-2025-11-22T15:59:57.580324448Z #5 importing cache manifest from local:8792851022353271508
-2025-11-22T15:59:57.580363449Z #5 inferred cache manifest type: application/vnd.oci.image.manifest.v1+json done
-2025-11-22T15:59:57.580391649Z #5 DONE 0.0s
-2025-11-22T15:59:57.580431141Z 
-2025-11-22T15:59:57.580543833Z #6 [1/5] FROM docker.io/library/python:3.9-slim@sha256:2d97f6910b16bd338d3060f261f53f144965f755599aab1acda1e13cf1731b1b
-2025-11-22T15:59:57.580552693Z #6 resolve docker.io/library/python:3.9-slim@sha256:2d97f6910b16bd338d3060f261f53f144965f755599aab1acda1e13cf1731b1b 0.0s done
-2025-11-22T15:59:57.580555793Z #6 DONE 0.0s
-2025-11-22T15:59:57.580733018Z 
-2025-11-22T15:59:57.581056115Z #7 [internal] load build context
-2025-11-22T15:59:57.581063416Z #7 transferring context: 152.82kB done
-2025-11-22T15:59:57.581066225Z #7 DONE 0.1s
-2025-11-22T15:59:57.581068736Z 
-2025-11-22T15:59:57.581071846Z #8 [2/5] WORKDIR /app
-2025-11-22T15:59:57.581081426Z #8 CACHED
-2025-11-22T15:59:57.583558775Z 
-2025-11-22T15:59:57.583574405Z #9 [3/5] COPY requirements.txt .
-2025-11-22T15:59:57.583577565Z #9 CACHED
-2025-11-22T15:59:57.583579905Z 
-2025-11-22T15:59:57.583595785Z #10 [4/5] RUN pip install --no-cache-dir -r requirements.txt
-2025-11-22T15:59:57.833598375Z #10 sha256:38513bd7256313495cdd83b3b0915a633cfa475dc2a07072ab2c8d191020ca5d 11.53MB / 29.78MB 0.2s
-2025-11-22T15:59:57.989704562Z #10 sha256:38513bd7256313495cdd83b3b0915a633cfa475dc2a07072ab2c8d191020ca5d 29.78MB / 29.78MB 0.3s
-2025-11-22T15:59:58.162873433Z #10 sha256:38513bd7256313495cdd83b3b0915a633cfa475dc2a07072ab2c8d191020ca5d 29.78MB / 29.78MB 0.3s done
-2025-11-22T15:59:58.162891123Z #10 extracting sha256:38513bd7256313495cdd83b3b0915a633cfa475dc2a07072ab2c8d191020ca5d
-2025-11-22T15:59:58.808224634Z #10 extracting sha256:38513bd7256313495cdd83b3b0915a633cfa475dc2a07072ab2c8d191020ca5d 0.8s done
-2025-11-22T15:59:58.987177232Z #10 sha256:b3ec39b36ae8c03a3e09854de4ec4aa08381dfed84a9daa075048c2e3df3881d 1.29MB / 1.29MB 0.0s done
-2025-11-22T15:59:58.987203173Z #10 extracting sha256:b3ec39b36ae8c03a3e09854de4ec4aa08381dfed84a9daa075048c2e3df3881d
-2025-11-22T15:59:59.796089007Z #10 extracting sha256:b3ec39b36ae8c03a3e09854de4ec4aa08381dfed84a9daa075048c2e3df3881d 1.0s done
-2025-11-22T15:59:59.898382399Z #10 sha256:fc74430849022d13b0d44b8969a953f842f59c6e9d1a0c2c83d710affa286c08 13.88MB / 13.88MB 0.1s done
-2025-11-22T16:00:00.053363439Z #10 extracting sha256:fc74430849022d13b0d44b8969a953f842f59c6e9d1a0c2c83d710affa286c08
-2025-11-22T16:00:00.741992626Z #10 extracting sha256:fc74430849022d13b0d44b8969a953f842f59c6e9d1a0c2c83d710affa286c08 0.8s done
-2025-11-22T16:00:00.885596356Z #10 sha256:ea56f685404adf81680322f152d2cfec62115b30dda481c2c450078315beb508 251B / 251B done
-2025-11-22T16:00:00.885632927Z #10 extracting sha256:ea56f685404adf81680322f152d2cfec62115b30dda481c2c450078315beb508 0.1s done
-2025-11-22T16:00:01.193935357Z #10 sha256:50cd5fe83edb951373587b403079c725b522a51327765b781719427d14c23117 92B / 92B done
-2025-11-22T16:00:01.193954808Z #10 extracting sha256:50cd5fe83edb951373587b403079c725b522a51327765b781719427d14c23117 0.0s done
-2025-11-22T16:00:01.193959058Z #10 sha256:df51269dbc1b074a85fba900fb50882acd417690915aaabd6e4eb2f2a3066430 278B / 278B done
-2025-11-22T16:00:01.193962968Z #10 extracting sha256:df51269dbc1b074a85fba900fb50882acd417690915aaabd6e4eb2f2a3066430 0.0s done
-2025-11-22T16:00:01.193967348Z #10 sha256:e87528c6a329d9ad1253d092394dcc4706a03c69826b7aa0488302992d6ba91c 23.39MB / 23.39MB 0.1s done
-2025-11-22T16:00:01.347825062Z #10 extracting sha256:e87528c6a329d9ad1253d092394dcc4706a03c69826b7aa0488302992d6ba91c
-2025-11-22T16:00:02.434674998Z #10 extracting sha256:e87528c6a329d9ad1253d092394dcc4706a03c69826b7aa0488302992d6ba91c 1.2s done
-2025-11-22T16:00:02.551249259Z #10 CACHED
-2025-11-22T16:00:02.551272749Z 
-2025-11-22T16:00:02.551277809Z #11 [5/5] COPY . .
-2025-11-22T16:00:02.55128163Z #11 DONE 0.1s
-2025-11-22T16:00:02.551285119Z 
-2025-11-22T16:00:02.55128964Z #12 exporting to docker image format
-2025-11-22T16:00:02.55129476Z #12 exporting layers 0.0s done
-2025-11-22T16:00:02.715691993Z #12 exporting manifest sha256:d8972557c49a9dacadbe673888179330d4c299ad986a319b73832f39d17daa2d done
-2025-11-22T16:00:02.715715573Z #12 exporting config sha256:9155840c698cce20cd0a0a7f117a184f19a840190a20bcabb02fe3563c5b97fc done
-2025-11-22T16:00:02.92882053Z #12 DONE 0.4s
-2025-11-22T16:00:02.92883806Z 
-2025-11-22T16:00:02.92884222Z #13 exporting cache to client directory
-2025-11-22T16:00:02.92884525Z #13 preparing build cache for export
-2025-11-22T16:00:03.003437686Z #13 writing cache image manifest sha256:b791876ffb3ffb7c04c9587dc2877d269c7abb129e87b755e45752ac67f1af10 done
-2025-11-22T16:00:03.003453697Z #13 DONE 0.0s
-2025-11-22T16:00:03.751174593Z Pushing image to registry...
-2025-11-22T16:00:05.594209226Z Upload succeeded
-2025-11-22T16:00:08.657574223Z ==> Deploying...
-2025-11-22T16:00:47.187999927Z ==> Application exited early
-2025-11-22T16:00:47.203711316Z ==> Common ways to troubleshoot your deploy: https://render.com/docs/troubleshooting-deploys
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\211833\AppData\Local\anaconda3\Lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 409, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\211833\AppData\Local\anaconda3\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\211833\AppData\Local\anaconda3\Lib\site-packages\fastapi\applications.py", line 1134, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\211833\AppData\Local\anaconda3\Lib\site-packages\starlette\applications.py", line 107, in __call__        
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\211833\AppData\Local\anaconda3\Lib\site-packages\starlette\middleware\errors.py", line 186, in __call__   
+    raise exc
+  File "C:\Users\211833\AppData\Local\anaconda3\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__   
+    await self.app(scope, receive, _send)
+  File "C:\Users\211833\AppData\Local\anaconda3\Lib\site-packages\starlette\middleware\cors.py", line 93, in __call__      
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\211833\AppData\Local\anaconda3\Lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\211833\AppData\Local\anaconda3\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\211833\AppData\Local\anaconda3\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\211833\AppData\Local\anaconda3\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\211833\AppData\Local\anaconda3\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\211833\AppData\Local\anaconda3\Lib\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\211833\AppData\Local\anaconda3\Lib\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\211833\AppData\Local\anaconda3\Lib\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\211833\AppData\Local\anaconda3\Lib\site-packages\fastapi\routing.py", line 125, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\211833\AppData\Local\anaconda3\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\211833\AppData\Local\anaconda3\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\211833\AppData\Local\anaconda3\Lib\site-packages\fastapi\routing.py", line 111, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\211833\AppData\Local\anaconda3\Lib\site-packages\fastapi\routing.py", line 391, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\211833\AppData\Local\anaconda3\Lib\site-packages\fastapi\routing.py", line 292, in run_endpoint_function  
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\211833\AppData\Local\anaconda3\Lib\site-packages\starlette\concurrency.py", line 32, in run_in_threadpool 
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\211833\AppData\Local\anaconda3\Lib\site-packages\anyio\to_thread.py", line 56, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\211833\AppData\Local\anaconda3\Lib\site-packages\anyio\_backends\_asyncio.py", line 2505, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\211833\AppData\Local\anaconda3\Lib\site-packages\anyio\_backends\_asyncio.py", line 1005, in run
+    result = context.run(func, *args)
+  File "C:\Users\211833\Desktop\vscodepj\sports_edu_mvp\backend\app\routers\users.py", line 48, in login_for_access_token  
+    access_token = auth.create_access_token(
+        data={"sub": user.username}, expires_delta=access_token_expires
+    )
+  File "C:\Users\211833\Desktop\vscodepj\sports_edu_mvp\backend\app\auth.py", line 42, in create_access_token
+    encoded_jwt = jwt.encode(to_encode, SECRET_KEY, algorithms=[ALGORITHM])
+TypeError: encode() got an unexpected keyword argument 'algorithms'. Did you mean 'algorithm'?
+INFO:     127.0.0.1:56579 - "GET /api/users/login HTTP/1.1" 405 Method Not Allowed
+INFO:     127.0.0.1:51337 - "GET /api/equipment/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51338 - "GET /api/equipment/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54234 - "POST /api/users/login HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\211833\AppData\Local\anaconda3\Lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 409, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\211833\AppData\Local\anaconda3\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\211833\AppData\Local\anaconda3\Lib\site-packages\fastapi\applications.py", line 1134, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\211833\AppData\Local\anaconda3\Lib\site-packages\starlette\applications.py", line 107, in __call__        
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\211833\AppData\Local\anaconda3\Lib\site-packages\starlette\middleware\errors.py", line 186, in __call__   
+    raise exc
+  File "C:\Users\211833\AppData\Local\anaconda3\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__   
+    await self.app(scope, receive, _send)
+  File "C:\Users\211833\AppData\Local\anaconda3\Lib\site-packages\starlette\middleware\cors.py", line 93, in __call__      
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\211833\AppData\Local\anaconda3\Lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\211833\AppData\Local\anaconda3\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\211833\AppData\Local\anaconda3\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\211833\AppData\Local\anaconda3\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\211833\AppData\Local\anaconda3\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\211833\AppData\Local\anaconda3\Lib\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\211833\AppData\Local\anaconda3\Lib\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\211833\AppData\Local\anaconda3\Lib\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\211833\AppData\Local\anaconda3\Lib\site-packages\fastapi\routing.py", line 125, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\211833\AppData\Local\anaconda3\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\211833\AppData\Local\anaconda3\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\211833\AppData\Local\anaconda3\Lib\site-packages\fastapi\routing.py", line 111, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\211833\AppData\Local\anaconda3\Lib\site-packages\fastapi\routing.py", line 391, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\211833\AppData\Local\anaconda3\Lib\site-packages\fastapi\routing.py", line 292, in run_endpoint_function  
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\211833\AppData\Local\anaconda3\Lib\site-packages\starlette\concurrency.py", line 32, in run_in_threadpool 
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\211833\AppData\Local\anaconda3\Lib\site-packages\anyio\to_thread.py", line 56, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\211833\AppData\Local\anaconda3\Lib\site-packages\anyio\_backends\_asyncio.py", line 2505, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\211833\AppData\Local\anaconda3\Lib\site-packages\anyio\_backends\_asyncio.py", line 1005, in run
+    result = context.run(func, *args)
+  File "C:\Users\211833\Desktop\vscodepj\sports_edu_mvp\backend\app\routers\users.py", line 48, in login_for_access_token  
+    access_token = auth.create_access_token(
+        data={"sub": user.username}, expires_delta=access_token_expires
+    )
+  File "C:\Users\211833\Desktop\vscodepj\sports_edu_mvp\backend\app\auth.py", line 42, in create_access_token
+    encoded_jwt = jwt.encode(to_encode, SECRET_KEY, algorithms=[ALGORITHM])
+TypeError: encode() got an unexpected keyword argument 'algorithms'. Did you mean 'algorithm'?
