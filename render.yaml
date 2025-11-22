@@ -18,10 +18,9 @@ services:
   - type: static
     name: sports-edu-frontend
     root: frontend
-    env: static
+    # 'env: static' 라인을 삭제했습니다. (불필요한 속성)
     buildCommand: npm install && npm run build
     staticPublishPath: dist
-    # React SPA 새로고침 404 방지 설정
     routes:
       - type: rewrite
         source: /*
