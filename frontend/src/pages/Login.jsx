@@ -17,6 +17,7 @@ export default function Login({ onLogin }) {
         await apiClient.post('/users/signup', {
           username, password, name, affiliation, 
           admin_code: adminCode 
+          
         });
         alert("회원가입 성공! 로그인해주세요.");
         setIsSignup(false);
