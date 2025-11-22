@@ -1,4 +1,4 @@
-const BASE_URL = import.meta.env.VITE_API_URL || '/api';
+const BASE_URL = import.meta.env.VITE_API_URL || '';
 
 // 로컬 스토리지에서 토큰 가져오기
 const getToken = () => localStorage.getItem('access_token');
@@ -65,13 +65,16 @@ export const apiClient = {
 };
 
 // New API calls for user management
-export const updateUser = (userData) => request('PUT', '/users/me', userData);
-export const updatePassword = (passwordData) => request('PUT', '/users/me/password', passwordData);
+export const updateUser = (userData) => request('PUT', '/api/users/me', userData);
+export const updatePassword = (passwordData) => request('PUT', '/api/users/me/password', passwordData);
 
 // New API calls for courses
-export const createCourseAdmin = (courseData) => request('POST', '/courses/', courseData);
-export const fetchMyCourses = () => request('GET', '/courses/my');
+export const createCourseAdmin = (courseData) => request('POST', '/api/courses/', courseData);
+export const fetchMyCourses = () => request('GET', '/api/courses/my');
 
 // New API calls for chat
-export const fetchChatHistory = (otherUserId) => request('GET', `/chat/history/${otherUserId}`);
-export const fetchChatRoomsAdmin = () => request('GET', '/chat/rooms');
+export const fetchChatHistory = (otherUserId) => request('GET', `/api/chat/history/${otherUserId}`);
+export const fetchChatRoomsAdmin = () => request('GET', '/api/chat/rooms');
+
+// New API calls for signup
+export const signupUser = (userData) => request('POST', '/api/users/signup', userData);
