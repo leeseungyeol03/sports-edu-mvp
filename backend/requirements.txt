@@ -6,3 +6,4 @@ pydantic==2.6.0
 python-multipart
 python-jose[cryptography]==3.3.0
 passlib[bcrypt]==1.7.4
+websockets>=10.0
