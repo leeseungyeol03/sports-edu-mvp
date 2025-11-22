@@ -1,164 +1,50 @@
-2025-11-22T16:20:51.660220225Z ==> Cloning from https://github.com/leeseungyeol03/sports-edu-mvp
-2025-11-22T16:20:52.154975223Z ==> Checking out commit e3bbc2495f897d8438755572f9d791ca7e3b1fdd in branch main
-2025-11-22T16:20:53.803258541Z #1 [internal] load build definition from Dockerfile
-2025-11-22T16:20:53.99811242Z #1 transferring dockerfile: 370B done
-2025-11-22T16:20:53.99812811Z #1 DONE 0.0s
-2025-11-22T16:20:53.99813073Z 
-2025-11-22T16:20:53.998133811Z #2 [internal] load metadata for docker.io/library/python:3.9-slim
-2025-11-22T16:20:54.191095797Z #2 ...
-2025-11-22T16:20:54.191109257Z 
-2025-11-22T16:20:54.191112507Z #3 [auth] library/python:pull render-prod/docker-mirror-repository/library/python:pull token for us-west1-docker.pkg.dev
-2025-11-22T16:20:54.191115567Z #3 DONE 0.0s
-2025-11-22T16:20:54.340400886Z 
-2025-11-22T16:20:54.340427837Z #2 [internal] load metadata for docker.io/library/python:3.9-slim
-2025-11-22T16:20:54.478536121Z #2 DONE 0.6s
-2025-11-22T16:20:54.583213131Z 
-2025-11-22T16:20:54.583230851Z #4 [internal] load .dockerignore
-2025-11-22T16:20:54.583233671Z #4 transferring context: 2B done
-2025-11-22T16:20:54.583235651Z #4 DONE 0.0s
-2025-11-22T16:20:54.583237341Z 
-2025-11-22T16:20:54.583239061Z #5 [internal] load build context
-2025-11-22T16:20:54.583241451Z #5 transferring context: 152.82kB done
-2025-11-22T16:20:54.583243212Z #5 DONE 0.1s
-2025-11-22T16:20:54.583244792Z 
-2025-11-22T16:20:54.583247081Z #6 [1/5] FROM docker.io/library/python:3.9-slim@sha256:2d97f6910b16bd338d3060f261f53f144965f755599aab1acda1e13cf1731b1b
-2025-11-22T16:20:54.583249052Z #6 resolve docker.io/library/python:3.9-slim@sha256:2d97f6910b16bd338d3060f261f53f144965f755599aab1acda1e13cf1731b1b 0.0s done
-2025-11-22T16:20:54.77763033Z #6 sha256:ea56f685404adf81680322f152d2cfec62115b30dda481c2c450078315beb508 251B / 251B 0.1s done
-2025-11-22T16:20:54.938698568Z #6 sha256:b3ec39b36ae8c03a3e09854de4ec4aa08381dfed84a9daa075048c2e3df3881d 1.29MB / 1.29MB 0.3s done
-2025-11-22T16:20:54.938721339Z #6 sha256:fc74430849022d13b0d44b8969a953f842f59c6e9d1a0c2c83d710affa286c08 0B / 13.88MB 0.2s
-2025-11-22T16:20:54.938724879Z #6 sha256:38513bd7256313495cdd83b3b0915a633cfa475dc2a07072ab2c8d191020ca5d 0B / 29.78MB 0.2s
-2025-11-22T16:20:55.131289416Z #6 sha256:fc74430849022d13b0d44b8969a953f842f59c6e9d1a0c2c83d710affa286c08 13.88MB / 13.88MB 0.3s done
-2025-11-22T16:20:55.131308816Z #6 sha256:38513bd7256313495cdd83b3b0915a633cfa475dc2a07072ab2c8d191020ca5d 29.78MB / 29.78MB 0.5s
-2025-11-22T16:20:55.310190991Z #6 sha256:38513bd7256313495cdd83b3b0915a633cfa475dc2a07072ab2c8d191020ca5d 29.78MB / 29.78MB 0.5s done
-2025-11-22T16:20:55.310209012Z #6 extracting sha256:38513bd7256313495cdd83b3b0915a633cfa475dc2a07072ab2c8d191020ca5d
-2025-11-22T16:20:55.839978819Z #6 extracting sha256:38513bd7256313495cdd83b3b0915a633cfa475dc2a07072ab2c8d191020ca5d 0.7s done
-2025-11-22T16:20:55.839999699Z #6 DONE 1.3s
-2025-11-22T16:20:55.990300281Z 
-2025-11-22T16:20:55.990334402Z #6 [1/5] FROM docker.io/library/python:3.9-slim@sha256:2d97f6910b16bd338d3060f261f53f144965f755599aab1acda1e13cf1731b1b
-2025-11-22T16:20:55.990340492Z #6 extracting sha256:b3ec39b36ae8c03a3e09854de4ec4aa08381dfed84a9daa075048c2e3df3881d
-2025-11-22T16:20:59.693574945Z #6 extracting sha256:b3ec39b36ae8c03a3e09854de4ec4aa08381dfed84a9daa075048c2e3df3881d 3.9s done
-2025-11-22T16:20:59.693597225Z #6 DONE 5.2s
-2025-11-22T16:20:59.843906958Z 
-2025-11-22T16:20:59.843935118Z #6 [1/5] FROM docker.io/library/python:3.9-slim@sha256:2d97f6910b16bd338d3060f261f53f144965f755599aab1acda1e13cf1731b1b
-2025-11-22T16:20:59.843939818Z #6 extracting sha256:fc74430849022d13b0d44b8969a953f842f59c6e9d1a0c2c83d710affa286c08
-2025-11-22T16:21:04.158106281Z #6 extracting sha256:fc74430849022d13b0d44b8969a953f842f59c6e9d1a0c2c83d710affa286c08 4.5s done
-2025-11-22T16:21:04.158129022Z #6 DONE 9.6s
-2025-11-22T16:21:04.308548127Z 
-2025-11-22T16:21:04.308575407Z #6 [1/5] FROM docker.io/library/python:3.9-slim@sha256:2d97f6910b16bd338d3060f261f53f144965f755599aab1acda1e13cf1731b1b
-2025-11-22T16:21:04.308591268Z #6 extracting sha256:ea56f685404adf81680322f152d2cfec62115b30dda481c2c450078315beb508
-2025-11-22T16:21:10.612511725Z #6 extracting sha256:ea56f685404adf81680322f152d2cfec62115b30dda481c2c450078315beb508 6.5s done
-2025-11-22T16:21:10.612530486Z #6 DONE 16.1s
-2025-11-22T16:21:10.840942721Z 
-2025-11-22T16:21:10.840964822Z #7 [2/5] WORKDIR /app
-2025-11-22T16:21:10.840968832Z #7 DONE 0.0s
-2025-11-22T16:21:10.840972782Z 
-2025-11-22T16:21:10.840976692Z #8 [3/5] COPY requirements.txt .
-2025-11-22T16:21:10.840979553Z #8 DONE 0.0s
-2025-11-22T16:21:10.840982213Z 
-2025-11-22T16:21:10.840985682Z #9 [4/5] RUN pip install --no-cache-dir -r requirements.txt
-2025-11-22T16:21:12.718240859Z #9 2.028 Collecting fastapi==0.109.0
-2025-11-22T16:21:12.826356538Z #9 2.063   Downloading fastapi-0.109.0-py3-none-any.whl (92 kB)
-2025-11-22T16:21:12.826374388Z #9 2.074      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 92.0/92.0 kB 9.9 MB/s eta 0:00:00
-2025-11-22T16:21:12.826379408Z #9 2.128 Collecting uvicorn==0.27.0
-2025-11-22T16:21:12.826383078Z #9 2.136   Downloading uvicorn-0.27.0-py3-none-any.whl (60 kB)
-2025-11-22T16:21:12.979368772Z #9 2.139      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 60.6/60.6 kB 188.3 MB/s eta 0:00:00
-2025-11-22T16:21:13.601067638Z #9 2.911 Collecting sqlalchemy==2.0.25
-2025-11-22T16:21:13.794136587Z #9 2.920   Downloading SQLAlchemy-2.0.25-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.1 MB)
-2025-11-22T16:21:13.794167228Z #9 2.953      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.1/3.1 MB 101.3 MB/s eta 0:00:00
-2025-11-22T16:21:13.81354017Z #9 3.123 Collecting psycopg2-binary==2.9.9
-2025-11-22T16:21:13.988215579Z #9 3.132   Downloading psycopg2_binary-2.9.9-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.0 MB)
-2025-11-22T16:21:13.988234039Z #9 3.147      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.0/3.0 MB 241.0 MB/s eta 0:00:00
-2025-11-22T16:21:14.162489868Z #9 3.472 Collecting pydantic==2.6.0
-2025-11-22T16:21:14.268856017Z #9 3.482   Downloading pydantic-2.6.0-py3-none-any.whl (394 kB)
-2025-11-22T16:21:14.268876857Z #9 3.485      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 394.2/394.2 kB 262.4 MB/s eta 0:00:00
-2025-11-22T16:21:14.268882648Z #9 3.509 Collecting python-multipart
-2025-11-22T16:21:14.268887538Z #9 3.517   Downloading python_multipart-0.0.20-py3-none-any.whl (24 kB)
-2025-11-22T16:21:14.268892738Z #9 3.541 Collecting python-jose[cryptography]==3.3.0
-2025-11-22T16:21:14.268897348Z #9 3.549   Downloading python_jose-3.3.0-py2.py3-none-any.whl (33 kB)
-2025-11-22T16:21:14.268901788Z #9 3.570 Collecting passlib[bcrypt]==1.7.4
-2025-11-22T16:21:14.268906598Z #9 3.579   Downloading passlib-1.7.4-py2.py3-none-any.whl (525 kB)
-2025-11-22T16:21:14.423996499Z #9 3.583      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 525.6/525.6 kB 236.1 MB/s eta 0:00:00
-2025-11-22T16:21:14.499060213Z #9 3.809 Collecting websockets>=10.0
-2025-11-22T16:21:14.66531952Z #9 3.817   Downloading websockets-15.0.1-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (181 kB)
-2025-11-22T16:21:14.665339901Z #9 3.820      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 181.4/181.4 kB 245.9 MB/s eta 0:00:00
-2025-11-22T16:21:14.665355261Z #9 3.849 Collecting tzdata
-2025-11-22T16:21:14.665359341Z #9 3.857   Downloading tzdata-2025.2-py2.py3-none-any.whl (347 kB)
-2025-11-22T16:21:14.665362931Z #9 3.861      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 347.8/347.8 kB 247.7 MB/s eta 0:00:00
-2025-11-22T16:21:14.665366631Z #9 3.975 Collecting starlette<0.36.0,>=0.35.0
-2025-11-22T16:21:14.77916522Z #9 3.984   Downloading starlette-0.35.1-py3-none-any.whl (71 kB)
-2025-11-22T16:21:14.77918007Z #9 3.986      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.1/71.1 kB 221.1 MB/s eta 0:00:00
-2025-11-22T16:21:14.77918293Z #9 4.034 Collecting typing-extensions>=4.8.0
-2025-11-22T16:21:14.77918523Z #9 4.042   Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
-2025-11-22T16:21:14.77918697Z #9 4.045      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.6/44.6 kB 146.1 MB/s eta 0:00:00
-2025-11-22T16:21:14.77918942Z #9 4.089 Collecting h11>=0.8
-2025-11-22T16:21:14.99638792Z #9 4.098   Downloading h11-0.16.0-py3-none-any.whl (37 kB)
-2025-11-22T16:21:14.99640798Z #9 4.144 Collecting click>=7.0
-2025-11-22T16:21:14.99641257Z #9 4.153   Downloading click-8.1.8-py3-none-any.whl (98 kB)
-2025-11-22T16:21:14.99641685Z #9 4.155      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 98.2/98.2 kB 215.4 MB/s eta 0:00:00
-2025-11-22T16:21:15.359094382Z #9 4.669 Collecting greenlet!=0.4.17
-2025-11-22T16:21:15.570995441Z #9 4.678   Downloading greenlet-3.2.4-cp39-cp39-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (582 kB)
-2025-11-22T16:21:15.571017751Z #9 4.685      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 582.8/582.8 kB 178.3 MB/s eta 0:00:00
-2025-11-22T16:21:15.571021541Z #9 4.721 Collecting annotated-types>=0.4.0
-2025-11-22T16:21:15.571024651Z #9 4.730   Downloading annotated_types-0.7.0-py3-none-any.whl (13 kB)
-2025-11-22T16:21:17.417681039Z #9 6.727 Collecting pydantic-core==2.16.1
-2025-11-22T16:21:17.543593574Z #9 6.737   Downloading pydantic_core-2.16.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.2 MB)
-2025-11-22T16:21:17.543612415Z #9 6.752      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.2/2.2 MB 172.9 MB/s eta 0:00:00
-2025-11-22T16:21:17.543616485Z #9 6.815 Collecting pyasn1
-2025-11-22T16:21:17.543620145Z #9 6.823   Downloading pyasn1-0.6.1-py3-none-any.whl (83 kB)
-2025-11-22T16:21:17.543622465Z #9 6.826      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 83.1/83.1 kB 226.0 MB/s eta 0:00:00
-2025-11-22T16:21:17.543625295Z #9 6.853 Collecting rsa
-2025-11-22T16:21:17.740871379Z #9 6.862   Downloading rsa-4.9.1-py3-none-any.whl (34 kB)
-2025-11-22T16:21:17.740889659Z #9 6.888 Collecting ecdsa!=0.15
-2025-11-22T16:21:17.740892499Z #9 6.897   Downloading ecdsa-0.19.1-py2.py3-none-any.whl (150 kB)
-2025-11-22T16:21:17.74089552Z #9 6.900      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 150.6/150.6 kB 219.0 MB/s eta 0:00:00
-2025-11-22T16:21:18.079091572Z #9 7.389 Collecting cryptography>=3.4.0
-2025-11-22T16:21:18.232959096Z #9 7.398   Downloading cryptography-46.0.3-cp38-abi3-manylinux_2_34_x86_64.whl (4.5 MB)
-2025-11-22T16:21:18.232975866Z #9 7.422      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/4.5 MB 204.1 MB/s eta 0:00:00
-2025-11-22T16:21:18.232988626Z #9 7.543 Collecting bcrypt>=3.1.0
-2025-11-22T16:21:18.396129022Z #9 7.551   Downloading bcrypt-5.0.0-cp39-abi3-manylinux_2_34_x86_64.whl (278 kB)
-2025-11-22T16:21:18.396147962Z #9 7.555      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 278.2/278.2 kB 249.7 MB/s eta 0:00:00
-2025-11-22T16:21:18.69165921Z #9 8.001 Collecting cffi>=2.0.0
-2025-11-22T16:21:18.819265654Z #9 8.011   Downloading cffi-2.0.0-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (216 kB)
-2025-11-22T16:21:18.819291084Z #9 8.014      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 216.5/216.5 kB 233.7 MB/s eta 0:00:00
-2025-11-22T16:21:18.819298755Z #9 8.047 Collecting six>=1.9.0
-2025-11-22T16:21:18.819305025Z #9 8.057   Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
-2025-11-22T16:21:18.819311295Z #9 8.129 Collecting anyio<5,>=3.4.0
-2025-11-22T16:21:18.927370592Z #9 8.138   Downloading anyio-4.11.0-py3-none-any.whl (109 kB)
-2025-11-22T16:21:18.927389963Z #9 8.141      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 109.1/109.1 kB 201.3 MB/s eta 0:00:00
-2025-11-22T16:21:18.927395893Z #9 8.187 Collecting sniffio>=1.1
-2025-11-22T16:21:18.927400233Z #9 8.196   Downloading sniffio-1.3.1-py3-none-any.whl (10 kB)
-2025-11-22T16:21:18.927404193Z #9 8.229 Collecting idna>=2.8
-2025-11-22T16:21:18.927408153Z #9 8.237   Downloading idna-3.11-py3-none-any.whl (71 kB)
-2025-11-22T16:21:19.151342887Z #9 8.240      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 203.9 MB/s eta 0:00:00
-2025-11-22T16:21:19.151359197Z #9 8.266 Collecting exceptiongroup>=1.0.2
-2025-11-22T16:21:19.151365177Z #9 8.275   Downloading exceptiongroup-1.3.1-py3-none-any.whl (16 kB)
-2025-11-22T16:21:19.151370487Z #9 8.299 Collecting pycparser
-2025-11-22T16:21:19.151375658Z #9 8.307   Downloading pycparser-2.23-py3-none-any.whl (118 kB)
-2025-11-22T16:21:19.151380038Z #9 8.310      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 118.1/118.1 kB 239.2 MB/s eta 0:00:00
-2025-11-22T16:21:19.216210428Z #9 8.526 Installing collected packages: passlib, websockets, tzdata, typing-extensions, sniffio, six, python-multipart, pycparser, pyasn1, psycopg2-binary, idna, h11, greenlet, click, bcrypt, annotated-types, uvicorn, sqlalchemy, rsa, pydantic-core, exceptiongroup, ecdsa, cffi, python-jose, pydantic, cryptography, anyio, starlette, fastapi
-2025-11-22T16:21:25.541141596Z #9 14.85 Successfully installed annotated-types-0.7.0 anyio-4.11.0 bcrypt-5.0.0 cffi-2.0.0 click-8.1.8 cryptography-46.0.3 ecdsa-0.19.1 exceptiongroup-1.3.1 fastapi-0.109.0 greenlet-3.2.4 h11-0.16.0 idna-3.11 passlib-1.7.4 psycopg2-binary-2.9.9 pyasn1-0.6.1 pycparser-2.23 pydantic-2.6.0 pydantic-core-2.16.1 python-jose-3.3.0 python-multipart-0.0.20 rsa-4.9.1 six-1.17.0 sniffio-1.3.1 sqlalchemy-2.0.25 starlette-0.35.1 typing-extensions-4.15.0 tzdata-2025.2 uvicorn-0.27.0 websockets-15.0.1
-2025-11-22T16:21:25.64510795Z #9 14.85 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
-2025-11-22T16:21:25.64512786Z #9 14.95 
-2025-11-22T16:21:25.64513265Z #9 14.95 [notice] A new release of pip is available: 23.0.1 -> 25.3
-2025-11-22T16:21:25.64513684Z #9 14.95 [notice] To update, run: pip install --upgrade pip
-2025-11-22T16:21:27.43406613Z #9 DONE 16.7s
-2025-11-22T16:21:27.677031318Z 
-2025-11-22T16:21:27.677057739Z #10 [5/5] COPY . .
-2025-11-22T16:21:27.677062289Z #10 DONE 0.1s
-2025-11-22T16:21:27.677065979Z 
-2025-11-22T16:21:27.677070439Z #11 exporting to docker image format
-2025-11-22T16:21:27.677074349Z #11 exporting layers
-2025-11-22T16:21:30.4361047Z #11 exporting layers 2.9s done
-2025-11-22T16:21:30.604540096Z #11 exporting manifest sha256:44f31656004cd7b0c2f51f23b268c10989ad915df20428bee40f16ab50f93dad done
-2025-11-22T16:21:30.604563697Z #11 exporting config sha256:e05f8e906eb1c31c8fdf705f10cd8d2eb4cb25dffccc11ee1f31387a82717c90 done
-2025-11-22T16:21:30.909639783Z #11 DONE 3.4s
-2025-11-22T16:21:31.068984242Z 
-2025-11-22T16:21:31.069011862Z #12 exporting cache to client directory
-2025-11-22T16:21:31.069016953Z #12 preparing build cache for export
-2025-11-22T16:21:31.473150481Z #12 writing cache image manifest sha256:44ea663920b38b6b32e82bf8ad631b752528779af8e68821583e53d670c495f8 done
-2025-11-22T16:21:31.473175411Z #12 DONE 0.5s
-2025-11-22T16:21:37.883520078Z Pushing image to registry...
-2025-11-22T16:21:40.359181659Z Upload succeeded
-2025-11-22T16:21:54.633327771Z ==> Deploying...
-2025-11-22T16:22:06.962037386Z ==> Application exited early
-2025-11-22T16:22:06.979151034Z ==> Common ways to troubleshoot your deploy: https://render.com/docs/troubleshooting-deploys
+2025-11-22T16:29:56.907189334Z #10 6.988      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/4.5 MB 161.7 MB/s eta 0:00:00
+2025-11-22T16:29:56.907195074Z #10 7.106 Collecting bcrypt>=3.1.0
+2025-11-22T16:29:57.070438333Z #10 7.115   Downloading bcrypt-5.0.0-cp39-abi3-manylinux_2_34_x86_64.whl (278 kB)
+2025-11-22T16:29:57.070459464Z #10 7.119      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 278.2/278.2 kB 232.6 MB/s eta 0:00:00
+2025-11-22T16:29:57.308405314Z #10 7.507 Collecting cffi>=2.0.0
+2025-11-22T16:29:57.435990806Z #10 7.516   Downloading cffi-2.0.0-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (216 kB)
+2025-11-22T16:29:57.436007637Z #10 7.520      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 216.5/216.5 kB 228.4 MB/s eta 0:00:00
+2025-11-22T16:29:57.436011537Z #10 7.551 Collecting six>=1.9.0
+2025-11-22T16:29:57.436014667Z #10 7.562   Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+2025-11-22T16:29:57.436017117Z #10 7.635 Collecting anyio<5,>=3.4.0
+2025-11-22T16:29:57.552003863Z #10 7.643   Downloading anyio-4.11.0-py3-none-any.whl (109 kB)
+2025-11-22T16:29:57.552020914Z #10 7.646      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 109.1/109.1 kB 212.1 MB/s eta 0:00:00
+2025-11-22T16:29:57.552023694Z #10 7.711 Collecting idna>=2.8
+2025-11-22T16:29:57.552025744Z #10 7.720   Downloading idna-3.11-py3-none-any.whl (71 kB)
+2025-11-22T16:29:57.552027594Z #10 7.722      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 215.5 MB/s eta 0:00:00
+2025-11-22T16:29:57.552029764Z #10 7.751 Collecting exceptiongroup>=1.0.2
+2025-11-22T16:29:57.793389913Z #10 7.760   Downloading exceptiongroup-1.3.1-py3-none-any.whl (16 kB)
+2025-11-22T16:29:57.793406593Z #10 7.783 Collecting sniffio>=1.1
+2025-11-22T16:29:57.793410033Z #10 7.792   Downloading sniffio-1.3.1-py3-none-any.whl (10 kB)
+2025-11-22T16:29:57.793412893Z #10 7.830 Collecting pycparser
+2025-11-22T16:29:57.793415143Z #10 7.839   Downloading pycparser-2.23-py3-none-any.whl (118 kB)
+2025-11-22T16:29:57.793418023Z #10 7.842      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 118.1/118.1 kB 231.4 MB/s eta 0:00:00
+2025-11-22T16:29:57.850639474Z #10 8.050 Installing collected packages: passlib, websockets, tzdata, typing-extensions, sniffio, six, python-multipart, pycparser, pyasn1, psycopg2-binary, idna, h11, greenlet, click, bcrypt, annotated-types, uvicorn, sqlalchemy, rsa, pydantic-core, exceptiongroup, ecdsa, cffi, python-jose, pydantic, cryptography, anyio, starlette, fastapi
+2025-11-22T16:30:00.640324091Z #10 10.84 Successfully installed annotated-types-0.7.0 anyio-4.11.0 bcrypt-5.0.0 cffi-2.0.0 click-8.1.8 cryptography-46.0.3 ecdsa-0.19.1 exceptiongroup-1.3.1 fastapi-0.109.0 greenlet-3.2.4 h11-0.16.0 idna-3.11 passlib-1.7.4 psycopg2-binary-2.9.9 pyasn1-0.6.1 pycparser-2.23 pydantic-2.6.0 pydantic-core-2.16.1 python-jose-3.3.0 python-multipart-0.0.20 rsa-4.9.1 six-1.17.0 sniffio-1.3.1 sqlalchemy-2.0.25 starlette-0.35.1 typing-extensions-4.15.0 tzdata-2025.2 uvicorn-0.27.0 websockets-15.0.1
+2025-11-22T16:30:00.746562494Z #10 10.84 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+2025-11-22T16:30:00.746590875Z #10 10.95 
+2025-11-22T16:30:00.746594525Z #10 10.95 [notice] A new release of pip is available: 23.0.1 -> 25.3
+2025-11-22T16:30:00.746597375Z #10 10.95 [notice] To update, run: pip install --upgrade pip
+2025-11-22T16:30:01.571867737Z #10 DONE 11.8s
+2025-11-22T16:30:01.790107456Z 
+2025-11-22T16:30:01.790134476Z #11 [5/5] COPY . /app/
+2025-11-22T16:30:01.790141367Z #11 DONE 0.1s
+2025-11-22T16:30:01.790146316Z 
+2025-11-22T16:30:01.790152997Z #12 exporting to docker image format
+2025-11-22T16:30:01.790158887Z #12 exporting layers
+2025-11-22T16:30:04.283078663Z #12 exporting layers 2.6s done
+2025-11-22T16:30:04.447487798Z #12 exporting manifest sha256:e0b675e6be4a7514e00d3402ef05be0097f9a9c5ea566f1c90214c52e0545717 done
+2025-11-22T16:30:04.447505808Z #12 exporting config sha256:15c97a6a4fa866fb802fdb8ddc813e62d22dec1db7a7062b3d9d153b8a23095f done
+2025-11-22T16:30:04.69819622Z #12 DONE 3.1s
+2025-11-22T16:30:04.880108926Z 
+2025-11-22T16:30:04.880164338Z #13 exporting cache to client directory
+2025-11-22T16:30:04.880173728Z #13 preparing build cache for export
+2025-11-22T16:30:04.970398914Z #13 writing cache image manifest sha256:fea3897a345c50b85415be82461f10b99683d482b1aca8241fc5e394f88fbd62 done
+2025-11-22T16:30:04.970414154Z #13 DONE 0.2s
+2025-11-22T16:30:05.794957298Z Pushing image to registry...
+2025-11-22T16:30:08.317189851Z Upload succeeded
+2025-11-22T16:30:10.796422606Z ==> Deploying...
+2025-11-22T16:30:46.267261869Z /bin/sh: 1: [bash,: not found
+2025-11-22T16:30:46.517394852Z ==> Exited with status 127
+2025-11-22T16:30:46.53563927Z ==> Common ways to troubleshoot your deploy: https://render.com/docs/troubleshooting-deploys

@@ -16,7 +16,3 @@ RUN pip install --no-cache-dir -r /app/requirements.txt
 
 # 소스 코드 복사
 COPY . /app/
-
-# ENTRYPOINT를 사용하여 애플리케이션 시작 (render.yaml의 startCommand를 우회)
-# set -x 를 사용하여 실행되는 모든 명령어 로깅
-ENTRYPOINT ["bash", "-c", "set -ex && cd /app && python -c \"print('Starting Python application with verbose debug output:'); import os; import sys; print(f'PYTHONPATH: {os.environ.get(\'PYTHONPATH\')}'); print(f'sys.path: {sys.path}'); from app import main\" && uvicorn app.main:app --host 0.0.0.0 --port $PORT"]
