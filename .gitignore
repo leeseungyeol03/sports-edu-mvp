@@ -1,1 +1,5 @@
-Logslogs.lognpm-debug.logyarn-debug.log*yarn-error.log*pnpm-debug.log*lerna-debug.log*Nodenode_modulesdistdist-ssr*.localEditor.vscode/*.idea.DS_Store*.suo*.ntvs*.njsproj*.sln*.sw?
+node_modules
+frontend/node_modules
+backend/venv
+.env
+dist
