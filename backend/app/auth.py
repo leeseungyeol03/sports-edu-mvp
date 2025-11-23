@@ -26,9 +26,13 @@ def verify_password(plain_password, hashed_password):
     """입력된 비밀번호와 저장된 해시 비밀번호 비교"""
     return pwd_context.verify(plain_password, hashed_password)
 
-def get_password_hash(password):
-    """비밀번호 해싱"""
-    return pwd_context.hash(password)
+def get_password_hash(password: str):
+    """
+    비밀번호 해싱.
+    bcrypt는 72바이트를 초과하는 비밀번호를 처리할 수 없으므로,
+    해싱 전에 비밀번호를 72바이트로 자릅니다.
+    """
+    return pwd_context.hash(password.encode('utf-8')[:72])
 
 def create_access_token(data: dict, expires_delta: Optional[timedelta] = None):
     """JWT 액세스 토큰 생성"""

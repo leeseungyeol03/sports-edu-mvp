@@ -1,591 +1,88 @@
-2025-11-23T05:42:57.174847105Z ==> Downloading cache...
-2025-11-23T05:42:57.210829804Z ==> Cloning from https://github.com/leeseungyeol03/sports-edu-mvp
-2025-11-23T05:42:57.675090758Z ==> Checking out commit 98b75d97676c223dce39b6d0e718e8eb81c0fabf in branch main
-2025-11-23T05:43:00.608649098Z ==> Downloaded 111MB in 3s. Extraction took 0s.
-2025-11-23T05:43:01.500206637Z #1 [internal] load build definition from Dockerfile
-2025-11-23T05:43:01.500231757Z #1 transferring dockerfile: 1.11kB done
-2025-11-23T05:43:01.500234877Z #1 DONE 0.0s
-2025-11-23T05:43:01.500237107Z 
-2025-11-23T05:43:01.500239707Z #2 [internal] load metadata for docker.io/library/python:3.9-slim
-2025-11-23T05:43:01.691714533Z #2 ...
-2025-11-23T05:43:01.691729973Z 
-2025-11-23T05:43:01.691734503Z #3 [auth] library/python:pull render-prod/docker-mirror-repository/library/python:pull token for us-west1-docker.pkg.dev
-2025-11-23T05:43:01.691741143Z #3 DONE 0.0s
-2025-11-23T05:43:01.841986825Z 
-2025-11-23T05:43:01.842002966Z #2 [internal] load metadata for docker.io/library/python:3.9-slim
-2025-11-23T05:43:01.967307846Z #2 DONE 0.6s
-2025-11-23T05:43:02.165138927Z 
-2025-11-23T05:43:02.165162757Z #4 [internal] load .dockerignore
-2025-11-23T05:43:02.165165777Z #4 transferring context: 2B done
-2025-11-23T05:43:02.165168217Z #4 DONE 0.0s
-2025-11-23T05:43:02.165170307Z 
-2025-11-23T05:43:02.165173187Z #5 importing cache manifest from local:12708693834630703919
-2025-11-23T05:43:02.165175877Z #5 inferred cache manifest type: application/vnd.oci.image.manifest.v1+json done
-2025-11-23T05:43:02.165177987Z #5 DONE 0.0s
-2025-11-23T05:43:02.165179937Z 
-2025-11-23T05:43:02.165182788Z #6 [1/6] FROM docker.io/library/python:3.9-slim@sha256:2d97f6910b16bd338d3060f261f53f144965f755599aab1acda1e13cf1731b1b
-2025-11-23T05:43:02.165185017Z #6 resolve docker.io/library/python:3.9-slim@sha256:2d97f6910b16bd338d3060f261f53f144965f755599aab1acda1e13cf1731b1b 0.0s done
-2025-11-23T05:43:02.165187137Z #6 DONE 0.0s
-2025-11-23T05:43:02.165189078Z 
-2025-11-23T05:43:02.165191158Z #7 [internal] load build context
-2025-11-23T05:43:02.165203898Z #7 transferring context: 156.54kB done
-2025-11-23T05:43:03.314179881Z #7 DONE 1.2s
-2025-11-23T05:43:03.314202972Z 
-2025-11-23T05:43:03.314209342Z #8 [2/6] RUN mkdir /app
-2025-11-23T05:43:03.314217102Z #8 sha256:38513bd7256313495cdd83b3b0915a633cfa475dc2a07072ab2c8d191020ca5d 29.78MB / 29.78MB 0.2s done
-2025-11-23T05:43:03.314222212Z #8 extracting sha256:38513bd7256313495cdd83b3b0915a633cfa475dc2a07072ab2c8d191020ca5d 0.7s done
-2025-11-23T05:43:03.314226512Z #8 sha256:b3ec39b36ae8c03a3e09854de4ec4aa08381dfed84a9daa075048c2e3df3881d 1.29MB / 1.29MB 0.0s done
-2025-11-23T05:43:03.314232032Z #8 extracting sha256:b3ec39b36ae8c03a3e09854de4ec4aa08381dfed84a9daa075048c2e3df3881d 0.3s done
-2025-11-23T05:43:03.314236662Z #8 sha256:fc74430849022d13b0d44b8969a953f842f59c6e9d1a0c2c83d710affa286c08 13.88MB / 13.88MB 0.1s done
-2025-11-23T05:43:03.472748928Z #8 extracting sha256:fc74430849022d13b0d44b8969a953f842f59c6e9d1a0c2c83d710affa286c08
-2025-11-23T05:43:03.939633343Z #8 extracting sha256:fc74430849022d13b0d44b8969a953f842f59c6e9d1a0c2c83d710affa286c08 0.6s done
-2025-11-23T05:43:04.140567654Z #8 sha256:ea56f685404adf81680322f152d2cfec62115b30dda481c2c450078315beb508 251B / 251B done
-2025-11-23T05:43:04.140589805Z #8 extracting sha256:ea56f685404adf81680322f152d2cfec62115b30dda481c2c450078315beb508 0.0s done
-2025-11-23T05:43:04.140594055Z #8 sha256:caaa2cfbab17e0ae333d07d07b4af1acf7afa074f5e2e2dda2d926d81a60bf98 92B / 92B done
-2025-11-23T05:43:04.140597715Z #8 extracting sha256:caaa2cfbab17e0ae333d07d07b4af1acf7afa074f5e2e2dda2d926d81a60bf98 0.0s done
-2025-11-23T05:43:04.140601475Z #8 CACHED
-2025-11-23T05:43:04.140604875Z 
-2025-11-23T05:43:04.140609965Z #9 [3/6] RUN apt-get update && apt-get install -y build-essential
-2025-11-23T05:43:04.140613565Z #9 0.112 Get:1 http://deb.debian.org/debian trixie InRelease [140 kB]
-2025-11-23T05:43:04.27274461Z #9 0.136 Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
-2025-11-23T05:43:04.272775751Z #9 0.139 Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
-2025-11-23T05:43:04.272778831Z #9 0.160 Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9670 kB]
-2025-11-23T05:43:04.272781411Z #9 0.244 Get:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [5412 B]
-2025-11-23T05:43:04.423257508Z #9 0.244 Get:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [71.8 kB]
-2025-11-23T05:43:04.863070079Z #9 0.834 Fetched 9978 kB in 1s (13.3 MB/s)
-2025-11-23T05:43:05.375107464Z #9 0.834 Reading package lists...
-2025-11-23T05:43:05.919427436Z #9 1.372 Reading package lists...
-2025-11-23T05:43:06.063189941Z #9 1.903 Building dependency tree...
-2025-11-23T05:43:06.063213471Z #9 2.034 Reading state information...
-2025-11-23T05:43:06.213436403Z #9 2.184 The following additional packages will be installed:
-2025-11-23T05:43:06.213460503Z #9 2.184   binutils binutils-common binutils-x86-64-linux-gnu bzip2 cpp cpp-14
-2025-11-23T05:43:06.367210195Z #9 2.184   cpp-14-x86-64-linux-gnu cpp-x86-64-linux-gnu dpkg-dev fakeroot g++ g++-14
-2025-11-23T05:43:06.367234805Z #9 2.184   g++-14-x86-64-linux-gnu g++-x86-64-linux-gnu gcc gcc-14
-2025-11-23T05:43:06.367237875Z #9 2.185   gcc-14-x86-64-linux-gnu gcc-x86-64-linux-gnu libalgorithm-diff-perl
-2025-11-23T05:43:06.367240275Z #9 2.185   libalgorithm-diff-xs-perl libalgorithm-merge-perl libasan8 libatomic1
-2025-11-23T05:43:06.367242455Z #9 2.185   libbinutils libc-dev-bin libc6-dev libcc1-0 libcrypt-dev libctf-nobfd0
-2025-11-23T05:43:06.367244555Z #9 2.185   libctf0 libdpkg-perl libfakeroot libfile-fcntllock-perl libgcc-14-dev
-2025-11-23T05:43:06.367246765Z #9 2.185   libgdbm-compat4t64 libgomp1 libgprofng0 libhwasan0 libisl23 libitm1
-2025-11-23T05:43:06.367249185Z #9 2.185   libjansson4 liblocale-gettext-perl liblsan0 libmpc3 libmpfr6 libperl5.40
-2025-11-23T05:43:06.367251516Z #9 2.186   libquadmath0 libsframe1 libstdc++-14-dev libtsan2 libubsan1 linux-libc-dev
-2025-11-23T05:43:06.367253705Z #9 2.186   make manpages manpages-dev patch perl perl-modules-5.40 rpcsvc-proto sq
-2025-11-23T05:43:06.367256325Z #9 2.186   xz-utils
-2025-11-23T05:43:06.367259336Z #9 2.188 Suggested packages:
-2025-11-23T05:43:06.367261466Z #9 2.188   binutils-doc gprofng-gui binutils-gold bzip2-doc cpp-doc gcc-14-locales
-2025-11-23T05:43:06.367263566Z #9 2.188   cpp-14-doc debian-keyring debian-tag2upload-keyring g++-multilib
-2025-11-23T05:43:06.367265656Z #9 2.188   g++-14-multilib gcc-14-doc gcc-multilib autoconf automake libtool flex bison
-2025-11-23T05:43:06.367267746Z #9 2.188   gdb gcc-doc gcc-14-multilib gdb-x86-64-linux-gnu libc-devtools glibc-doc
-2025-11-23T05:43:06.367269896Z #9 2.188   sensible-utils git bzr libstdc++-14-doc make-doc man-browser ed
-2025-11-23T05:43:06.367272576Z #9 2.188   diffutils-doc perl-doc libterm-readline-gnu-perl
-2025-11-23T05:43:06.367274976Z #9 2.188   | libterm-readline-perl-perl libtap-harness-archive-perl
-2025-11-23T05:43:06.42631792Z #9 2.397 The following NEW packages will be installed:
-2025-11-23T05:43:06.426344641Z #9 2.397   binutils binutils-common binutils-x86-64-linux-gnu build-essential bzip2 cpp
-2025-11-23T05:43:06.528582956Z #9 2.397   cpp-14 cpp-14-x86-64-linux-gnu cpp-x86-64-linux-gnu dpkg-dev fakeroot g++
-2025-11-23T05:43:06.528605037Z #9 2.397   g++-14 g++-14-x86-64-linux-gnu g++-x86-64-linux-gnu gcc gcc-14
-2025-11-23T05:43:06.528608617Z #9 2.398   gcc-14-x86-64-linux-gnu gcc-x86-64-linux-gnu libalgorithm-diff-perl
-2025-11-23T05:43:06.528611697Z #9 2.398   libalgorithm-diff-xs-perl libalgorithm-merge-perl libasan8 libatomic1
-2025-11-23T05:43:06.528614347Z #9 2.398   libbinutils libc-dev-bin libc6-dev libcc1-0 libcrypt-dev libctf-nobfd0
-2025-11-23T05:43:06.528629767Z #9 2.398   libctf0 libdpkg-perl libfakeroot libfile-fcntllock-perl libgcc-14-dev
-2025-11-23T05:43:06.528633467Z #9 2.398   libgdbm-compat4t64 libgomp1 libgprofng0 libhwasan0 libisl23 libitm1
-2025-11-23T05:43:06.528635967Z #9 2.398   libjansson4 liblocale-gettext-perl liblsan0 libmpc3 libmpfr6 libperl5.40
-2025-11-23T05:43:06.528637927Z #9 2.399   libquadmath0 libsframe1 libstdc++-14-dev libtsan2 libubsan1 linux-libc-dev
-2025-11-23T05:43:06.528639707Z #9 2.399   make manpages manpages-dev patch perl perl-modules-5.40 rpcsvc-proto sq
-2025-11-23T05:43:06.528642287Z #9 2.399   xz-utils
-2025-11-23T05:43:06.528644087Z #9 2.441 0 upgraded, 62 newly installed, 0 to remove and 6 not upgraded.
-2025-11-23T05:43:06.528646458Z #9 2.441 Need to get 91.7 MB of archives.
-2025-11-23T05:43:06.528648127Z #9 2.441 After this operation, 365 MB of additional disk space will be used.
-2025-11-23T05:43:06.528650538Z #9 2.441 Get:1 http://deb.debian.org/debian trixie/main amd64 liblocale-gettext-perl amd64 1.07-7+b1 [15.3 kB]
-2025-11-23T05:43:06.528652207Z #9 2.450 Get:2 http://deb.debian.org/debian trixie/main amd64 bzip2 amd64 1.0.8-6 [40.5 kB]
-2025-11-23T05:43:06.528654408Z #9 2.459 Get:3 http://deb.debian.org/debian trixie/main amd64 manpages all 6.9.1-1 [1393 kB]
-2025-11-23T05:43:06.528657598Z #9 2.487 Get:4 http://deb.debian.org/debian trixie/main amd64 perl-modules-5.40 all 5.40.1-6 [3019 kB]
-2025-11-23T05:43:06.528660438Z #9 2.500 Get:5 http://deb.debian.org/debian trixie/main amd64 libgdbm-compat4t64 amd64 1.24-2 [50.3 kB]
-2025-11-23T05:43:06.632397323Z #9 2.500 Get:6 http://deb.debian.org/debian trixie/main amd64 libperl5.40 amd64 5.40.1-6 [4341 kB]
-2025-11-23T05:43:06.632415753Z #9 2.514 Get:7 http://deb.debian.org/debian trixie/main amd64 perl amd64 5.40.1-6 [267 kB]
-2025-11-23T05:43:06.632420184Z #9 2.515 Get:8 http://deb.debian.org/debian trixie/main amd64 xz-utils amd64 5.8.1-1 [660 kB]
-2025-11-23T05:43:06.632424153Z #9 2.518 Get:9 http://deb.debian.org/debian trixie/main amd64 libsframe1 amd64 2.44-3 [78.4 kB]
-2025-11-23T05:43:06.632427204Z #9 2.518 Get:10 http://deb.debian.org/debian trixie/main amd64 binutils-common amd64 2.44-3 [2509 kB]
-2025-11-23T05:43:06.632429524Z #9 2.526 Get:11 http://deb.debian.org/debian trixie/main amd64 libbinutils amd64 2.44-3 [534 kB]
-2025-11-23T05:43:06.632431694Z #9 2.528 Get:12 http://deb.debian.org/debian trixie/main amd64 libgprofng0 amd64 2.44-3 [808 kB]
-2025-11-23T05:43:06.632433894Z #9 2.531 Get:13 http://deb.debian.org/debian trixie/main amd64 libctf-nobfd0 amd64 2.44-3 [156 kB]
-2025-11-23T05:43:06.632436004Z #9 2.532 Get:14 http://deb.debian.org/debian trixie/main amd64 libctf0 amd64 2.44-3 [88.6 kB]
-2025-11-23T05:43:06.632438354Z #9 2.532 Get:15 http://deb.debian.org/debian trixie/main amd64 libjansson4 amd64 2.14-2+b3 [39.8 kB]
-2025-11-23T05:43:06.632440714Z #9 2.532 Get:16 http://deb.debian.org/debian trixie/main amd64 binutils-x86-64-linux-gnu amd64 2.44-3 [1014 kB]
-2025-11-23T05:43:06.632442844Z #9 2.536 Get:17 http://deb.debian.org/debian trixie/main amd64 binutils amd64 2.44-3 [265 kB]
-2025-11-23T05:43:06.632444974Z #9 2.537 Get:18 http://deb.debian.org/debian trixie/main amd64 libc-dev-bin amd64 2.41-12 [58.2 kB]
-2025-11-23T05:43:06.632447114Z #9 2.537 Get:19 http://deb.debian.org/debian trixie/main amd64 linux-libc-dev all 6.12.57-1 [2692 kB]
-2025-11-23T05:43:06.632449224Z #9 2.546 Get:20 http://deb.debian.org/debian trixie/main amd64 libcrypt-dev amd64 1:4.4.38-1 [119 kB]
-2025-11-23T05:43:06.632451294Z #9 2.546 Get:21 http://deb.debian.org/debian trixie/main amd64 rpcsvc-proto amd64 1.4.3-1 [63.3 kB]
-2025-11-23T05:43:06.632453394Z #9 2.549 Get:22 http://deb.debian.org/debian trixie/main amd64 libc6-dev amd64 2.41-12 [1991 kB]
-2025-11-23T05:43:06.632455574Z #9 2.556 Get:23 http://deb.debian.org/debian trixie/main amd64 libisl23 amd64 0.27-1 [659 kB]
-2025-11-23T05:43:06.632467404Z #9 2.558 Get:24 http://deb.debian.org/debian trixie/main amd64 libmpfr6 amd64 4.2.2-1 [729 kB]
-2025-11-23T05:43:06.632469605Z #9 2.561 Get:25 http://deb.debian.org/debian trixie/main amd64 libmpc3 amd64 1.3.1-1+b3 [52.2 kB]
-2025-11-23T05:43:06.632471754Z #9 2.561 Get:26 http://deb.debian.org/debian trixie/main amd64 cpp-14-x86-64-linux-gnu amd64 14.2.0-19 [11.0 MB]
-2025-11-23T05:43:06.632473934Z #9 2.603 Get:27 http://deb.debian.org/debian trixie/main amd64 cpp-14 amd64 14.2.0-19 [1280 B]
-2025-11-23T05:43:06.769297002Z #9 2.604 Get:28 http://deb.debian.org/debian trixie/main amd64 cpp-x86-64-linux-gnu amd64 4:14.2.0-1 [4840 B]
-2025-11-23T05:43:06.769318123Z #9 2.606 Get:29 http://deb.debian.org/debian trixie/main amd64 cpp amd64 4:14.2.0-1 [1568 B]
-2025-11-23T05:43:06.769320852Z #9 2.606 Get:30 http://deb.debian.org/debian trixie/main amd64 libcc1-0 amd64 14.2.0-19 [42.8 kB]
-2025-11-23T05:43:06.769323103Z #9 2.606 Get:31 http://deb.debian.org/debian trixie/main amd64 libgomp1 amd64 14.2.0-19 [137 kB]
-2025-11-23T05:43:06.769325283Z #9 2.607 Get:32 http://deb.debian.org/debian trixie/main amd64 libitm1 amd64 14.2.0-19 [26.0 kB]
-2025-11-23T05:43:06.769327523Z #9 2.607 Get:33 http://deb.debian.org/debian trixie/main amd64 libatomic1 amd64 14.2.0-19 [9308 B]
-2025-11-23T05:43:06.769330213Z #9 2.607 Get:34 http://deb.debian.org/debian trixie/main amd64 libasan8 amd64 14.2.0-19 [2725 kB]
-2025-11-23T05:43:06.769332383Z #9 2.616 Get:35 http://deb.debian.org/debian trixie/main amd64 liblsan0 amd64 14.2.0-19 [1204 kB]
-2025-11-23T05:43:06.769334463Z #9 2.620 Get:36 http://deb.debian.org/debian trixie/main amd64 libtsan2 amd64 14.2.0-19 [2460 kB]
-2025-11-23T05:43:06.769336573Z #9 2.628 Get:37 http://deb.debian.org/debian trixie/main amd64 libubsan1 amd64 14.2.0-19 [1074 kB]
-2025-11-23T05:43:06.769338733Z #9 2.637 Get:38 http://deb.debian.org/debian trixie/main amd64 libhwasan0 amd64 14.2.0-19 [1488 kB]
-2025-11-23T05:43:06.769340843Z #9 2.642 Get:39 http://deb.debian.org/debian trixie/main amd64 libquadmath0 amd64 14.2.0-19 [145 kB]
-2025-11-23T05:43:06.769342963Z #9 2.643 Get:40 http://deb.debian.org/debian trixie/main amd64 libgcc-14-dev amd64 14.2.0-19 [2672 kB]
-2025-11-23T05:43:06.769345133Z #9 2.652 Get:41 http://deb.debian.org/debian trixie/main amd64 gcc-14-x86-64-linux-gnu amd64 14.2.0-19 [21.4 MB]
-2025-11-23T05:43:06.769347333Z #9 2.740 Get:42 http://deb.debian.org/debian trixie/main amd64 gcc-14 amd64 14.2.0-19 [540 kB]
-2025-11-23T05:43:07.017364233Z #9 2.742 Get:43 http://deb.debian.org/debian trixie/main amd64 gcc-x86-64-linux-gnu amd64 4:14.2.0-1 [1436 B]
-2025-11-23T05:43:07.017381603Z #9 2.742 Get:44 http://deb.debian.org/debian trixie/main amd64 gcc amd64 4:14.2.0-1 [5136 B]
-2025-11-23T05:43:07.017384333Z #9 2.743 Get:45 http://deb.debian.org/debian trixie/main amd64 libstdc++-14-dev amd64 14.2.0-19 [2376 kB]
-2025-11-23T05:43:07.017386163Z #9 2.751 Get:46 http://deb.debian.org/debian trixie/main amd64 g++-14-x86-64-linux-gnu amd64 14.2.0-19 [12.1 MB]
-2025-11-23T05:43:07.017388213Z #9 2.800 Get:47 http://deb.debian.org/debian trixie/main amd64 g++-14 amd64 14.2.0-19 [22.5 kB]
-2025-11-23T05:43:07.017390063Z #9 2.800 Get:48 http://deb.debian.org/debian trixie/main amd64 g++-x86-64-linux-gnu amd64 4:14.2.0-1 [1200 B]
-2025-11-23T05:43:07.017392053Z #9 2.800 Get:49 http://deb.debian.org/debian trixie/main amd64 g++ amd64 4:14.2.0-1 [1344 B]
-2025-11-23T05:43:07.017397703Z #9 2.801 Get:50 http://deb.debian.org/debian trixie/main amd64 make amd64 4.4.1-2 [463 kB]
-2025-11-23T05:43:07.017399523Z #9 2.802 Get:51 http://deb.debian.org/debian trixie/main amd64 libdpkg-perl all 1.22.21 [650 kB]
-2025-11-23T05:43:07.017401203Z #9 2.805 Get:52 http://deb.debian.org/debian trixie/main amd64 patch amd64 2.8-2 [134 kB]
-2025-11-23T05:43:07.017412394Z #9 2.805 Get:53 http://deb.debian.org/debian trixie/main amd64 dpkg-dev all 1.22.21 [1338 kB]
-2025-11-23T05:43:07.017414234Z #9 2.809 Get:54 http://deb.debian.org/debian trixie/main amd64 build-essential amd64 12.12 [4624 B]
-2025-11-23T05:43:07.017416014Z #9 2.810 Get:55 http://deb.debian.org/debian trixie/main amd64 libfakeroot amd64 1.37.1.1-1 [29.6 kB]
-2025-11-23T05:43:07.017420134Z #9 2.810 Get:56 http://deb.debian.org/debian trixie/main amd64 fakeroot amd64 1.37.1.1-1 [76.0 kB]
-2025-11-23T05:43:07.017423064Z #9 2.814 Get:57 http://deb.debian.org/debian trixie/main amd64 libalgorithm-diff-perl all 1.201-1 [43.3 kB]
-2025-11-23T05:43:07.017426034Z #9 2.814 Get:58 http://deb.debian.org/debian trixie/main amd64 libalgorithm-diff-xs-perl amd64 0.04-9 [11.1 kB]
-2025-11-23T05:43:07.017429034Z #9 2.815 Get:59 http://deb.debian.org/debian trixie/main amd64 libalgorithm-merge-perl all 0.08-5 [11.8 kB]
-2025-11-23T05:43:07.017431804Z #9 2.823 Get:60 http://deb.debian.org/debian trixie/main amd64 libfile-fcntllock-perl amd64 0.22-4+b4 [34.6 kB]
-2025-11-23T05:43:07.017434854Z #9 2.831 Get:61 http://deb.debian.org/debian trixie/main amd64 manpages-dev all 6.9.1-1 [2122 kB]
-2025-11-23T05:43:07.017437754Z #9 2.838 Get:62 http://deb.debian.org/debian trixie/main amd64 sq amd64 1.3.1-2+b1 [5654 kB]
-2025-11-23T05:43:07.026123426Z #9 2.997 debconf: unable to initialize frontend: Dialog
-2025-11-23T05:43:07.026140566Z #9 2.997 debconf: (TERM is not set, so the dialog frontend is not usable.)
-2025-11-23T05:43:07.026144386Z #9 2.997 debconf: falling back to frontend: Readline
-2025-11-23T05:43:07.182260704Z #9 2.997 debconf: unable to initialize frontend: Readline
-2025-11-23T05:43:07.182277614Z #9 2.997 debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC entries checked: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.40.1 /usr/local/share/perl/5.40.1 /usr/lib/x86_64-linux-gnu/perl5/5.40 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl-base /usr/lib/x86_64-linux-gnu/perl/5.40 /usr/share/perl/5.40 /usr/local/lib/site_perl) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 8, <STDIN> line 62.)
-2025-11-23T05:43:07.182286084Z #9 2.997 debconf: falling back to frontend: Teletype
-2025-11-23T05:43:07.182289564Z #9 3.003 debconf: unable to initialize frontend: Teletype
-2025-11-23T05:43:07.182293165Z #9 3.003 debconf: (This frontend requires a controlling tty.)
-2025-11-23T05:43:07.182297105Z #9 3.003 debconf: falling back to frontend: Noninteractive
-2025-11-23T05:43:08.628587859Z #9 4.600 Fetched 91.7 MB in 0s (206 MB/s)
-2025-11-23T05:43:08.728856476Z #9 4.622 Selecting previously unselected package liblocale-gettext-perl.
-2025-11-23T05:43:08.728879826Z #9 4.622 (Reading database ... 
-(Reading database ... 5%
-(Reading database ... 10%
-(Reading database ... 15%
-(Reading database ... 20%
-(Reading database ... 25%
-(Reading database ... 30%
-(Reading database ... 35%
-(Reading database ... 40%
-(Reading database ... 45%
-(Reading database ... 50%
-(Reading database ... 55%
-(Reading database ... 60%
-(Reading database ... 65%
-(Reading database ... 70%
-(Reading database ... 75%
-(Reading database ... 80%
-(Reading database ... 85%
-(Reading database ... 90%
-(Reading database ... 95%
-(Reading database ... 100%
-(Reading database ... 5644 files and directories currently installed.)
-2025-11-23T05:43:08.728886276Z #9 4.629 Preparing to unpack .../00-liblocale-gettext-perl_1.07-7+b1_amd64.deb ...
-2025-11-23T05:43:08.728890886Z #9 4.631 Unpacking liblocale-gettext-perl (1.07-7+b1) ...
-2025-11-23T05:43:08.728894717Z #9 4.664 Selecting previously unselected package bzip2.
-2025-11-23T05:43:08.728898187Z #9 4.665 Preparing to unpack .../01-bzip2_1.0.8-6_amd64.deb ...
-2025-11-23T05:43:08.728902167Z #9 4.668 Unpacking bzip2 (1.0.8-6) ...
-2025-11-23T05:43:08.728916567Z #9 4.696 Selecting previously unselected package manpages.
-2025-11-23T05:43:08.728918857Z #9 4.697 Preparing to unpack .../02-manpages_6.9.1-1_all.deb ...
-2025-11-23T05:43:08.728921037Z #9 4.700 Unpacking manpages (6.9.1-1) ...
-2025-11-23T05:43:08.935298936Z #9 4.752 Selecting previously unselected package perl-modules-5.40.
-2025-11-23T05:43:08.935319786Z #9 4.753 Preparing to unpack .../03-perl-modules-5.40_5.40.1-6_all.deb ...
-2025-11-23T05:43:08.935324436Z #9 4.756 Unpacking perl-modules-5.40 (5.40.1-6) ...
-2025-11-23T05:43:09.053735971Z #9 5.025 Selecting previously unselected package libgdbm-compat4t64:amd64.
-2025-11-23T05:43:09.250675974Z #9 5.026 Preparing to unpack .../04-libgdbm-compat4t64_1.24-2_amd64.deb ...
-2025-11-23T05:43:09.250690464Z #9 5.032 Unpacking libgdbm-compat4t64:amd64 (1.24-2) ...
-2025-11-23T05:43:09.250692764Z #9 5.067 Selecting previously unselected package libperl5.40:amd64.
-2025-11-23T05:43:09.250694944Z #9 5.068 Preparing to unpack .../05-libperl5.40_5.40.1-6_amd64.deb ...
-2025-11-23T05:43:09.250696834Z #9 5.071 Unpacking libperl5.40:amd64 (5.40.1-6) ...
-2025-11-23T05:43:09.327332125Z #9 5.298 Selecting previously unselected package perl.
-2025-11-23T05:43:09.455772727Z #9 5.300 Preparing to unpack .../06-perl_5.40.1-6_amd64.deb ...
-2025-11-23T05:43:09.455789968Z #9 5.303 Unpacking perl (5.40.1-6) ...
-2025-11-23T05:43:09.455792737Z #9 5.341 Selecting previously unselected package xz-utils.
-2025-11-23T05:43:09.455795658Z #9 5.343 Preparing to unpack .../07-xz-utils_5.8.1-1_amd64.deb ...
-2025-11-23T05:43:09.455798008Z #9 5.346 Unpacking xz-utils (5.8.1-1) ...
-2025-11-23T05:43:09.455800198Z #9 5.393 Selecting previously unselected package libsframe1:amd64.
-2025-11-23T05:43:09.455802288Z #9 5.395 Preparing to unpack .../08-libsframe1_2.44-3_amd64.deb ...
-2025-11-23T05:43:09.455804378Z #9 5.398 Unpacking libsframe1:amd64 (2.44-3) ...
-2025-11-23T05:43:09.455806548Z #9 5.427 Selecting previously unselected package binutils-common:amd64.
-2025-11-23T05:43:09.588743249Z #9 5.428 Preparing to unpack .../09-binutils-common_2.44-3_amd64.deb ...
-2025-11-23T05:43:09.588759559Z #9 5.431 Unpacking binutils-common:amd64 (2.44-3) ...
-2025-11-23T05:43:09.588763729Z #9 5.560 Selecting previously unselected package libbinutils:amd64.
-2025-11-23T05:43:09.716505397Z #9 5.561 Preparing to unpack .../10-libbinutils_2.44-3_amd64.deb ...
-2025-11-23T05:43:09.716523338Z #9 5.564 Unpacking libbinutils:amd64 (2.44-3) ...
-2025-11-23T05:43:09.716526078Z #9 5.619 Selecting previously unselected package libgprofng0:amd64.
-2025-11-23T05:43:09.716528348Z #9 5.620 Preparing to unpack .../11-libgprofng0_2.44-3_amd64.deb ...
-2025-11-23T05:43:09.716530438Z #9 5.623 Unpacking libgprofng0:amd64 (2.44-3) ...
-2025-11-23T05:43:09.716532858Z #9 5.687 Selecting previously unselected package libctf-nobfd0:amd64.
-2025-11-23T05:43:09.826826423Z #9 5.689 Preparing to unpack .../12-libctf-nobfd0_2.44-3_amd64.deb ...
-2025-11-23T05:43:09.826839763Z #9 5.692 Unpacking libctf-nobfd0:amd64 (2.44-3) ...
-2025-11-23T05:43:09.826842003Z #9 5.728 Selecting previously unselected package libctf0:amd64.
-2025-11-23T05:43:09.826843883Z #9 5.730 Preparing to unpack .../13-libctf0_2.44-3_amd64.deb ...
-2025-11-23T05:43:09.826846223Z #9 5.733 Unpacking libctf0:amd64 (2.44-3) ...
-2025-11-23T05:43:09.826848003Z #9 5.767 Selecting previously unselected package libjansson4:amd64.
-2025-11-23T05:43:09.826849913Z #9 5.768 Preparing to unpack .../14-libjansson4_2.14-2+b3_amd64.deb ...
-2025-11-23T05:43:09.826851603Z #9 5.771 Unpacking libjansson4:amd64 (2.14-2+b3) ...
-2025-11-23T05:43:09.826853403Z #9 5.798 Selecting previously unselected package binutils-x86-64-linux-gnu.
-2025-11-23T05:43:09.928425066Z #9 5.799 Preparing to unpack .../15-binutils-x86-64-linux-gnu_2.44-3_amd64.deb ...
-2025-11-23T05:43:09.928442536Z #9 5.803 Unpacking binutils-x86-64-linux-gnu (2.44-3) ...
-2025-11-23T05:43:09.928446156Z #9 5.898 Selecting previously unselected package binutils.
-2025-11-23T05:43:09.928451206Z #9 5.900 Preparing to unpack .../16-binutils_2.44-3_amd64.deb ...
-2025-11-23T05:43:10.164741274Z #9 5.905 Unpacking binutils (2.44-3) ...
-2025-11-23T05:43:10.164760845Z #9 5.945 Selecting previously unselected package libc-dev-bin.
-2025-11-23T05:43:10.164764795Z #9 5.947 Preparing to unpack .../17-libc-dev-bin_2.41-12_amd64.deb ...
-2025-11-23T05:43:10.164767365Z #9 5.950 Unpacking libc-dev-bin (2.41-12) ...
-2025-11-23T05:43:10.164770055Z #9 5.981 Selecting previously unselected package linux-libc-dev.
-2025-11-23T05:43:10.164772385Z #9 5.983 Preparing to unpack .../18-linux-libc-dev_6.12.57-1_all.deb ...
-2025-11-23T05:43:10.164774695Z #9 5.985 Unpacking linux-libc-dev (6.12.57-1) ...
-2025-11-23T05:43:10.432713978Z #9 6.404 Selecting previously unselected package libcrypt-dev:amd64.
-2025-11-23T05:43:10.648213256Z #9 6.406 Preparing to unpack .../19-libcrypt-dev_1%3a4.4.38-1_amd64.deb ...
-2025-11-23T05:43:10.648230657Z #9 6.415 Unpacking libcrypt-dev:amd64 (1:4.4.38-1) ...
-2025-11-23T05:43:10.648234797Z #9 6.444 Selecting previously unselected package rpcsvc-proto.
-2025-11-23T05:43:10.648238437Z #9 6.445 Preparing to unpack .../20-rpcsvc-proto_1.4.3-1_amd64.deb ...
-2025-11-23T05:43:10.648244127Z #9 6.448 Unpacking rpcsvc-proto (1.4.3-1) ...
-2025-11-23T05:43:10.648250427Z #9 6.478 Selecting previously unselected package libc6-dev:amd64.
-2025-11-23T05:43:10.648256217Z #9 6.480 Preparing to unpack .../21-libc6-dev_2.41-12_amd64.deb ...
-2025-11-23T05:43:10.648261927Z #9 6.483 Unpacking libc6-dev:amd64 (2.41-12) ...
-2025-11-23T05:43:10.648267587Z #9 6.619 Selecting previously unselected package libisl23:amd64.
-2025-11-23T05:43:10.760585302Z #9 6.621 Preparing to unpack .../22-libisl23_0.27-1_amd64.deb ...
-2025-11-23T05:43:10.760602032Z #9 6.624 Unpacking libisl23:amd64 (0.27-1) ...
-2025-11-23T05:43:10.760608722Z #9 6.683 Selecting previously unselected package libmpfr6:amd64.
-2025-11-23T05:43:10.760614982Z #9 6.685 Preparing to unpack .../23-libmpfr6_4.2.2-1_amd64.deb ...
-2025-11-23T05:43:10.760620842Z #9 6.688 Unpacking libmpfr6:amd64 (4.2.2-1) ...
-2025-11-23T05:43:10.760626322Z #9 6.732 Selecting previously unselected package libmpc3:amd64.
-2025-11-23T05:43:10.947891514Z #9 6.733 Preparing to unpack .../24-libmpc3_1.3.1-1+b3_amd64.deb ...
-2025-11-23T05:43:10.947907865Z #9 6.736 Unpacking libmpc3:amd64 (1.3.1-1+b3) ...
-2025-11-23T05:43:10.947912075Z #9 6.764 Selecting previously unselected package cpp-14-x86-64-linux-gnu.
-2025-11-23T05:43:10.947915885Z #9 6.766 Preparing to unpack .../25-cpp-14-x86-64-linux-gnu_14.2.0-19_amd64.deb ...
-2025-11-23T05:43:10.947919635Z #9 6.769 Unpacking cpp-14-x86-64-linux-gnu (14.2.0-19) ...
-2025-11-23T05:43:11.156663481Z #9 7.128 Selecting previously unselected package cpp-14.
-2025-11-23T05:43:11.268628758Z #9 7.129 Preparing to unpack .../26-cpp-14_14.2.0-19_amd64.deb ...
-2025-11-23T05:43:11.268647058Z #9 7.132 Unpacking cpp-14 (14.2.0-19) ...
-2025-11-23T05:43:11.268653068Z #9 7.159 Selecting previously unselected package cpp-x86-64-linux-gnu.
-2025-11-23T05:43:11.268656628Z #9 7.161 Preparing to unpack .../27-cpp-x86-64-linux-gnu_4%3a14.2.0-1_amd64.deb ...
-2025-11-23T05:43:11.268659718Z #9 7.164 Unpacking cpp-x86-64-linux-gnu (4:14.2.0-1) ...
-2025-11-23T05:43:11.268662578Z #9 7.198 Selecting previously unselected package cpp.
-2025-11-23T05:43:11.268665458Z #9 7.199 Preparing to unpack .../28-cpp_4%3a14.2.0-1_amd64.deb ...
-2025-11-23T05:43:11.268676339Z #9 7.208 Unpacking cpp (4:14.2.0-1) ...
-2025-11-23T05:43:11.268678199Z #9 7.240 Selecting previously unselected package libcc1-0:amd64.
-2025-11-23T05:43:11.382727497Z #9 7.241 Preparing to unpack .../29-libcc1-0_14.2.0-19_amd64.deb ...
-2025-11-23T05:43:11.382746178Z #9 7.244 Unpacking libcc1-0:amd64 (14.2.0-19) ...
-2025-11-23T05:43:11.382749168Z #9 7.276 Selecting previously unselected package libgomp1:amd64.
-2025-11-23T05:43:11.382751498Z #9 7.278 Preparing to unpack .../30-libgomp1_14.2.0-19_amd64.deb ...
-2025-11-23T05:43:11.382753728Z #9 7.280 Unpacking libgomp1:amd64 (14.2.0-19) ...
-2025-11-23T05:43:11.382755878Z #9 7.317 Selecting previously unselected package libitm1:amd64.
-2025-11-23T05:43:11.382757928Z #9 7.318 Preparing to unpack .../31-libitm1_14.2.0-19_amd64.deb ...
-2025-11-23T05:43:11.382760458Z #9 7.322 Unpacking libitm1:amd64 (14.2.0-19) ...
-2025-11-23T05:43:11.382762638Z #9 7.354 Selecting previously unselected package libatomic1:amd64.
-2025-11-23T05:43:11.560363259Z #9 7.356 Preparing to unpack .../32-libatomic1_14.2.0-19_amd64.deb ...
-2025-11-23T05:43:11.56038099Z #9 7.358 Unpacking libatomic1:amd64 (14.2.0-19) ...
-2025-11-23T05:43:11.5603838Z #9 7.389 Selecting previously unselected package libasan8:amd64.
-2025-11-23T05:43:11.56039078Z #9 7.391 Preparing to unpack .../33-libasan8_14.2.0-19_amd64.deb ...
-2025-11-23T05:43:11.56039481Z #9 7.393 Unpacking libasan8:amd64 (14.2.0-19) ...
-2025-11-23T05:43:11.56039802Z #9 7.531 Selecting previously unselected package liblsan0:amd64.
-2025-11-23T05:43:11.78660748Z #9 7.533 Preparing to unpack .../34-liblsan0_14.2.0-19_amd64.deb ...
-2025-11-23T05:43:11.78662469Z #9 7.536 Unpacking liblsan0:amd64 (14.2.0-19) ...
-2025-11-23T05:43:11.78662765Z #9 7.616 Selecting previously unselected package libtsan2:amd64.
-2025-11-23T05:43:11.78662995Z #9 7.618 Preparing to unpack .../35-libtsan2_14.2.0-19_amd64.deb ...
-2025-11-23T05:43:11.78663206Z #9 7.621 Unpacking libtsan2:amd64 (14.2.0-19) ...
-2025-11-23T05:43:11.78663417Z #9 7.758 Selecting previously unselected package libubsan1:amd64.
-2025-11-23T05:43:11.956945648Z #9 7.759 Preparing to unpack .../36-libubsan1_14.2.0-19_amd64.deb ...
-2025-11-23T05:43:11.956964738Z #9 7.762 Unpacking libubsan1:amd64 (14.2.0-19) ...
-2025-11-23T05:43:11.956967278Z #9 7.835 Selecting previously unselected package libhwasan0:amd64.
-2025-11-23T05:43:11.956969179Z #9 7.837 Preparing to unpack .../37-libhwasan0_14.2.0-19_amd64.deb ...
-2025-11-23T05:43:11.956970988Z #9 7.839 Unpacking libhwasan0:amd64 (14.2.0-19) ...
-2025-11-23T05:43:11.956972759Z #9 7.928 Selecting previously unselected package libquadmath0:amd64.
-2025-11-23T05:43:12.119594654Z #9 7.929 Preparing to unpack .../38-libquadmath0_14.2.0-19_amd64.deb ...
-2025-11-23T05:43:12.119612905Z #9 7.932 Unpacking libquadmath0:amd64 (14.2.0-19) ...
-2025-11-23T05:43:12.119615735Z #9 7.962 Selecting previously unselected package libgcc-14-dev:amd64.
-2025-11-23T05:43:12.119619235Z #9 7.963 Preparing to unpack .../39-libgcc-14-dev_14.2.0-19_amd64.deb ...
-2025-11-23T05:43:12.119622705Z #9 7.966 Unpacking libgcc-14-dev:amd64 (14.2.0-19) ...
-2025-11-23T05:43:12.119626775Z #9 8.091 Selecting previously unselected package gcc-14-x86-64-linux-gnu.
-2025-11-23T05:43:12.274723673Z #9 8.092 Preparing to unpack .../40-gcc-14-x86-64-linux-gnu_14.2.0-19_amd64.deb ...
-2025-11-23T05:43:12.274742903Z #9 8.095 Unpacking gcc-14-x86-64-linux-gnu (14.2.0-19) ...
-2025-11-23T05:43:12.733177101Z #9 8.704 Selecting previously unselected package gcc-14.
-2025-11-23T05:43:12.843638459Z #9 8.706 Preparing to unpack .../41-gcc-14_14.2.0-19_amd64.deb ...
-2025-11-23T05:43:12.84365806Z #9 8.709 Unpacking gcc-14 (14.2.0-19) ...
-2025-11-23T05:43:12.84367457Z #9 8.743 Selecting previously unselected package gcc-x86-64-linux-gnu.
-2025-11-23T05:43:12.84368359Z #9 8.745 Preparing to unpack .../42-gcc-x86-64-linux-gnu_4%3a14.2.0-1_amd64.deb ...
-2025-11-23T05:43:12.84368676Z #9 8.748 Unpacking gcc-x86-64-linux-gnu (4:14.2.0-1) ...
-2025-11-23T05:43:12.84368889Z #9 8.779 Selecting previously unselected package gcc.
-2025-11-23T05:43:12.84369103Z #9 8.781 Preparing to unpack .../43-gcc_4%3a14.2.0-1_amd64.deb ...
-2025-11-23T05:43:12.84369336Z #9 8.785 Unpacking gcc (4:14.2.0-1) ...
-2025-11-23T05:43:12.8436958Z #9 8.815 Selecting previously unselected package libstdc++-14-dev:amd64.
-2025-11-23T05:43:12.999831648Z #9 8.817 Preparing to unpack .../44-libstdc++-14-dev_14.2.0-19_amd64.deb ...
-2025-11-23T05:43:12.999849889Z #9 8.820 Unpacking libstdc++-14-dev:amd64 (14.2.0-19) ...
-2025-11-23T05:43:13.047329295Z #9 9.018 Selecting previously unselected package g++-14-x86-64-linux-gnu.
-2025-11-23T05:43:13.203430302Z #9 9.020 Preparing to unpack .../45-g++-14-x86-64-linux-gnu_14.2.0-19_amd64.deb ...
-2025-11-23T05:43:13.203448222Z #9 9.024 Unpacking g++-14-x86-64-linux-gnu (14.2.0-19) ...
-2025-11-23T05:43:13.460511661Z #9 9.431 Selecting previously unselected package g++-14.
-2025-11-23T05:43:13.56089086Z #9 9.433 Preparing to unpack .../46-g++-14_14.2.0-19_amd64.deb ...
-2025-11-23T05:43:13.56090927Z #9 9.436 Unpacking g++-14 (14.2.0-19) ...
-2025-11-23T05:43:13.560912Z #9 9.462 Selecting previously unselected package g++-x86-64-linux-gnu.
-2025-11-23T05:43:13.56091516Z #9 9.464 Preparing to unpack .../47-g++-x86-64-linux-gnu_4%3a14.2.0-1_amd64.deb ...
-2025-11-23T05:43:13.56091966Z #9 9.467 Unpacking g++-x86-64-linux-gnu (4:14.2.0-1) ...
-2025-11-23T05:43:13.56092367Z #9 9.496 Selecting previously unselected package g++.
-2025-11-23T05:43:13.56092724Z #9 9.498 Preparing to unpack .../48-g++_4%3a14.2.0-1_amd64.deb ...
-2025-11-23T05:43:13.56093106Z #9 9.501 Unpacking g++ (4:14.2.0-1) ...
-2025-11-23T05:43:13.56093439Z #9 9.527 Selecting previously unselected package make.
-2025-11-23T05:43:13.56093767Z #9 9.529 Preparing to unpack .../49-make_4.4.1-2_amd64.deb ...
-2025-11-23T05:43:13.560940761Z #9 9.532 Unpacking make (4.4.1-2) ...
-2025-11-23T05:43:13.664593134Z #9 9.575 Selecting previously unselected package libdpkg-perl.
-2025-11-23T05:43:13.664612334Z #9 9.577 Preparing to unpack .../50-libdpkg-perl_1.22.21_all.deb ...
-2025-11-23T05:43:13.664616844Z #9 9.580 Unpacking libdpkg-perl (1.22.21) ...
-2025-11-23T05:43:13.664619445Z #9 9.636 Selecting previously unselected package patch.
-2025-11-23T05:43:13.769260747Z #9 9.638 Preparing to unpack .../51-patch_2.8-2_amd64.deb ...
-2025-11-23T05:43:13.769282848Z #9 9.640 Unpacking patch (2.8-2) ...
-2025-11-23T05:43:13.769286218Z #9 9.673 Selecting previously unselected package dpkg-dev.
-2025-11-23T05:43:13.769288468Z #9 9.675 Preparing to unpack .../52-dpkg-dev_1.22.21_all.deb ...
-2025-11-23T05:43:13.769290618Z #9 9.678 Unpacking dpkg-dev (1.22.21) ...
-2025-11-23T05:43:13.769293288Z #9 9.740 Selecting previously unselected package build-essential.
-2025-11-23T05:43:13.879906009Z #9 9.742 Preparing to unpack .../53-build-essential_12.12_amd64.deb ...
-2025-11-23T05:43:13.879920919Z #9 9.745 Unpacking build-essential (12.12) ...
-2025-11-23T05:43:13.879923169Z #9 9.778 Selecting previously unselected package libfakeroot:amd64.
-2025-11-23T05:43:13.879925239Z #9 9.780 Preparing to unpack .../54-libfakeroot_1.37.1.1-1_amd64.deb ...
-2025-11-23T05:43:13.879927809Z #9 9.783 Unpacking libfakeroot:amd64 (1.37.1.1-1) ...
-2025-11-23T05:43:13.879929689Z #9 9.817 Selecting previously unselected package fakeroot.
-2025-11-23T05:43:13.879931369Z #9 9.819 Preparing to unpack .../55-fakeroot_1.37.1.1-1_amd64.deb ...
-2025-11-23T05:43:13.87994189Z #9 9.822 Unpacking fakeroot (1.37.1.1-1) ...
-2025-11-23T05:43:13.879943859Z #9 9.851 Selecting previously unselected package libalgorithm-diff-perl.
-2025-11-23T05:43:13.981530392Z #9 9.853 Preparing to unpack .../56-libalgorithm-diff-perl_1.201-1_all.deb ...
-2025-11-23T05:43:13.981552023Z #9 9.856 Unpacking libalgorithm-diff-perl (1.201-1) ...
-2025-11-23T05:43:13.981555453Z #9 9.883 Selecting previously unselected package libalgorithm-diff-xs-perl.
-2025-11-23T05:43:13.981558383Z #9 9.885 Preparing to unpack .../57-libalgorithm-diff-xs-perl_0.04-9_amd64.deb ...
-2025-11-23T05:43:13.981560563Z #9 9.889 Unpacking libalgorithm-diff-xs-perl (0.04-9) ...
-2025-11-23T05:43:13.981562923Z #9 9.917 Selecting previously unselected package libalgorithm-merge-perl.
-2025-11-23T05:43:13.981565143Z #9 9.919 Preparing to unpack .../58-libalgorithm-merge-perl_0.08-5_all.deb ...
-2025-11-23T05:43:13.981567283Z #9 9.922 Unpacking libalgorithm-merge-perl (0.08-5) ...
-2025-11-23T05:43:13.981569373Z #9 9.950 Selecting previously unselected package libfile-fcntllock-perl.
-2025-11-23T05:43:13.981572013Z #9 9.953 Preparing to unpack .../59-libfile-fcntllock-perl_0.22-4+b4_amd64.deb ...
-2025-11-23T05:43:14.141546667Z #9 9.956 Unpacking libfile-fcntllock-perl (0.22-4+b4) ...
-2025-11-23T05:43:14.141563477Z #9 9.988 Selecting previously unselected package manpages-dev.
-2025-11-23T05:43:14.141566437Z #9 9.990 Preparing to unpack .../60-manpages-dev_6.9.1-1_all.deb ...
-2025-11-23T05:43:14.141569168Z #9 9.993 Unpacking manpages-dev (6.9.1-1) ...
-2025-11-23T05:43:14.141570928Z #9 10.11 Selecting previously unselected package sq.
-2025-11-23T05:43:14.298244966Z #9 10.12 Preparing to unpack .../61-sq_1.3.1-2+b1_amd64.deb ...
-2025-11-23T05:43:14.298269527Z #9 10.12 Unpacking sq (1.3.1-2+b1) ...
-2025-11-23T05:43:14.439697555Z #9 10.41 Setting up libgdbm-compat4t64:amd64 (1.24-2) ...
-2025-11-23T05:43:14.546440389Z #9 10.42 Setting up manpages (6.9.1-1) ...
-2025-11-23T05:43:14.546456859Z #9 10.43 Setting up binutils-common:amd64 (2.44-3) ...
-2025-11-23T05:43:14.54645897Z #9 10.44 Setting up linux-libc-dev (6.12.57-1) ...
-2025-11-23T05:43:14.54646106Z #9 10.45 Setting up libctf-nobfd0:amd64 (2.44-3) ...
-2025-11-23T05:43:14.54646284Z #9 10.46 Setting up sq (1.3.1-2+b1) ...
-2025-11-23T05:43:14.54646456Z #9 10.47 Setting up libgomp1:amd64 (14.2.0-19) ...
-2025-11-23T05:43:14.54646634Z #9 10.48 Setting up bzip2 (1.0.8-6) ...
-2025-11-23T05:43:14.54646799Z #9 10.49 Setting up libsframe1:amd64 (2.44-3) ...
-2025-11-23T05:43:14.54646973Z #9 10.50 Setting up libfakeroot:amd64 (1.37.1.1-1) ...
-2025-11-23T05:43:14.54647142Z #9 10.52 Setting up libjansson4:amd64 (2.14-2+b3) ...
-2025-11-23T05:43:14.649307327Z #9 10.53 Setting up fakeroot (1.37.1.1-1) ...
-2025-11-23T05:43:14.649329338Z #9 10.54 update-alternatives: using /usr/bin/fakeroot-sysv to provide /usr/bin/fakeroot (fakeroot) in auto mode
-2025-11-23T05:43:14.649334598Z #9 10.54 update-alternatives: warning: skip creation of /usr/share/man/man1/fakeroot.1.gz because associated file /usr/share/man/man1/fakeroot-sysv.1.gz (of link group fakeroot) doesn't exist
-2025-11-23T05:43:14.649336528Z #9 10.54 update-alternatives: warning: skip creation of /usr/share/man/man1/faked.1.gz because associated file /usr/share/man/man1/faked-sysv.1.gz (of link group fakeroot) doesn't exist
-2025-11-23T05:43:14.649339848Z #9 10.54 update-alternatives: warning: skip creation of /usr/share/man/es/man1/fakeroot.1.gz because associated file /usr/share/man/es/man1/fakeroot-sysv.1.gz (of link group fakeroot) doesn't exist
-2025-11-23T05:43:14.649341898Z #9 10.54 update-alternatives: warning: skip creation of /usr/share/man/es/man1/faked.1.gz because associated file /usr/share/man/es/man1/faked-sysv.1.gz (of link group fakeroot) doesn't exist
-2025-11-23T05:43:14.649351768Z #9 10.54 update-alternatives: warning: skip creation of /usr/share/man/fr/man1/fakeroot.1.gz because associated file /usr/share/man/fr/man1/fakeroot-sysv.1.gz (of link group fakeroot) doesn't exist
-2025-11-23T05:43:14.649353638Z #9 10.54 update-alternatives: warning: skip creation of /usr/share/man/fr/man1/faked.1.gz because associated file /usr/share/man/fr/man1/faked-sysv.1.gz (of link group fakeroot) doesn't exist
-2025-11-23T05:43:14.649355518Z #9 10.54 update-alternatives: warning: skip creation of /usr/share/man/sv/man1/fakeroot.1.gz because associated file /usr/share/man/sv/man1/fakeroot-sysv.1.gz (of link group fakeroot) doesn't exist
-2025-11-23T05:43:14.649357278Z #9 10.54 update-alternatives: warning: skip creation of /usr/share/man/sv/man1/faked.1.gz because associated file /usr/share/man/sv/man1/faked-sysv.1.gz (of link group fakeroot) doesn't exist
-2025-11-23T05:43:14.649359208Z #9 10.55 Setting up rpcsvc-proto (1.4.3-1) ...
-2025-11-23T05:43:14.649360908Z #9 10.56 Setting up make (4.4.1-2) ...
-2025-11-23T05:43:14.649362628Z #9 10.57 Setting up libmpfr6:amd64 (4.2.2-1) ...
-2025-11-23T05:43:14.649364288Z #9 10.58 Setting up xz-utils (5.8.1-1) ...
-2025-11-23T05:43:14.649366668Z #9 10.59 update-alternatives: using /usr/bin/xz to provide /usr/bin/lzma (lzma) in auto mode
-2025-11-23T05:43:14.649376228Z #9 10.59 update-alternatives: warning: skip creation of /usr/share/man/man1/lzma.1.gz because associated file /usr/share/man/man1/xz.1.gz (of link group lzma) doesn't exist
-2025-11-23T05:43:14.649378068Z #9 10.59 update-alternatives: warning: skip creation of /usr/share/man/man1/unlzma.1.gz because associated file /usr/share/man/man1/unxz.1.gz (of link group lzma) doesn't exist
-2025-11-23T05:43:14.649379799Z #9 10.59 update-alternatives: warning: skip creation of /usr/share/man/man1/lzcat.1.gz because associated file /usr/share/man/man1/xzcat.1.gz (of link group lzma) doesn't exist
-2025-11-23T05:43:14.649381469Z #9 10.59 update-alternatives: warning: skip creation of /usr/share/man/man1/lzmore.1.gz because associated file /usr/share/man/man1/xzmore.1.gz (of link group lzma) doesn't exist
-2025-11-23T05:43:14.649384059Z #9 10.59 update-alternatives: warning: skip creation of /usr/share/man/man1/lzless.1.gz because associated file /usr/share/man/man1/xzless.1.gz (of link group lzma) doesn't exist
-2025-11-23T05:43:14.649387189Z #9 10.59 update-alternatives: warning: skip creation of /usr/share/man/man1/lzdiff.1.gz because associated file /usr/share/man/man1/xzdiff.1.gz (of link group lzma) doesn't exist
-2025-11-23T05:43:14.649390199Z #9 10.59 update-alternatives: warning: skip creation of /usr/share/man/man1/lzcmp.1.gz because associated file /usr/share/man/man1/xzcmp.1.gz (of link group lzma) doesn't exist
-2025-11-23T05:43:14.649392789Z #9 10.59 update-alternatives: warning: skip creation of /usr/share/man/man1/lzgrep.1.gz because associated file /usr/share/man/man1/xzgrep.1.gz (of link group lzma) doesn't exist
-2025-11-23T05:43:14.649396009Z #9 10.59 update-alternatives: warning: skip creation of /usr/share/man/man1/lzegrep.1.gz because associated file /usr/share/man/man1/xzegrep.1.gz (of link group lzma) doesn't exist
-2025-11-23T05:43:14.649398499Z #9 10.59 update-alternatives: warning: skip creation of /usr/share/man/man1/lzfgrep.1.gz because associated file /usr/share/man/man1/xzfgrep.1.gz (of link group lzma) doesn't exist
-2025-11-23T05:43:14.649401709Z #9 10.60 Setting up libquadmath0:amd64 (14.2.0-19) ...
-2025-11-23T05:43:14.649404459Z #9 10.61 Setting up libmpc3:amd64 (1.3.1-1+b3) ...
-2025-11-23T05:43:14.649407049Z #9 10.62 Setting up libatomic1:amd64 (14.2.0-19) ...
-2025-11-23T05:43:14.760445178Z #9 10.63 Setting up patch (2.8-2) ...
-2025-11-23T05:43:14.760466739Z #9 10.64 Setting up libubsan1:amd64 (14.2.0-19) ...
-2025-11-23T05:43:14.760483949Z #9 10.65 Setting up perl-modules-5.40 (5.40.1-6) ...
-2025-11-23T05:43:14.760487859Z #9 10.66 Setting up libhwasan0:amd64 (14.2.0-19) ...
-2025-11-23T05:43:14.760491389Z #9 10.67 Setting up libcrypt-dev:amd64 (1:4.4.38-1) ...
-2025-11-23T05:43:14.760494959Z #9 10.68 Setting up libasan8:amd64 (14.2.0-19) ...
-2025-11-23T05:43:14.760497069Z #9 10.69 Setting up libtsan2:amd64 (14.2.0-19) ...
-2025-11-23T05:43:14.760499199Z #9 10.70 Setting up libbinutils:amd64 (2.44-3) ...
-2025-11-23T05:43:14.760501359Z #9 10.71 Setting up libisl23:amd64 (0.27-1) ...
-2025-11-23T05:43:14.760503459Z #9 10.72 Setting up libc-dev-bin (2.41-12) ...
-2025-11-23T05:43:14.760505599Z #9 10.73 Setting up libcc1-0:amd64 (14.2.0-19) ...
-2025-11-23T05:43:14.869868626Z #9 10.75 Setting up liblocale-gettext-perl (1.07-7+b1) ...
-2025-11-23T05:43:14.869888256Z #9 10.76 Setting up liblsan0:amd64 (14.2.0-19) ...
-2025-11-23T05:43:14.869890936Z #9 10.78 Setting up libitm1:amd64 (14.2.0-19) ...
-2025-11-23T05:43:14.869893806Z #9 10.79 Setting up libctf0:amd64 (2.44-3) ...
-2025-11-23T05:43:14.869895906Z #9 10.81 Setting up manpages-dev (6.9.1-1) ...
-2025-11-23T05:43:14.869898126Z #9 10.82 Setting up libperl5.40:amd64 (5.40.1-6) ...
-2025-11-23T05:43:14.869900366Z #9 10.84 Setting up perl (5.40.1-6) ...
-2025-11-23T05:43:14.973757004Z #9 10.87 Setting up libgprofng0:amd64 (2.44-3) ...
-2025-11-23T05:43:14.973774414Z #9 10.88 Setting up cpp-14-x86-64-linux-gnu (14.2.0-19) ...
-2025-11-23T05:43:14.973777664Z #9 10.90 Setting up libdpkg-perl (1.22.21) ...
-2025-11-23T05:43:14.973780084Z #9 10.91 Setting up cpp-14 (14.2.0-19) ...
-2025-11-23T05:43:14.973782614Z #9 10.93 Setting up libc6-dev:amd64 (2.41-12) ...
-2025-11-23T05:43:14.973787204Z #9 10.94 Setting up libgcc-14-dev:amd64 (14.2.0-19) ...
-2025-11-23T05:43:15.095181337Z #9 10.96 Setting up libstdc++-14-dev:amd64 (14.2.0-19) ...
-2025-11-23T05:43:15.095198828Z #9 10.98 Setting up binutils-x86-64-linux-gnu (2.44-3) ...
-2025-11-23T05:43:15.095201928Z #9 10.99 Setting up cpp-x86-64-linux-gnu (4:14.2.0-1) ...
-2025-11-23T05:43:15.095204148Z #9 11.01 Setting up libfile-fcntllock-perl (0.22-4+b4) ...
-2025-11-23T05:43:15.095206268Z #9 11.03 Setting up libalgorithm-diff-perl (1.201-1) ...
-2025-11-23T05:43:15.095211298Z #9 11.04 Setting up binutils (2.44-3) ...
-2025-11-23T05:43:15.095213588Z #9 11.07 Setting up dpkg-dev (1.22.21) ...
-2025-11-23T05:43:15.224089449Z #9 11.09 Setting up cpp (4:14.2.0-1) ...
-2025-11-23T05:43:15.224111019Z #9 11.12 Setting up gcc-14-x86-64-linux-gnu (14.2.0-19) ...
-2025-11-23T05:43:15.224113869Z #9 11.13 Setting up libalgorithm-diff-xs-perl (0.04-9) ...
-2025-11-23T05:43:15.224116229Z #9 11.15 Setting up libalgorithm-merge-perl (0.08-5) ...
-2025-11-23T05:43:15.224118649Z #9 11.17 Setting up gcc-x86-64-linux-gnu (4:14.2.0-1) ...
-2025-11-23T05:43:15.224121019Z #9 11.19 Setting up gcc-14 (14.2.0-19) ...
-2025-11-23T05:43:15.317181174Z #9 11.20 Setting up g++-14-x86-64-linux-gnu (14.2.0-19) ...
-2025-11-23T05:43:15.317196794Z #9 11.22 Setting up g++-x86-64-linux-gnu (4:14.2.0-1) ...
-2025-11-23T05:43:15.317199884Z #9 11.24 Setting up g++-14 (14.2.0-19) ...
-2025-11-23T05:43:15.317201624Z #9 11.25 Setting up gcc (4:14.2.0-1) ...
-2025-11-23T05:43:15.317203434Z #9 11.29 Setting up g++ (4:14.2.0-1) ...
-2025-11-23T05:43:15.508037477Z #9 11.30 update-alternatives: using /usr/bin/g++ to provide /usr/bin/c++ (c++) in auto mode
-2025-11-23T05:43:15.508060167Z #9 11.31 Setting up build-essential (12.12) ...
-2025-11-23T05:43:15.508065257Z #9 11.33 Processing triggers for libc-bin (2.41-12) ...
-2025-11-23T05:43:19.27248687Z #9 DONE 15.2s
-2025-11-23T05:43:19.379471619Z 
-2025-11-23T05:43:19.379488389Z #10 [4/6] COPY requirements.txt /app/
-2025-11-23T05:43:19.379497899Z #10 DONE 0.1s
-2025-11-23T05:43:19.532346383Z 
-2025-11-23T05:43:19.532365823Z #11 [5/6] RUN pip install --no-cache-dir -r /app/requirements.txt
-2025-11-23T05:43:21.334855547Z #11 1.953 Collecting fastapi==0.109.0
-2025-11-23T05:43:21.4476326Z #11 1.996   Downloading fastapi-0.109.0-py3-none-any.whl (92 kB)
-2025-11-23T05:43:21.44765345Z #11 2.008      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 92.0/92.0 kB 9.4 MB/s eta 0:00:00
-2025-11-23T05:43:21.44765781Z #11 2.066 Collecting uvicorn==0.27.0
-2025-11-23T05:43:21.611188164Z #11 2.076   Downloading uvicorn-0.27.0-py3-none-any.whl (60 kB)
-2025-11-23T05:43:21.611207415Z #11 2.079      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 60.6/60.6 kB 185.8 MB/s eta 0:00:00
-2025-11-23T05:43:22.280027019Z #11 2.898 Collecting sqlalchemy==2.0.25
-2025-11-23T05:43:22.476260368Z #11 2.909   Downloading SQLAlchemy-2.0.25-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.1 MB)
-2025-11-23T05:43:22.476278568Z #11 2.944      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.1/3.1 MB 95.4 MB/s eta 0:00:00
-2025-11-23T05:43:22.49614336Z #11 3.114 Collecting psycopg2-binary==2.9.9
-2025-11-23T05:43:22.672297492Z #11 3.125   Downloading psycopg2_binary-2.9.9-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.0 MB)
-2025-11-23T05:43:22.672315663Z #11 3.140      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.0/3.0 MB 226.9 MB/s eta 0:00:00
-2025-11-23T05:43:22.885880913Z #11 3.504 Collecting pydantic==2.6.0
-2025-11-23T05:43:22.99175049Z #11 3.517   Downloading pydantic-2.6.0-py3-none-any.whl (394 kB)
-2025-11-23T05:43:22.99177232Z #11 3.521      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 394.2/394.2 kB 208.1 MB/s eta 0:00:00
-2025-11-23T05:43:22.99177917Z #11 3.547 Collecting python-multipart
-2025-11-23T05:43:22.991784961Z #11 3.556   Downloading python_multipart-0.0.20-py3-none-any.whl (24 kB)
-2025-11-23T05:43:22.991790891Z #11 3.579 Collecting python-jose[cryptography]==3.3.0
-2025-11-23T05:43:22.991796871Z #11 3.587   Downloading python_jose-3.3.0-py2.py3-none-any.whl (33 kB)
-2025-11-23T05:43:22.991801981Z #11 3.610 Collecting passlib[bcrypt]==1.7.4
-2025-11-23T05:43:23.156392786Z #11 3.620   Downloading passlib-1.7.4-py2.py3-none-any.whl (525 kB)
-2025-11-23T05:43:23.156417856Z #11 3.624      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 525.6/525.6 kB 225.4 MB/s eta 0:00:00
-2025-11-23T05:43:23.250775176Z #11 3.869 Collecting websockets>=10.0
-2025-11-23T05:43:23.390926009Z #11 3.879   Downloading websockets-15.0.1-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (181 kB)
-2025-11-23T05:43:23.390944759Z #11 3.883      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 181.4/181.4 kB 225.8 MB/s eta 0:00:00
-2025-11-23T05:43:23.39094975Z #11 3.912 Collecting tzdata
-2025-11-23T05:43:23.39095375Z #11 3.921   Downloading tzdata-2025.2-py2.py3-none-any.whl (347 kB)
-2025-11-23T05:43:23.39095752Z #11 3.925      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 347.8/347.8 kB 242.5 MB/s eta 0:00:00
-2025-11-23T05:43:23.3909617Z #11 4.009 Collecting starlette<0.36.0,>=0.35.0
-2025-11-23T05:43:23.523926451Z #11 4.019   Downloading starlette-0.35.1-py3-none-any.whl (71 kB)
-2025-11-23T05:43:23.523955541Z #11 4.022      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.1/71.1 kB 215.5 MB/s eta 0:00:00
-2025-11-23T05:43:23.523958961Z #11 4.061 Collecting typing-extensions>=4.8.0
-2025-11-23T05:43:23.523961332Z #11 4.070   Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
-2025-11-23T05:43:23.523963842Z #11 4.072      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.6/44.6 kB 198.5 MB/s eta 0:00:00
-2025-11-23T05:43:23.523966622Z #11 4.142 Collecting h11>=0.8
-2025-11-23T05:43:23.733211626Z #11 4.152   Downloading h11-0.16.0-py3-none-any.whl (37 kB)
-2025-11-23T05:43:23.733224387Z #11 4.189 Collecting click>=7.0
-2025-11-23T05:43:23.733226937Z #11 4.198   Downloading click-8.1.8-py3-none-any.whl (98 kB)
-2025-11-23T05:43:23.733229767Z #11 4.201      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 98.2/98.2 kB 221.4 MB/s eta 0:00:00
-2025-11-23T05:43:24.014484582Z #11 4.633 Collecting greenlet!=0.4.17
-2025-11-23T05:43:24.217237819Z #11 4.642   Downloading greenlet-3.2.4-cp39-cp39-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (582 kB)
-2025-11-23T05:43:24.217255029Z #11 4.647      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 582.8/582.8 kB 214.5 MB/s eta 0:00:00
-2025-11-23T05:43:24.217258649Z #11 4.676 Collecting annotated-types>=0.4.0
-2025-11-23T05:43:24.217261579Z #11 4.685   Downloading annotated_types-0.7.0-py3-none-any.whl (13 kB)
-2025-11-23T05:43:25.967110694Z #11 6.585 Collecting pydantic-core==2.16.1
-2025-11-23T05:43:26.076096682Z #11 6.596   Downloading pydantic_core-2.16.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.2 MB)
-2025-11-23T05:43:26.076114953Z #11 6.629      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.2/2.2 MB 74.5 MB/s eta 0:00:00
-2025-11-23T05:43:26.076119583Z #11 6.694 Collecting pyasn1
-2025-11-23T05:43:26.322293876Z #11 6.704   Downloading pyasn1-0.6.1-py3-none-any.whl (83 kB)
-2025-11-23T05:43:26.322324846Z #11 6.706      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 83.1/83.1 kB 215.4 MB/s eta 0:00:00
-2025-11-23T05:43:26.322330286Z #11 6.737 Collecting ecdsa!=0.15
-2025-11-23T05:43:26.322335626Z #11 6.747   Downloading ecdsa-0.19.1-py2.py3-none-any.whl (150 kB)
-2025-11-23T05:43:26.322339657Z #11 6.750      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 150.6/150.6 kB 229.9 MB/s eta 0:00:00
-2025-11-23T05:43:26.322344357Z #11 6.778 Collecting rsa
-2025-11-23T05:43:26.322348267Z #11 6.787   Downloading rsa-4.9.1-py3-none-any.whl (34 kB)
-2025-11-23T05:43:26.681491266Z #11 7.300 Collecting cryptography>=3.4.0
-2025-11-23T05:43:26.83487028Z #11 7.313   Downloading cryptography-46.0.3-cp38-abi3-manylinux_2_34_x86_64.whl (4.5 MB)
-2025-11-23T05:43:26.83489265Z #11 7.336      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/4.5 MB 208.0 MB/s eta 0:00:00
-2025-11-23T05:43:26.83490021Z #11 7.453 Collecting bcrypt>=3.1.0
-2025-11-23T05:43:26.998633758Z #11 7.463   Downloading bcrypt-5.0.0-cp39-abi3-manylinux_2_34_x86_64.whl (278 kB)
-2025-11-23T05:43:26.998662489Z #11 7.466      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 278.2/278.2 kB 247.4 MB/s eta 0:00:00
-2025-11-23T05:43:27.239528527Z #11 7.858 Collecting cffi>=2.0.0
-2025-11-23T05:43:27.370241304Z #11 7.867   Downloading cffi-2.0.0-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (216 kB)
-2025-11-23T05:43:27.370274664Z #11 7.871      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 216.5/216.5 kB 225.7 MB/s eta 0:00:00
-2025-11-23T05:43:27.370279115Z #11 7.903 Collecting six>=1.9.0
-2025-11-23T05:43:27.370284804Z #11 7.912   Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
-2025-11-23T05:43:27.370289475Z #11 7.988 Collecting anyio<5,>=3.4.0
-2025-11-23T05:43:27.475138271Z #11 8.000   Downloading anyio-4.11.0-py3-none-any.whl (109 kB)
-2025-11-23T05:43:27.475156222Z #11 8.003      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 109.1/109.1 kB 230.6 MB/s eta 0:00:00
-2025-11-23T05:43:27.475160682Z #11 8.049 Collecting sniffio>=1.1
-2025-11-23T05:43:27.475163822Z #11 8.058   Downloading sniffio-1.3.1-py3-none-any.whl (10 kB)
-2025-11-23T05:43:27.475166982Z #11 8.085 Collecting idna>=2.8
-2025-11-23T05:43:27.475169872Z #11 8.094   Downloading idna-3.11-py3-none-any.whl (71 kB)
-2025-11-23T05:43:27.714751135Z #11 8.096      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 229.1 MB/s eta 0:00:00
-2025-11-23T05:43:27.714768055Z #11 8.132 Collecting exceptiongroup>=1.0.2
-2025-11-23T05:43:27.714771305Z #11 8.141   Downloading exceptiongroup-1.3.1-py3-none-any.whl (16 kB)
-2025-11-23T05:43:27.714774265Z #11 8.168 Collecting pycparser
-2025-11-23T05:43:27.714776945Z #11 8.179   Downloading pycparser-2.23-py3-none-any.whl (118 kB)
-2025-11-23T05:43:27.714779266Z #11 8.182      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 118.1/118.1 kB 201.9 MB/s eta 0:00:00
-2025-11-23T05:43:27.779739246Z #11 8.398 Installing collected packages: passlib, websockets, tzdata, typing-extensions, sniffio, six, python-multipart, pycparser, pyasn1, psycopg2-binary, idna, h11, greenlet, click, bcrypt, annotated-types, uvicorn, sqlalchemy, rsa, pydantic-core, exceptiongroup, ecdsa, cffi, python-jose, pydantic, cryptography, anyio, starlette, fastapi
-2025-11-23T05:43:30.533352987Z #11 11.15 Successfully installed annotated-types-0.7.0 anyio-4.11.0 bcrypt-5.0.0 cffi-2.0.0 click-8.1.8 cryptography-46.0.3 ecdsa-0.19.1 exceptiongroup-1.3.1 fastapi-0.109.0 greenlet-3.2.4 h11-0.16.0 idna-3.11 passlib-1.7.4 psycopg2-binary-2.9.9 pyasn1-0.6.1 pycparser-2.23 pydantic-2.6.0 pydantic-core-2.16.1 python-jose-3.3.0 python-multipart-0.0.20 rsa-4.9.1 six-1.17.0 sniffio-1.3.1 sqlalchemy-2.0.25 starlette-0.35.1 typing-extensions-4.15.0 tzdata-2025.2 uvicorn-0.27.0 websockets-15.0.1
-2025-11-23T05:43:30.638132192Z #11 11.15 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
-2025-11-23T05:43:30.638147812Z #11 11.26 
-2025-11-23T05:43:30.638152502Z #11 11.26 [notice] A new release of pip is available: 23.0.1 -> 25.3
-2025-11-23T05:43:30.638156513Z #11 11.26 [notice] To update, run: pip install --upgrade pip
-2025-11-23T05:43:31.16152383Z #11 DONE 11.8s
-2025-11-23T05:43:31.381781771Z 
-2025-11-23T05:43:31.381805622Z #12 [6/6] COPY . /app/
-2025-11-23T05:43:31.381813582Z #12 DONE 0.1s
-2025-11-23T05:43:31.381819592Z 
-2025-11-23T05:43:31.381826142Z #13 exporting to docker image format
-2025-11-23T05:43:31.381831812Z #13 exporting layers
-2025-11-23T05:43:47.633029281Z Pushing image to registry...
-2025-11-23T05:43:42.704651251Z #13 exporting layers 11.5s done
-2025-11-23T05:43:42.872610232Z #13 exporting manifest sha256:f4ac3d52578eef82c5b47c98fc93e43d58cebb5e65dbfa6f89313b98690728c0 done
-2025-11-23T05:43:42.872642642Z #13 exporting config sha256:5341729c8362c651d0134ea5589391e15eeaf1a4f7e24150bc21c2290c59fa9f done
-2025-11-23T05:43:43.95469375Z #13 DONE 12.7s
-2025-11-23T05:43:43.954710951Z 
-2025-11-23T05:43:43.954714281Z #14 exporting cache to client directory
-2025-11-23T05:43:43.954716231Z #14 preparing build cache for export
-2025-11-23T05:43:45.128920845Z #14 writing cache image manifest sha256:3bc3c13ffb1b987ea9175f33f5fd6322fadbc2897dc3898ba1f7317d5b98ec02 done
-2025-11-23T05:43:45.128940285Z #14 DONE 1.1s
-2025-11-23T05:43:52.784572426Z Upload succeeded
-2025-11-23T05:44:04.151208578Z ==> Deploying...
-2025-11-23T05:44:21.246805763Z + python -c 'import os; import sys; print('\''Starting Python application from Docker CMD with verbose debug output:'\''); print('\''PYTHONPATH: '\'' + os.environ.get('\''PYTHONPATH'\'', '\''Not Set'\'')); print('\''sys.path: '\'' + str(sys.path))'
-2025-11-23T05:44:21.329418479Z Starting Python application from Docker CMD with verbose debug output:
-2025-11-23T05:44:21.329477731Z PYTHONPATH: /app
-2025-11-23T05:44:21.329519092Z sys.path: ['', '/app', '/usr/local/lib/python39.zip', '/usr/local/lib/python3.9', '/usr/local/lib/python3.9/lib-dynload', '/usr/local/lib/python3.9/site-packages']
-2025-11-23T05:44:21.331707868Z + cd /app/app
-2025-11-23T05:44:21.3317675Z + uvicorn main:app --host 0.0.0.0 --port 10000
-2025-11-23T05:44:32.104999997Z ==> Your service is live 🎉
-2025-11-23T05:44:32.161329913Z ==> 
-2025-11-23T05:44:32.192879731Z ==> ///////////////////////////////////////////////////////////
-2025-11-23T05:44:32.220265959Z ==> 
-2025-11-23T05:44:32.248762367Z ==> Available at your primary URL https://sports-edu-backend.onrender.com
-2025-11-23T05:44:32.276451915Z ==> 
-2025-11-23T05:44:32.306109612Z ==> ///////////////////////////////////////////////////////////
-2025-11-23T05:44:30.528139565Z INFO:main:Attempt 1/5: Creating database tables...
-2025-11-23T05:44:30.639197783Z INFO:main:Database tables created successfully.
-2025-11-23T05:44:30.832278369Z INFO:     Started server process [7]
-2025-11-23T05:44:30.832539487Z INFO:     Waiting for application startup.
-2025-11-23T05:44:30.832548447Z INFO:     Application startup complete.
-2025-11-23T05:44:30.832867427Z INFO:     Uvicorn running on http://0.0.0.0:10000 (Press CTRL+C to quit)
-2025-11-23T05:44:31.035291763Z INFO:     127.0.0.1:52384 - "HEAD / HTTP/1.1" 404 Not Found
-2025-11-23T05:44:33.382261324Z INFO:     10.23.58.18:0 - "GET / HTTP/1.1" 404 Not Found
+2025-11-23T05:51:52.136091762Z INFO:     10.23.58.18:0 - "GET /api/equipment/ HTTP/1.1" 200 OK
+2025-11-23T05:51:55.175230233Z INFO:     10.23.58.18:0 - "OPTIONS /api/users/signup HTTP/1.1" 200 OK
+2025-11-23T05:51:55.360034014Z INFO:app.routers.users:Attempting to create user: a
+2025-11-23T05:51:55.372835251Z INFO:app.routers.users:Assigning role USER to user a
+2025-11-23T05:51:55.373771571Z WARNING:passlib.handlers.bcrypt:(trapped) error reading bcrypt version
+2025-11-23T05:51:55.373783192Z Traceback (most recent call last):
+2025-11-23T05:51:55.373789102Z   File "/usr/local/lib/python3.9/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+2025-11-23T05:51:55.373793372Z     version = _bcrypt.__about__.__version__
+2025-11-23T05:51:55.373797973Z AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-11-23T05:51:55.380804539Z ERROR:app.routers.users:An unexpected error occurred during user creation for a: password cannot be longer than 72 bytes, truncate manually if necessary (e.g. my_password[:72])
+2025-11-23T05:51:55.38082977Z Traceback (most recent call last):
+2025-11-23T05:51:55.3808351Z   File "/app/app/routers/users.py", line 31, in create_user
+2025-11-23T05:51:55.38083907Z     hashed_password = auth.get_password_hash(user.password)
+2025-11-23T05:51:55.380842791Z   File "/app/app/auth.py", line 31, in get_password_hash
+2025-11-23T05:51:55.380846781Z     return pwd_context.hash(password)
+2025-11-23T05:51:55.380851341Z   File "/usr/local/lib/python3.9/site-packages/passlib/context.py", line 2258, in hash
+2025-11-23T05:51:55.380855161Z     return record.hash(secret, **kwds)
+2025-11-23T05:51:55.380873412Z   File "/usr/local/lib/python3.9/site-packages/passlib/utils/handlers.py", line 779, in hash
+2025-11-23T05:51:55.380877903Z     self.checksum = self._calc_checksum(secret)
+2025-11-23T05:51:55.380882583Z   File "/usr/local/lib/python3.9/site-packages/passlib/handlers/bcrypt.py", line 591, in _calc_checksum
+2025-11-23T05:51:55.380886433Z     self._stub_requires_backend()
+2025-11-23T05:51:55.380890243Z   File "/usr/local/lib/python3.9/site-packages/passlib/utils/handlers.py", line 2254, in _stub_requires_backend
+2025-11-23T05:51:55.380899344Z     cls.set_backend()
+2025-11-23T05:51:55.380903534Z   File "/usr/local/lib/python3.9/site-packages/passlib/utils/handlers.py", line 2156, in set_backend
+2025-11-23T05:51:55.380921885Z     return owner.set_backend(name, dryrun=dryrun)
+2025-11-23T05:51:55.380924975Z   File "/usr/local/lib/python3.9/site-packages/passlib/utils/handlers.py", line 2163, in set_backend
+2025-11-23T05:51:55.380927165Z     return cls.set_backend(name, dryrun=dryrun)
+2025-11-23T05:51:55.380929265Z   File "/usr/local/lib/python3.9/site-packages/passlib/utils/handlers.py", line 2188, in set_backend
+2025-11-23T05:51:55.380931346Z     cls._set_backend(name, dryrun)
+2025-11-23T05:51:55.380933555Z   File "/usr/local/lib/python3.9/site-packages/passlib/utils/handlers.py", line 2311, in _set_backend
+2025-11-23T05:51:55.380935826Z     super(SubclassBackendMixin, cls)._set_backend(name, dryrun)
+2025-11-23T05:51:55.380938006Z   File "/usr/local/lib/python3.9/site-packages/passlib/utils/handlers.py", line 2224, in _set_backend
+2025-11-23T05:51:55.380940186Z     ok = loader(**kwds)
+2025-11-23T05:51:55.380942376Z   File "/usr/local/lib/python3.9/site-packages/passlib/handlers/bcrypt.py", line 626, in _load_backend_mixin
+2025-11-23T05:51:55.380944696Z     return mixin_cls._finalize_backend_mixin(name, dryrun)
+2025-11-23T05:51:55.380950116Z   File "/usr/local/lib/python3.9/site-packages/passlib/handlers/bcrypt.py", line 421, in _finalize_backend_mixin
+2025-11-23T05:51:55.380952417Z     if detect_wrap_bug(IDENT_2A):
+2025-11-23T05:51:55.380954737Z   File "/usr/local/lib/python3.9/site-packages/passlib/handlers/bcrypt.py", line 380, in detect_wrap_bug
+2025-11-23T05:51:55.380957967Z     if verify(secret, bug_hash):
+2025-11-23T05:51:55.380960507Z   File "/usr/local/lib/python3.9/site-packages/passlib/utils/handlers.py", line 792, in verify
+2025-11-23T05:51:55.380963457Z     return consteq(self._calc_checksum(secret), chk)
+2025-11-23T05:51:55.380965917Z   File "/usr/local/lib/python3.9/site-packages/passlib/handlers/bcrypt.py", line 655, in _calc_checksum
+2025-11-23T05:51:55.380968537Z     hash = _bcrypt.hashpw(secret, config)
+2025-11-23T05:51:55.380971578Z ValueError: password cannot be longer than 72 bytes, truncate manually if necessary (e.g. my_password[:72])
+2025-11-23T05:51:55.386105443Z INFO:     10.23.58.18:0 - "POST /api/users/signup HTTP/1.1" 500 Internal Server Error
+2025-11-23T05:52:00.966023096Z INFO:app.routers.users:Attempting to create user: a
+2025-11-23T05:52:00.97316933Z INFO:app.routers.users:Assigning role USER to user a
+2025-11-23T05:52:00.973641765Z WARNING:passlib.handlers.bcrypt:(trapped) error reading bcrypt version
+2025-11-23T05:52:00.973658216Z Traceback (most recent call last):
+2025-11-23T05:52:00.973665887Z   File "/usr/local/lib/python3.9/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+2025-11-23T05:52:00.973670247Z     version = _bcrypt.__about__.__version__
+2025-11-23T05:52:00.973676197Z AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-11-23T05:52:00.980426859Z ERROR:app.routers.users:An unexpected error occurred during user creation for a: password cannot be longer than 72 bytes, truncate manually if necessary (e.g. my_password[:72])
+2025-11-23T05:52:00.98044282Z Traceback (most recent call last):
+2025-11-23T05:52:00.980447921Z   File "/app/app/routers/users.py", line 31, in create_user
+2025-11-23T05:52:00.980452421Z     hashed_password = auth.get_password_hash(user.password)
+2025-11-23T05:52:00.980456961Z   File "/app/app/auth.py", line 31, in get_password_hash
+2025-11-23T05:52:00.980461011Z     return pwd_context.hash(password)
+2025-11-23T05:52:00.980480552Z   File "/usr/local/lib/python3.9/site-packages/passlib/context.py", line 2258, in hash
+2025-11-23T05:52:00.980486743Z     return record.hash(secret, **kwds)
+2025-11-23T05:52:00.980491023Z   File "/usr/local/lib/python3.9/site-packages/passlib/utils/handlers.py", line 779, in hash
+2025-11-23T05:52:00.980509924Z     self.checksum = self._calc_checksum(secret)
+2025-11-23T05:52:00.980515194Z   File "/usr/local/lib/python3.9/site-packages/passlib/handlers/bcrypt.py", line 591, in _calc_checksum
+2025-11-23T05:52:00.980518155Z     self._stub_requires_backend()
+2025-11-23T05:52:00.980521344Z   File "/usr/local/lib/python3.9/site-packages/passlib/utils/handlers.py", line 2254, in _stub_requires_backend
+2025-11-23T05:52:00.980524935Z     cls.set_backend()
+2025-11-23T05:52:00.980528045Z   File "/usr/local/lib/python3.9/site-packages/passlib/utils/handlers.py", line 2156, in set_backend
+2025-11-23T05:52:00.980530805Z     return owner.set_backend(name, dryrun=dryrun)
+2025-11-23T05:52:00.980533595Z   File "/usr/local/lib/python3.9/site-packages/passlib/utils/handlers.py", line 2163, in set_backend
+2025-11-23T05:52:00.980536385Z     return cls.set_backend(name, dryrun=dryrun)
+2025-11-23T05:52:00.980538945Z   File "/usr/local/lib/python3.9/site-packages/passlib/utils/handlers.py", line 2188, in set_backend
+2025-11-23T05:52:00.980541606Z     cls._set_backend(name, dryrun)
+2025-11-23T05:52:00.980544676Z   File "/usr/local/lib/python3.9/site-packages/passlib/utils/handlers.py", line 2311, in _set_backend
+2025-11-23T05:52:00.980547656Z     super(SubclassBackendMixin, cls)._set_backend(name, dryrun)
+2025-11-23T05:52:00.980549776Z   File "/usr/local/lib/python3.9/site-packages/passlib/utils/handlers.py", line 2224, in _set_backend
+2025-11-23T05:52:00.980551536Z     ok = loader(**kwds)
+2025-11-23T05:52:00.980553216Z   File "/usr/local/lib/python3.9/site-packages/passlib/handlers/bcrypt.py", line 626, in _load_backend_mixin
+2025-11-23T05:52:00.980554906Z     return mixin_cls._finalize_backend_mixin(name, dryrun)
+2025-11-23T05:52:00.980556577Z   File "/usr/local/lib/python3.9/site-packages/passlib/handlers/bcrypt.py", line 421, in _finalize_backend_mixin
+2025-11-23T05:52:00.980558626Z     if detect_wrap_bug(IDENT_2A):
+2025-11-23T05:52:00.980560377Z   File "/usr/local/lib/python3.9/site-packages/passlib/handlers/bcrypt.py", line 380, in detect_wrap_bug
+2025-11-23T05:52:00.980562717Z     if verify(secret, bug_hash):
+2025-11-23T05:52:00.980564467Z   File "/usr/local/lib/python3.9/site-packages/passlib/utils/handlers.py", line 792, in verify
+2025-11-23T05:52:00.980566097Z     return consteq(self._calc_checksum(secret), chk)
+2025-11-23T05:52:00.980567867Z   File "/usr/local/lib/python3.9/site-packages/passlib/handlers/bcrypt.py", line 655, in _calc_checksum
+2025-11-23T05:52:00.980569547Z     hash = _bcrypt.hashpw(secret, config)
+2025-11-23T05:52:00.980571257Z ValueError: password cannot be longer than 72 bytes, truncate manually if necessary (e.g. my_password[:72])
+2025-11-23T05:52:00.982360983Z INFO:     10.23.58.18:0 - "POST /api/users/signup HTTP/1.1" 500 Internal Server Error
