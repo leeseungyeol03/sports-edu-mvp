@@ -2,16 +2,20 @@ import os
 from datetime import datetime, timedelta
 from typing import Optional
 from jose import JWTError, jwt
-from passlib.hash import bcrypt_sha256
+from passlib.context import CryptContext
 from fastapi import Depends, HTTPException, status, Query, WebSocketException
 from fastapi.security import OAuth2PasswordBearer
 from sqlalchemy.orm import Session
 from . import models, database
 
 # --- 설정 (배포 시 환경변수로 관리 권장) ---
+# 실제 운영에선 os.getenv("SECRET_KEY") 사용, 개발 시 기본값 제공
 SECRET_KEY = os.getenv("SECRET_KEY", "your-super-secret-key-please-change-me")
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 30
+
+# 비밀번호 해싱 컨텍스트 (Bcrypt 사용)
+pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
 # 토큰 인증 방식 설정 (Header: Authorization: Bearer <token>)
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="users/login")
@@ -20,14 +24,11 @@ oauth2_scheme = OAuth2PasswordBearer(tokenUrl="users/login")
 
 def verify_password(plain_password, hashed_password):
     """입력된 비밀번호와 저장된 해시 비밀번호 비교"""
-    return bcrypt_sha256.verify(plain_password, hashed_password)
+    return pwd_context.verify(plain_password, hashed_password)
 
-def get_password_hash(password: str):
-    """
-    비밀번호 해싱.
-    bcrypt_sha256를 사용하여 길이 제한 문제를 해결합니다.
-    """
-    return bcrypt_sha256.hash(password)
+def get_password_hash(password):
+    """비밀번호 해싱"""
+    return pwd_context.hash(password)
 
 def create_access_token(data: dict, expires_delta: Optional[timedelta] = None):
     """JWT 액세스 토큰 생성"""
