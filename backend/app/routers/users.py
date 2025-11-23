@@ -12,56 +12,31 @@ ADMIN_SECRET_CODE = "team2002" # 관리자 인증 코드
 
 @router.post("/signup", response_model=schemas.User)
 def create_user(user: schemas.UserCreate, db: Session = Depends(database.get_db)):
-    logger.info(f"Attempting to create user: {user.username}")
-    
-    # 1. 중복 확인
     db_user = db.query(models.User).filter(models.User.username == user.username).first()
     if db_user:
-        logger.warning(f"Username {user.username} already exists.")
         raise HTTPException(status_code=400, detail="이미 등록된 사용자명입니다.")
     
-    # 2. 권한 설정 (관리자 코드 확인)
     user_role = models.UserRole.USER
     if user.admin_code and user.admin_code == ADMIN_SECRET_CODE:
         user_role = models.UserRole.ADMIN
-    logger.info(f"Assigning role {user_role.value} to user {user.username}")
-
+    
     try:
-        # 3. 유저 생성
         hashed_password = auth.get_password_hash(user.password)
         new_user = models.User(
             username=user.username, 
             password_hash=hashed_password, 
             affiliation=user.affiliation,
             name=user.name,
-            role=user_role.value # 역할 저장
+            role=user_role.value
         )
-        logger.info(f"User object created for {user.username}. Adding to session.")
         db.add(new_user)
-        
-        try:
-            logger.info("Committing to database...")
-            db.commit()
-            logger.info("Commit successful.")
-        except Exception as e:
-            logger.error(f"Database commit failed: {e}", exc_info=True)
-            db.rollback()
-            raise HTTPException(status_code=500, detail="데이터베이스 저장 중 오류가 발생했습니다.")
-            
-        try:
-            logger.info("Refreshing user object...")
-            db.refresh(new_user)
-            logger.info("Refresh successful.")
-        except Exception as e:
-            logger.error(f"Database refresh failed: {e}", exc_info=True)
-            raise HTTPException(status_code=500, detail="유저 정보 조회 중 오류가 발생했습니다.")
-            
-        logger.info(f"User {user.username} created successfully")
+        db.commit()
+        db.refresh(new_user)
         return new_user
-
     except Exception as e:
-        logger.error(f"An unexpected error occurred during user creation for {user.username}: {e}", exc_info=True)
-        raise HTTPException(status_code=500, detail="유저 생성 중 전체 프로세스 오류가 발생했습니다.")
+        logger.error(f"Error creating user {user.username}: {e}", exc_info=True)
+        db.rollback()
+        raise HTTPException(status_code=500, detail="유저 생성 중 서버 오류가 발생했습니다.")
 
 @router.post("/login", response_model=schemas.Token)
 def login_for_access_token(form_data: OAuth2PasswordRequestForm = Depends(), db: Session = Depends(database.get_db)):

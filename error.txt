@@ -1,88 +1,222 @@
-2025-11-23T05:51:52.136091762Z INFO:     10.23.58.18:0 - "GET /api/equipment/ HTTP/1.1" 200 OK
-2025-11-23T05:51:55.175230233Z INFO:     10.23.58.18:0 - "OPTIONS /api/users/signup HTTP/1.1" 200 OK
-2025-11-23T05:51:55.360034014Z INFO:app.routers.users:Attempting to create user: a
-2025-11-23T05:51:55.372835251Z INFO:app.routers.users:Assigning role USER to user a
-2025-11-23T05:51:55.373771571Z WARNING:passlib.handlers.bcrypt:(trapped) error reading bcrypt version
-2025-11-23T05:51:55.373783192Z Traceback (most recent call last):
-2025-11-23T05:51:55.373789102Z   File "/usr/local/lib/python3.9/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
-2025-11-23T05:51:55.373793372Z     version = _bcrypt.__about__.__version__
-2025-11-23T05:51:55.373797973Z AttributeError: module 'bcrypt' has no attribute '__about__'
-2025-11-23T05:51:55.380804539Z ERROR:app.routers.users:An unexpected error occurred during user creation for a: password cannot be longer than 72 bytes, truncate manually if necessary (e.g. my_password[:72])
-2025-11-23T05:51:55.38082977Z Traceback (most recent call last):
-2025-11-23T05:51:55.3808351Z   File "/app/app/routers/users.py", line 31, in create_user
-2025-11-23T05:51:55.38083907Z     hashed_password = auth.get_password_hash(user.password)
-2025-11-23T05:51:55.380842791Z   File "/app/app/auth.py", line 31, in get_password_hash
-2025-11-23T05:51:55.380846781Z     return pwd_context.hash(password)
-2025-11-23T05:51:55.380851341Z   File "/usr/local/lib/python3.9/site-packages/passlib/context.py", line 2258, in hash
-2025-11-23T05:51:55.380855161Z     return record.hash(secret, **kwds)
-2025-11-23T05:51:55.380873412Z   File "/usr/local/lib/python3.9/site-packages/passlib/utils/handlers.py", line 779, in hash
-2025-11-23T05:51:55.380877903Z     self.checksum = self._calc_checksum(secret)
-2025-11-23T05:51:55.380882583Z   File "/usr/local/lib/python3.9/site-packages/passlib/handlers/bcrypt.py", line 591, in _calc_checksum
-2025-11-23T05:51:55.380886433Z     self._stub_requires_backend()
-2025-11-23T05:51:55.380890243Z   File "/usr/local/lib/python3.9/site-packages/passlib/utils/handlers.py", line 2254, in _stub_requires_backend
-2025-11-23T05:51:55.380899344Z     cls.set_backend()
-2025-11-23T05:51:55.380903534Z   File "/usr/local/lib/python3.9/site-packages/passlib/utils/handlers.py", line 2156, in set_backend
-2025-11-23T05:51:55.380921885Z     return owner.set_backend(name, dryrun=dryrun)
-2025-11-23T05:51:55.380924975Z   File "/usr/local/lib/python3.9/site-packages/passlib/utils/handlers.py", line 2163, in set_backend
-2025-11-23T05:51:55.380927165Z     return cls.set_backend(name, dryrun=dryrun)
-2025-11-23T05:51:55.380929265Z   File "/usr/local/lib/python3.9/site-packages/passlib/utils/handlers.py", line 2188, in set_backend
-2025-11-23T05:51:55.380931346Z     cls._set_backend(name, dryrun)
-2025-11-23T05:51:55.380933555Z   File "/usr/local/lib/python3.9/site-packages/passlib/utils/handlers.py", line 2311, in _set_backend
-2025-11-23T05:51:55.380935826Z     super(SubclassBackendMixin, cls)._set_backend(name, dryrun)
-2025-11-23T05:51:55.380938006Z   File "/usr/local/lib/python3.9/site-packages/passlib/utils/handlers.py", line 2224, in _set_backend
-2025-11-23T05:51:55.380940186Z     ok = loader(**kwds)
-2025-11-23T05:51:55.380942376Z   File "/usr/local/lib/python3.9/site-packages/passlib/handlers/bcrypt.py", line 626, in _load_backend_mixin
-2025-11-23T05:51:55.380944696Z     return mixin_cls._finalize_backend_mixin(name, dryrun)
-2025-11-23T05:51:55.380950116Z   File "/usr/local/lib/python3.9/site-packages/passlib/handlers/bcrypt.py", line 421, in _finalize_backend_mixin
-2025-11-23T05:51:55.380952417Z     if detect_wrap_bug(IDENT_2A):
-2025-11-23T05:51:55.380954737Z   File "/usr/local/lib/python3.9/site-packages/passlib/handlers/bcrypt.py", line 380, in detect_wrap_bug
-2025-11-23T05:51:55.380957967Z     if verify(secret, bug_hash):
-2025-11-23T05:51:55.380960507Z   File "/usr/local/lib/python3.9/site-packages/passlib/utils/handlers.py", line 792, in verify
-2025-11-23T05:51:55.380963457Z     return consteq(self._calc_checksum(secret), chk)
-2025-11-23T05:51:55.380965917Z   File "/usr/local/lib/python3.9/site-packages/passlib/handlers/bcrypt.py", line 655, in _calc_checksum
-2025-11-23T05:51:55.380968537Z     hash = _bcrypt.hashpw(secret, config)
-2025-11-23T05:51:55.380971578Z ValueError: password cannot be longer than 72 bytes, truncate manually if necessary (e.g. my_password[:72])
-2025-11-23T05:51:55.386105443Z INFO:     10.23.58.18:0 - "POST /api/users/signup HTTP/1.1" 500 Internal Server Error
-2025-11-23T05:52:00.966023096Z INFO:app.routers.users:Attempting to create user: a
-2025-11-23T05:52:00.97316933Z INFO:app.routers.users:Assigning role USER to user a
-2025-11-23T05:52:00.973641765Z WARNING:passlib.handlers.bcrypt:(trapped) error reading bcrypt version
-2025-11-23T05:52:00.973658216Z Traceback (most recent call last):
-2025-11-23T05:52:00.973665887Z   File "/usr/local/lib/python3.9/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
-2025-11-23T05:52:00.973670247Z     version = _bcrypt.__about__.__version__
-2025-11-23T05:52:00.973676197Z AttributeError: module 'bcrypt' has no attribute '__about__'
-2025-11-23T05:52:00.980426859Z ERROR:app.routers.users:An unexpected error occurred during user creation for a: password cannot be longer than 72 bytes, truncate manually if necessary (e.g. my_password[:72])
-2025-11-23T05:52:00.98044282Z Traceback (most recent call last):
-2025-11-23T05:52:00.980447921Z   File "/app/app/routers/users.py", line 31, in create_user
-2025-11-23T05:52:00.980452421Z     hashed_password = auth.get_password_hash(user.password)
-2025-11-23T05:52:00.980456961Z   File "/app/app/auth.py", line 31, in get_password_hash
-2025-11-23T05:52:00.980461011Z     return pwd_context.hash(password)
-2025-11-23T05:52:00.980480552Z   File "/usr/local/lib/python3.9/site-packages/passlib/context.py", line 2258, in hash
-2025-11-23T05:52:00.980486743Z     return record.hash(secret, **kwds)
-2025-11-23T05:52:00.980491023Z   File "/usr/local/lib/python3.9/site-packages/passlib/utils/handlers.py", line 779, in hash
-2025-11-23T05:52:00.980509924Z     self.checksum = self._calc_checksum(secret)
-2025-11-23T05:52:00.980515194Z   File "/usr/local/lib/python3.9/site-packages/passlib/handlers/bcrypt.py", line 591, in _calc_checksum
-2025-11-23T05:52:00.980518155Z     self._stub_requires_backend()
-2025-11-23T05:52:00.980521344Z   File "/usr/local/lib/python3.9/site-packages/passlib/utils/handlers.py", line 2254, in _stub_requires_backend
-2025-11-23T05:52:00.980524935Z     cls.set_backend()
-2025-11-23T05:52:00.980528045Z   File "/usr/local/lib/python3.9/site-packages/passlib/utils/handlers.py", line 2156, in set_backend
-2025-11-23T05:52:00.980530805Z     return owner.set_backend(name, dryrun=dryrun)
-2025-11-23T05:52:00.980533595Z   File "/usr/local/lib/python3.9/site-packages/passlib/utils/handlers.py", line 2163, in set_backend
-2025-11-23T05:52:00.980536385Z     return cls.set_backend(name, dryrun=dryrun)
-2025-11-23T05:52:00.980538945Z   File "/usr/local/lib/python3.9/site-packages/passlib/utils/handlers.py", line 2188, in set_backend
-2025-11-23T05:52:00.980541606Z     cls._set_backend(name, dryrun)
-2025-11-23T05:52:00.980544676Z   File "/usr/local/lib/python3.9/site-packages/passlib/utils/handlers.py", line 2311, in _set_backend
-2025-11-23T05:52:00.980547656Z     super(SubclassBackendMixin, cls)._set_backend(name, dryrun)
-2025-11-23T05:52:00.980549776Z   File "/usr/local/lib/python3.9/site-packages/passlib/utils/handlers.py", line 2224, in _set_backend
-2025-11-23T05:52:00.980551536Z     ok = loader(**kwds)
-2025-11-23T05:52:00.980553216Z   File "/usr/local/lib/python3.9/site-packages/passlib/handlers/bcrypt.py", line 626, in _load_backend_mixin
-2025-11-23T05:52:00.980554906Z     return mixin_cls._finalize_backend_mixin(name, dryrun)
-2025-11-23T05:52:00.980556577Z   File "/usr/local/lib/python3.9/site-packages/passlib/handlers/bcrypt.py", line 421, in _finalize_backend_mixin
-2025-11-23T05:52:00.980558626Z     if detect_wrap_bug(IDENT_2A):
-2025-11-23T05:52:00.980560377Z   File "/usr/local/lib/python3.9/site-packages/passlib/handlers/bcrypt.py", line 380, in detect_wrap_bug
-2025-11-23T05:52:00.980562717Z     if verify(secret, bug_hash):
-2025-11-23T05:52:00.980564467Z   File "/usr/local/lib/python3.9/site-packages/passlib/utils/handlers.py", line 792, in verify
-2025-11-23T05:52:00.980566097Z     return consteq(self._calc_checksum(secret), chk)
-2025-11-23T05:52:00.980567867Z   File "/usr/local/lib/python3.9/site-packages/passlib/handlers/bcrypt.py", line 655, in _calc_checksum
-2025-11-23T05:52:00.980569547Z     hash = _bcrypt.hashpw(secret, config)
-2025-11-23T05:52:00.980571257Z ValueError: password cannot be longer than 72 bytes, truncate manually if necessary (e.g. my_password[:72])
-2025-11-23T05:52:00.982360983Z INFO:     10.23.58.18:0 - "POST /api/users/signup HTTP/1.1" 500 Internal Server Error
+sports-edu-backend.o…/api/users/signup:1 
+ Failed to load resource: the server responded with a status of 500 ()
+index-CYVWgRfR.js:120 API Error: 
+Object
+detail
+: 
+"유저 생성 중 전체 프로세스 오류가 발생했습니다."
+[[Prototype]]
+: 
+Object
+constructor
+: 
+ƒ Object()
+assign
+: 
+ƒ assign()
+create
+: 
+ƒ create()
+defineProperties
+: 
+ƒ defineProperties()
+defineProperty
+: 
+ƒ defineProperty()
+entries
+: 
+ƒ entries()
+freeze
+: 
+ƒ freeze()
+fromEntries
+: 
+ƒ fromEntries()
+getOwnPropertyDescriptor
+: 
+ƒ getOwnPropertyDescriptor()
+getOwnPropertyDescriptors
+: 
+ƒ getOwnPropertyDescriptors()
+getOwnPropertyNames
+: 
+ƒ getOwnPropertyNames()
+getOwnPropertySymbols
+: 
+ƒ getOwnPropertySymbols()
+getPrototypeOf
+: 
+ƒ getPrototypeOf()
+groupBy
+: 
+ƒ groupBy()
+hasOwn
+: 
+ƒ hasOwn()
+is
+: 
+ƒ is()
+isExtensible
+: 
+ƒ isExtensible()
+isFrozen
+: 
+ƒ isFrozen()
+isSealed
+: 
+ƒ isSealed()
+keys
+: 
+ƒ keys()
+length
+: 
+1
+name
+: 
+"Object"
+preventExtensions
+: 
+ƒ preventExtensions()
+prototype
+: 
+{__defineGetter__: ƒ, __defineSetter__: ƒ, hasOwnProperty: ƒ, __lookupGetter__: ƒ, __lookupSetter__: ƒ, …}
+seal
+: 
+ƒ seal()
+setPrototypeOf
+: 
+ƒ setPrototypeOf()
+values
+: 
+ƒ values()
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+[[Scopes]]
+: 
+Scopes[0]
+hasOwnProperty
+: 
+ƒ hasOwnProperty()
+length
+: 
+1
+name
+: 
+"hasOwnProperty"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+[[Scopes]]
+: 
+Scopes[0]
+isPrototypeOf
+: 
+ƒ isPrototypeOf()
+length
+: 
+1
+name
+: 
+"isPrototypeOf"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+[[Scopes]]
+: 
+Scopes[0]
+propertyIsEnumerable
+: 
+ƒ propertyIsEnumerable()
+toLocaleString
+: 
+ƒ toLocaleString()
+toString
+: 
+ƒ toString()
+valueOf
+: 
+ƒ valueOf()
+__defineGetter__
+: 
+ƒ __defineGetter__()
+__defineSetter__
+: 
+ƒ __defineSetter__()
+__lookupGetter__
+: 
+ƒ __lookupGetter__()
+__lookupSetter__
+: 
+ƒ __lookupSetter__()
+__proto__
+: 
+(...)
+get __proto__
+: 
+ƒ __proto__()
+set __proto__
+: 
+ƒ __proto__()
+length
+: 
+1
+name
+: 
+"set __proto__"
+arguments
+: 
+(...)
+caller
+: 
+(...)
+[[Prototype]]
+: 
+ƒ ()
+[[Scopes]]
+: 
+Scopes[0]
+kr	@	index-CYVWgRfR.js:120
+index-CYVWgRfR.js:120 
+ POST https://sports-edu-backend.onrender.com/api/users/signup 500 (Internal Server Error)
+index-CYVWgRfR.js:120 API Error: 
+{detail: '유저 생성 중 전체 프로세스 오류가 발생했습니다.'}
+detail
+: 
+"유저 생성 중 전체 프로세스 오류가 발생했습니다."
+[[Prototype]]
+: 
+Object
+kr	@	index-CYVWgRfR.js:120
+await in kr		
+post	@	index-CYVWgRfR.js:120
+w	@	index-CYVWgRfR.js:120
+qc	@	index-CYVWgRfR.js:37
+Yc	@	index-CYVWgRfR.js:37
+Xc	@	index-CYVWgRfR.js:37
+mi	@	index-CYVWgRfR.js:37
+na	@	index-CYVWgRfR.js:37
+(anonymous)	@	index-CYVWgRfR.js:37
+Ts	@	index-CYVWgRfR.js:40
+_u	@	index-CYVWgRfR.js:37
+Ul	@	index-CYVWgRfR.js:37
+os	@	index-CYVWgRfR.js:37
+dd	@	index-CYVWgRfR.js:37
