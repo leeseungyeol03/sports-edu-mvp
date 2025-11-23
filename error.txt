@@ -1,50 +1,123 @@
-2025-11-23T06:09:17.276532457Z ==> ///////////////////////////////////////////////////////////
-2025-11-23T06:09:17.304686125Z ==> 
-2025-11-23T06:09:17.336281932Z ==> Available at your primary URL https://sports-edu-backend.onrender.com
-2025-11-23T06:09:17.36866427Z ==> 
-2025-11-23T06:09:17.409531687Z ==> ///////////////////////////////////////////////////////////
-2025-11-23T06:09:18.269833481Z INFO:     10.22.62.66:0 - "GET / HTTP/1.1" 404 Not Found
-2025-11-23T06:09:29.366775788Z INFO:     10.23.58.18:0 - "OPTIONS /api/equipment/ HTTP/1.1" 200 OK
-2025-11-23T06:09:29.768416372Z INFO:     10.23.40.19:0 - "GET /api/equipment/ HTTP/1.1" 200 OK
-2025-11-23T06:09:35.797260489Z INFO:     10.22.62.66:0 - "OPTIONS /api/users/signup HTTP/1.1" 200 OK
-2025-11-23T06:09:35.99531968Z WARNING:passlib.handlers.bcrypt:(trapped) error reading bcrypt version
-2025-11-23T06:09:35.995349131Z Traceback (most recent call last):
-2025-11-23T06:09:35.995354121Z   File "/usr/local/lib/python3.9/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
-2025-11-23T06:09:35.995357781Z     version = _bcrypt.__about__.__version__
-2025-11-23T06:09:35.995361921Z AttributeError: module 'bcrypt' has no attribute '__about__'
-2025-11-23T06:09:36.001734216Z ERROR:app.routers.users:Error creating user a: password cannot be longer than 72 bytes, truncate manually if necessary (e.g. my_password[:72])
-2025-11-23T06:09:36.001755797Z Traceback (most recent call last):
-2025-11-23T06:09:36.001760347Z   File "/app/app/routers/users.py", line 24, in create_user
-2025-11-23T06:09:36.001764107Z     hashed_password = auth.get_password_hash(user.password)
-2025-11-23T06:09:36.001767637Z   File "/app/app/auth.py", line 30, in get_password_hash
-2025-11-23T06:09:36.001771217Z     return bcrypt_sha256.hash(password)
-2025-11-23T06:09:36.001775487Z   File "/usr/local/lib/python3.9/site-packages/passlib/utils/handlers.py", line 779, in hash
-2025-11-23T06:09:36.001779107Z     self.checksum = self._calc_checksum(secret)
-2025-11-23T06:09:36.001783528Z   File "/usr/local/lib/python3.9/site-packages/passlib/handlers/bcrypt.py", line 1226, in _calc_checksum
-2025-11-23T06:09:36.001787068Z     return super(bcrypt_sha256, self)._calc_checksum(key)
-2025-11-23T06:09:36.001790597Z   File "/usr/local/lib/python3.9/site-packages/passlib/handlers/bcrypt.py", line 591, in _calc_checksum
-2025-11-23T06:09:36.001794098Z     self._stub_requires_backend()
-2025-11-23T06:09:36.001797608Z   File "/usr/local/lib/python3.9/site-packages/passlib/utils/handlers.py", line 2254, in _stub_requires_backend
-2025-11-23T06:09:36.001801778Z     cls.set_backend()
-2025-11-23T06:09:36.001805918Z   File "/usr/local/lib/python3.9/site-packages/passlib/utils/handlers.py", line 2156, in set_backend
-2025-11-23T06:09:36.001809278Z     return owner.set_backend(name, dryrun=dryrun)
-2025-11-23T06:09:36.001831248Z   File "/usr/local/lib/python3.9/site-packages/passlib/utils/handlers.py", line 2163, in set_backend
-2025-11-23T06:09:36.001834458Z     return cls.set_backend(name, dryrun=dryrun)
-2025-11-23T06:09:36.001836838Z   File "/usr/local/lib/python3.9/site-packages/passlib/utils/handlers.py", line 2188, in set_backend
-2025-11-23T06:09:36.001839258Z     cls._set_backend(name, dryrun)
-2025-11-23T06:09:36.001841458Z   File "/usr/local/lib/python3.9/site-packages/passlib/utils/handlers.py", line 2311, in _set_backend
-2025-11-23T06:09:36.001843758Z     super(SubclassBackendMixin, cls)._set_backend(name, dryrun)
-2025-11-23T06:09:36.001845958Z   File "/usr/local/lib/python3.9/site-packages/passlib/utils/handlers.py", line 2224, in _set_backend
-2025-11-23T06:09:36.001848369Z     ok = loader(**kwds)
-2025-11-23T06:09:36.001850579Z   File "/usr/local/lib/python3.9/site-packages/passlib/handlers/bcrypt.py", line 626, in _load_backend_mixin
-2025-11-23T06:09:36.001852879Z     return mixin_cls._finalize_backend_mixin(name, dryrun)
-2025-11-23T06:09:36.001854969Z   File "/usr/local/lib/python3.9/site-packages/passlib/handlers/bcrypt.py", line 421, in _finalize_backend_mixin
-2025-11-23T06:09:36.001857139Z     if detect_wrap_bug(IDENT_2A):
-2025-11-23T06:09:36.001859469Z   File "/usr/local/lib/python3.9/site-packages/passlib/handlers/bcrypt.py", line 380, in detect_wrap_bug
-2025-11-23T06:09:36.001862339Z     if verify(secret, bug_hash):
-2025-11-23T06:09:36.001867379Z   File "/usr/local/lib/python3.9/site-packages/passlib/utils/handlers.py", line 792, in verify
-2025-11-23T06:09:36.001869879Z     return consteq(self._calc_checksum(secret), chk)
-2025-11-23T06:09:36.001872279Z   File "/usr/local/lib/python3.9/site-packages/passlib/handlers/bcrypt.py", line 655, in _calc_checksum
-2025-11-23T06:09:36.001874519Z     hash = _bcrypt.hashpw(secret, config)
-2025-11-23T06:09:36.001878999Z ValueError: password cannot be longer than 72 bytes, truncate manually if necessary (e.g. my_password[:72])
-2025-11-23T06:09:36.003986687Z INFO:     10.22.62.66:0 - "POST /api/users/signup HTTP/1.1" 500 Internal Server Error
+index-CYVWgRfR.js:120 WebSocket connection to 'ws://127.0.0.1:8000/api/chat/ws/1?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTc2Mzg4MDU0NH0.0VKrte1jzXZ1I1Sn_aAjpb96XKJzyBpj-7MVflGlqAY' failed: 
+(anonymous)	@	index-CYVWgRfR.js:120
+pl	@	index-CYVWgRfR.js:40
+Jt	@	index-CYVWgRfR.js:40
+Pf	@	index-CYVWgRfR.js:40
+kt	@	index-CYVWgRfR.js:40
+Wi	@	index-CYVWgRfR.js:40
+vt	@	index-CYVWgRfR.js:38
+(anonymous)	@	index-CYVWgRfR.js:40
+index-CYVWgRfR.js:120 WebSocket Error: 
+Event {isTrusted: true, type: 'error', target: WebSocket, currentTarget: WebSocket, eventPhase: 2, …}
+isTrusted
+: 
+true
+bubbles
+: 
+false
+cancelBubble
+: 
+false
+cancelable
+: 
+false
+composed
+: 
+false
+currentTarget
+: 
+WebSocket {url: 'ws://127.0.0.1:8000/api/chat/ws/1?token=eyJhbGciOi…U0NH0.0VKrte1jzXZ1I1Sn_aAjpb96XKJzyBpj-7MVflGlqAY', readyState: 3, bufferedAmount: 24, onopen: ƒ, onerror: ƒ, …}
+defaultPrevented
+: 
+false
+eventPhase
+: 
+0
+returnValue
+: 
+true
+srcElement
+: 
+WebSocket {url: 'ws://127.0.0.1:8000/api/chat/ws/1?token=eyJhbGciOi…U0NH0.0VKrte1jzXZ1I1Sn_aAjpb96XKJzyBpj-7MVflGlqAY', readyState: 3, bufferedAmount: 24, onopen: ƒ, onerror: ƒ, …}
+target
+: 
+WebSocket {url: 'ws://127.0.0.1:8000/api/chat/ws/1?token=eyJhbGciOi…U0NH0.0VKrte1jzXZ1I1Sn_aAjpb96XKJzyBpj-7MVflGlqAY', readyState: 3, bufferedAmount: 24, onopen: ƒ, onerror: ƒ, …}
+timeStamp
+: 
+25692.299999952316
+type
+: 
+"error"
+[[Prototype]]
+: 
+Event
+x.onerror	@	index-CYVWgRfR.js:120
+index-CYVWgRfR.js:120 WebSocket disconnected from rental room: 1 
+index-CYVWgRfR.js:120 WebSocket is already in CLOSING or CLOSED state.
+m	@	index-CYVWgRfR.js:120
+w	@	index-CYVWgRfR.js:120
+qc	@	index-CYVWgRfR.js:37
+Yc	@	index-CYVWgRfR.js:37
+Xc	@	index-CYVWgRfR.js:37
+mi	@	index-CYVWgRfR.js:37
+na	@	index-CYVWgRfR.js:37
+(anonymous)	@	index-CYVWgRfR.js:37
+Ts	@	index-CYVWgRfR.js:40
+_u	@	index-CYVWgRfR.js:37
+Ul	@	index-CYVWgRfR.js:37
+os	@	index-CYVWgRfR.js:37
+dd	@	index-CYVWgRfR.js:37
+index-CYVWgRfR.js:120 WebSocket connection to 'ws://127.0.0.1:8000/api/chat/ws/1?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTc2Mzg4MDU0NH0.0VKrte1jzXZ1I1Sn_aAjpb96XKJzyBpj-7MVflGlqAY' failed: 
+(anonymous)	@	index-CYVWgRfR.js:120
+pl	@	index-CYVWgRfR.js:40
+Jt	@	index-CYVWgRfR.js:40
+Pf	@	index-CYVWgRfR.js:40
+kt	@	index-CYVWgRfR.js:40
+Wi	@	index-CYVWgRfR.js:40
+vt	@	index-CYVWgRfR.js:38
+(anonymous)	@	index-CYVWgRfR.js:40
+index-CYVWgRfR.js:120 WebSocket Error: 
+Event {isTrusted: true, type: 'error', target: WebSocket, currentTarget: WebSocket, eventPhase: 2, …}
+isTrusted
+: 
+true
+bubbles
+: 
+false
+cancelBubble
+: 
+false
+cancelable
+: 
+false
+composed
+: 
+false
+currentTarget
+: 
+WebSocket {url: 'ws://127.0.0.1:8000/api/chat/ws/1?token=eyJhbGciOi…U0NH0.0VKrte1jzXZ1I1Sn_aAjpb96XKJzyBpj-7MVflGlqAY', readyState: 3, bufferedAmount: 0, onopen: ƒ, onerror: ƒ, …}
+defaultPrevented
+: 
+false
+eventPhase
+: 
+0
+returnValue
+: 
+true
+srcElement
+: 
+WebSocket {url: 'ws://127.0.0.1:8000/api/chat/ws/1?token=eyJhbGciOi…U0NH0.0VKrte1jzXZ1I1Sn_aAjpb96XKJzyBpj-7MVflGlqAY', readyState: 3, bufferedAmount: 0, onopen: ƒ, onerror: ƒ, …}
+target
+: 
+WebSocket {url: 'ws://127.0.0.1:8000/api/chat/ws/1?token=eyJhbGciOi…U0NH0.0VKrte1jzXZ1I1Sn_aAjpb96XKJzyBpj-7MVflGlqAY', readyState: 3, bufferedAmount: 0, onopen: ƒ, onerror: ƒ, …}
+timeStamp
+: 
+33124.199999928474
+type
+: 
+"error"
+[[Prototype]]
+: 
+Event
+x.onerror	@	index-CYVWgRfR.js:120

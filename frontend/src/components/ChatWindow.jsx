@@ -3,7 +3,18 @@ import { Send, X } from 'lucide-react';
 import { apiClient } from '../api/client';
 import { UserContext } from '../App'; // Import UserContext
 
-const WEBSOCKET_URL = import.meta.env.VITE_WEBSOCKET_URL || 'ws://127.0.0.1:8000';
+// WebSocket URL을 VITE_API_URL에서 동적으로 생성
+const getWebSocketURL = () => {
+  const apiUrl = import.meta.env.VITE_API_URL;
+  if (apiUrl) {
+    // 프로덕션 환경: http(s)://를 ws(s)://로 변경
+    return apiUrl.replace(/^http/, 'ws');
+  }
+  // 로컬 개발 환경
+  return 'ws://127.0.0.1:8000';
+};
+
+const WEBSOCKET_URL = getWebSocketURL();
 
 export default function ChatWindow({ rentalId, userId, onClose }) {
   const { user } = useContext(UserContext); // Get user from context
@@ -33,7 +44,9 @@ export default function ChatWindow({ rentalId, userId, onClose }) {
       return;
     }
 
-    const ws = new WebSocket(`${WEBSOCKET_URL}/api/chat/ws/${rentalId}?token=${token}`);
+    const wsUrl = `${WEBSOCKET_URL}/api/chat/ws/${rentalId}?token=${token}`;
+    console.log("Connecting to WebSocket:", wsUrl); // Log the URL
+    const ws = new WebSocket(wsUrl);
     setSocket(ws);
 
     ws.onopen = () => {
@@ -47,7 +60,7 @@ export default function ChatWindow({ rentalId, userId, onClose }) {
     };
 
     ws.onclose = (event) => {
-      console.log(`WebSocket disconnected from rental room: ${rentalId}`, event.reason);
+      console.log(`WebSocket disconnected from rental room: ${rentalId}`, event.reason, event.code);
     };
 
     ws.onerror = (error) => {
@@ -60,7 +73,10 @@ export default function ChatWindow({ rentalId, userId, onClose }) {
   }, [rentalId, userId]);
 
   const handleSend = () => {
-    if (!input.trim() || !socket) return;
+    if (!input.trim() || !socket || socket.readyState !== WebSocket.OPEN) {
+        console.error("Socket is not open. Cannot send message.");
+        return;
+    }
     
     const messageToSend = {
       message: input.trim()
