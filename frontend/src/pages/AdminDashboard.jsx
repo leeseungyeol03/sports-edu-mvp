@@ -31,14 +31,14 @@ export default function AdminDashboard() {
 
   const fetchRentals = async () => {
     try {
-      const data = await apiClient.get('/rentals/all');
+      const data = await apiClient.get('/api/rentals/all');
       setRentals(data);
     } catch (err) { console.error(err); }
   };
 
   const fetchEquipmentForCourses = async () => {
     try {
-      const data = await apiClient.get('/equipment/');
+      const data = await apiClient.get('/api/equipment/');
       setEquipmentList(data);
       if (data.length > 0 && !newCourse.equip_id) {
         setNewCourse(prev => ({ ...prev, equip_id: data[0].equip_id }));
@@ -48,7 +48,7 @@ export default function AdminDashboard() {
 
   const handleApprove = async (rentalId) => {
     try {
-      await apiClient.put(`/rentals/${rentalId}/approve`);
+      await apiClient.put(`/api/rentals/${rentalId}/approve`);
       alert("승인 완료!");
       fetchRentals();
     } catch (err) { console.error(err); }
@@ -57,7 +57,7 @@ export default function AdminDashboard() {
   const handleCreateItem = async (e) => {
     e.preventDefault();
     try {
-      await apiClient.post('/equipment/', { ...newItem, available_qty: newItem.total_qty });
+      await apiClient.post('/api/equipment/', { ...newItem, available_qty: newItem.total_qty });
       alert("장비 등록 성공!");
       setNewItem({ name: '', category: '펜싱', total_qty: 1, rental_fee: 0, description: '', image_url: '📦' });
     } catch (err) { alert("등록 실패: " + err.message); }

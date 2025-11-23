@@ -29,7 +29,7 @@ export default function DetailModal({ item, onClose, onRent }) { // Removed 'cou
       setCourseError(null);
       const fetchCourses = async () => {
         try {
-          const data = await apiClient.get(`/courses/?equip_id=${item.equip_id}`);
+          const data = await apiClient.get(`/api/courses/?equip_id=${item.equip_id}`);
           setCourseList(data);
         } catch (err) {
           console.error("Failed to fetch courses for equipment:", err);

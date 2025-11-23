@@ -23,7 +23,7 @@ export default function Classroom({ rental, onExit }) {
     const fetchCurriculum = async () => {
       try {
         setLoading(true);
-        const data = await apiClient.get(`/courses/?equip_id=${equipId}`);
+        const data = await apiClient.get(`/api/courses/?equip_id=${equipId}`);
         setCourses(data);
         if (data.length > 0) setActiveCourse(data[0]);
       } catch (err) {

@@ -23,7 +23,7 @@ export default function ChatWindow({ rentalId, userId, onClose }) {
   useEffect(() => {
     if (!rentalId || !userId) return;
 
-    apiClient.get(`/chat/history/${rentalId}`)
+    apiClient.get(`/api/chat/history/${rentalId}`)
       .then(history => setMessages(history))
       .catch(err => console.error("Failed to fetch chat history:", err));
 

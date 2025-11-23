@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { UserContext } from '../App'; // Assuming UserContext is defined in App.jsx
-import { apiClient } from '../api/client';
+import { apiClient, updateUser, updatePassword } from '../api/client';
 
 const MyPage = () => {
   const { user, setUser } = useContext(UserContext);
@@ -21,7 +21,7 @@ const MyPage = () => {
 
   const fetchUserMe = async () => {
     try {
-      const userData = await apiClient.get('/users/me');
+      const userData = await apiClient.get('/api/users/me');
       setUser(userData);
     } catch (err) {
       console.error('Failed to fetch user data:', err);
@@ -34,7 +34,7 @@ const MyPage = () => {
     setMessage('');
     setError('');
     try {
-      const updatedUser = await apiClient.updateUser({ name, affiliation });
+      const updatedUser = await updateUser({ name, affiliation });
       setUser(updatedUser);
       setMessage('프로필 정보가 성공적으로 업데이트되었습니다.');
     } catch (err) {
@@ -56,7 +56,7 @@ const MyPage = () => {
       return;
     }
     try {
-      await apiClient.updatePassword({ current_password: currentPassword, new_password: newPassword });
+      await updatePassword({ current_password: currentPassword, new_password: newPassword });
       setMessage('비밀번호가 성공적으로 변경되었습니다.');
       setCurrentPassword('');
       setNewPassword('');
