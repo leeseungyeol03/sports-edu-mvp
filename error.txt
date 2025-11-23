@@ -1,4 +1,4 @@
-equest URL
+Request URL
 https://sports-edu-backend.onrender.com/api/users/signup
 Request Method
 POST

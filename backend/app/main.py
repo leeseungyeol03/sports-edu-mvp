@@ -51,6 +51,6 @@ app.include_router(rentals.router, prefix="/api/rentals", tags=["rentals"])
 app.include_router(courses.router, prefix="/api/courses", tags=["courses"])
 app.include_router(chat.router, prefix="/api/chat", tags=["chat"]) # chat 라우터 등록
 
-@app.get("/health")
+@app.get("/api/shealth")
 def health_check():
     return {"status": "ok"}

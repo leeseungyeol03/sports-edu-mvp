@@ -9,6 +9,9 @@ RUN mkdir /app
 # /app 디렉토리를 PYTHONPATH에 추가
 ENV PYTHONPATH=/app
 
+# [수정] build-essential 패키지를 설치하여 bcrypt와 같은 C-기반 라이브러리 컴파일 지원
+RUN apt-get update && apt-get install -y build-essential
+
 # 의존성 파일 복사 및 설치
 COPY requirements.txt /app/
 RUN pip install --no-cache-dir -r /app/requirements.txt
