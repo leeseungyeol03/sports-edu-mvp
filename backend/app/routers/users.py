@@ -3,36 +3,51 @@ from fastapi.security import OAuth2PasswordRequestForm
 from sqlalchemy.orm import Session
 from datetime import timedelta
 from app import models, schemas, database, auth
+import logging
 
 router = APIRouter()
+logger = logging.getLogger(__name__)
 
 ADMIN_SECRET_CODE = "team2002" # 관리자 인증 코드
 
 @router.post("/signup", response_model=schemas.User)
 def create_user(user: schemas.UserCreate, db: Session = Depends(database.get_db)):
+    logger.info(f"Attempting to create user: {user.username}")
+    
     # 1. 중복 확인
     db_user = db.query(models.User).filter(models.User.username == user.username).first()
     if db_user:
+        logger.warning(f"Username {user.username} already exists.")
         raise HTTPException(status_code=400, detail="이미 등록된 사용자명입니다.")
     
     # 2. 권한 설정 (관리자 코드 확인)
     user_role = models.UserRole.USER
-    if user.admin_code == ADMIN_SECRET_CODE:
+    if user.admin_code and user.admin_code == ADMIN_SECRET_CODE:
         user_role = models.UserRole.ADMIN
-    
-    # 3. 유저 생성
-    hashed_password = auth.get_password_hash(user.password)
-    new_user = models.User(
-        username=user.username, 
-        password_hash=hashed_password, 
-        affiliation=user.affiliation,
-        name=user.name,
-        role=user_role # 역할 저장
-    )
-    db.add(new_user)
-    db.commit()
-    db.refresh(new_user)
-    return new_user
+    logger.info(f"Assigning role {user_role.value} to user {user.username}")
+
+    try:
+        # 3. 유저 생성
+        hashed_password = auth.get_password_hash(user.password)
+        new_user = models.User(
+            username=user.username, 
+            password_hash=hashed_password, 
+            affiliation=user.affiliation,
+            name=user.name,
+            role=user_role.value # 역할 저장
+        )
+        logger.info(f"Creating new user object for {user.username}")
+        db.add(new_user)
+        logger.info(f"Adding user {user.username} to session")
+        db.commit()
+        logger.info(f"Committing user {user.username} to database")
+        db.refresh(new_user)
+        logger.info(f"User {user.username} created successfully")
+        return new_user
+    except Exception as e:
+        logger.error(f"Error creating user {user.username}: {e}", exc_info=True)
+        db.rollback()
+        raise HTTPException(status_code=500, detail="유저 생성 중 서버 오류가 발생했습니다.")
 
 @router.post("/login", response_model=schemas.Token)
 def login_for_access_token(form_data: OAuth2PasswordRequestForm = Depends(), db: Session = Depends(database.get_db)):
