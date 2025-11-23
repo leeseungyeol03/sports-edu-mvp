@@ -36,18 +36,32 @@ def create_user(user: schemas.UserCreate, db: Session = Depends(database.get_db)
             name=user.name,
             role=user_role.value # 역할 저장
         )
-        logger.info(f"Creating new user object for {user.username}")
+        logger.info(f"User object created for {user.username}. Adding to session.")
         db.add(new_user)
-        logger.info(f"Adding user {user.username} to session")
-        db.commit()
-        logger.info(f"Committing user {user.username} to database")
-        db.refresh(new_user)
+        
+        try:
+            logger.info("Committing to database...")
+            db.commit()
+            logger.info("Commit successful.")
+        except Exception as e:
+            logger.error(f"Database commit failed: {e}", exc_info=True)
+            db.rollback()
+            raise HTTPException(status_code=500, detail="데이터베이스 저장 중 오류가 발생했습니다.")
+            
+        try:
+            logger.info("Refreshing user object...")
+            db.refresh(new_user)
+            logger.info("Refresh successful.")
+        except Exception as e:
+            logger.error(f"Database refresh failed: {e}", exc_info=True)
+            raise HTTPException(status_code=500, detail="유저 정보 조회 중 오류가 발생했습니다.")
+            
         logger.info(f"User {user.username} created successfully")
         return new_user
+
     except Exception as e:
-        logger.error(f"Error creating user {user.username}: {e}", exc_info=True)
-        db.rollback()
-        raise HTTPException(status_code=500, detail="유저 생성 중 서버 오류가 발생했습니다.")
+        logger.error(f"An unexpected error occurred during user creation for {user.username}: {e}", exc_info=True)
+        raise HTTPException(status_code=500, detail="유저 생성 중 전체 프로세스 오류가 발생했습니다.")
 
 @router.post("/login", response_model=schemas.Token)
 def login_for_access_token(form_data: OAuth2PasswordRequestForm = Depends(), db: Session = Depends(database.get_db)):
