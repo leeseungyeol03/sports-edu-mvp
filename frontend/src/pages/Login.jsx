@@ -14,7 +14,7 @@ export default function Login({ onLogin }) {
     
     if (isSignup) {
       try {
-        await apiClient.post('/users/signup', {
+        await apiClient.post('/api/users/signup', {
           username, password, name, affiliation, 
           admin_code: adminCode 
           
